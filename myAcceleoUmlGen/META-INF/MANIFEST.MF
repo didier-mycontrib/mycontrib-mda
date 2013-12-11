@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Acceleo Gen Module Runtime Plug-in
+Bundle-SymbolicName: myAcceleoUmlGen
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: m2t.uml.gen.Activator
+Bundle-Vendor: Eclipse Modeling Project
+Require-Bundle: org.eclipse.core.runtime, 
+ org.eclipse.uml2.uml,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.ocl,
+ org.eclipse.ocl.ecore,
+ org.eclipse.acceleo.model,
+ org.eclipse.acceleo.engine
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Eclipse-LazyStart: true
+Export-Package: m2t.uml.gen,
+ m2t.uml.gen.java.files,
+ m2t.uml.gen.jee.files,
+ m2t.uml.gen.soa.files,
+ m2t.uml.gen.sql.files,
+ m2t.uml.gen.xml.files
+

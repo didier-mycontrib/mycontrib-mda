@@ -1,0 +1,15 @@
+[comment encoding = UTF-8 /]
+[module generateJava('http://www.eclipse.org/uml2/3.0.0/UML')/]
+[import m2t::uml::gen::common::files::utilCommon/]
+[import m2t::uml::gen::java::files::utilJava/]
+
+[template public generateJavaClassFile(c: Classifier) ?
+   ( ( c.oclIsTypeOf(Class) or c.oclIsTypeOf(Interface)) and isNotWithGeneric(c) )]
+[comment @main /]
+[file (c.fileNameFromUml().concat('.java'), false)]
+[c.genJavaPackage()/]
+[c.genJavaNeedsImports()/]
+[c.genJavaDefaultImports()/]
+[c.genJavaClassOrInterface()/]  
+[/file]
+[/template]

@@ -1,0 +1,160 @@
+[comment encoding = Cp1252 /]
+[module generateJeeTest('http://www.eclipse.org/uml2/3.0.0/UML')/]
+[import m2t::uml::gen::common::files::utilCommon/]
+[import m2t::uml::gen::java::files::utilJava /]
+[import m2t::uml::gen::jee::files::utilJee /]
+[import m2t::uml::gen::jee::files::jeeArtifacts /]
+
+[template public generateJeeTestFile(c: Classifier) ? ( c.oclIsTypeOf(Class) or c.oclIsTypeOf(Interface)) ]
+[comment @main /]
+[c.generateServiceTestFile()/]
+[/template]
+
+[template public generateServiceTestFile(c: Classifier) ? ( c.oclIsTypeOf(Class) and c.queryAsStereotype('n-tiers::service') ) ]
+[file (c.jeeFileNameFromUml('testService').concat('.java'), false)]
+
+[c.genJeePackage('impl.domain.service.test')/]
+[c.genJeeImports('testService')/]
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"/serviceSpringConf.xml","/dataSourceForTestSpringConf.xml"})
+public class TestService[c.name/] { 
+
+	private [c.name/] service = null; // service métier à tester
+	//[protected ('pk')]
+	private Serializable pk; // clef primaire pour test CRUD (ajuster le type si nécessaire)
+	//[/protected]
+
+	@Inject
+	public void setService([c.name/] service) {
+		this.service = service;
+	}       
+
+	[for (o: Operation | c.oclAsType(Class).ownedOperation) ? (not o.queryAsStereotype('n-tiers::CRUD'))]
+	@Test
+   public void test_[o.name/]() {
+   //[protected ('test_'+o.name+'_implementation')]
+     try{
+        System.out.println("test_[o.name/]");
+        //...
+        }catch(Exception /*ServiceException*/ ex){
+      	    System.err.println(ex.getMessage());
+      	    Assert.fail(ex.getMessage());
+      	}
+   //[/protected]
+   }
+	[/for]
+    
+    [for (o: Operation | c.oclAsType(Class).ownedOperation) ? (o.queryAsStereotype('n-tiers::CRUD'))]
+       [o.type.oclAsType(Classifier).generateDaoTestFile()/]
+       
+	@Test
+	public void test[o.type.name/]Dto_CRUD() {
+		//************* version avec grande transaction globale (de bout en bout à l'état persistant)
+    	//              affichages sophistiqués possibles (pas de problème avec lazy=true)
+    	//******************************************************************
+		System.out.println("****** test CRUD sur [o.type.name/] (via Service Spring Gestion[o.type.name/]s) *****");
+		// séquence habituelle : new & save , get(All) , maj , update , get , delete , ...
+		sequence_crud_[o.type.name/]();
+		System.out.println("****** end of CRUD test *****\n");
+	}
+              
+    private void sequence_crud_[o.type.name/](){
+		create[o.type.name/](); verifNew[o.type.name/]();
+		update[o.type.name/](); verifUpdate[o.type.name/](); 
+		delete[o.type.name/](); verifDelete[o.type.name/]();
+	}
+	private void create[o.type.name/]() {
+		//[protected ('testCreate'+o.type.name)]
+		try {
+		    [o.type.name/] newDto = new [o.type.name/]();
+			[for (p:Property | o.type.oclAsType(Classifier).attribute)]
+	        //newDto.set[p.name.toUpperFirst()/]([p.javaExempleValueStringFromUmlProperty()/]);
+	        [/for]
+	       
+			this.pk=service.createNew[o.type.name/](newDto); // appel d'une méthode transactionnelle
+			System.out.println("\t id(pk) du nouveau [o.type.name/] créé: " + pk);
+			} catch(Exception /*ServiceException*/ ex){
+      	    	System.err.println(ex.getMessage());
+      	    	Assert.fail(ex.getMessage());
+      			}
+		//[/protected]
+		}
+		
+		private void verifNew[o.type.name/]() {
+		//[protected ('verifNew'+o.type.name)]
+		[o.type.name/] dto=null;
+			try {
+			dto = service.get[o.type.name/]ByPk(this.pk);
+			//Assert.assertTrue(dto.getId() == this.pk);
+			//Assert.assertTrue(dto.getZZZ().equals("....."));
+			System.out.println("\t valeurs initiales de l'entité/dto (créé(e)): " + dto.toString());		   
+			} catch(Exception /*ServiceException*/ ex){
+      	    	System.err.println(ex.getMessage());
+      	    	Assert.fail(ex.getMessage());
+      		}
+		//[/protected]
+		}
+					
+		private void update[o.type.name/]() {
+		//[protected ('testUpdate'+o.type.name)]
+		[o.type.name/] dto=null;
+		try {
+			dto = service.get[o.type.name/]ByPk(this.pk);
+			//dto.setXY("....");
+			service.update[o.type.name/](dto);  // appel d'une méthode transactionnelle
+		    } catch(Exception /*ServiceException*/ ex){
+      	    	System.err.println(ex.getMessage());
+      	    	Assert.fail(ex.getMessage());
+      		}
+        	//[/protected]	
+		}
+		
+		
+		private void verifUpdate[o.type.name/]() {
+		//[protected ('verifUpdate'+o.type.name)]
+		[o.type.name/] dto=null;
+			try {
+			dto = service.get[o.type.name/]ByPk(this.pk);
+			//Assert.assertTrue(dto.getZZZ().equals("....."));
+			System.out.println("\t nouvelle valeur de l'entité/dto (modifié(e)): " + dto.toString());			  
+			} catch(Exception /*ServiceException*/ ex){
+      	    	System.err.println(ex.getMessage());
+      	    	Assert.fail(ex.getMessage());
+      		}
+		//[/protected]
+		}
+		    	    
+		private void delete[o.type.name/]() {
+		//[protected ('testDelete'+o.type.name)]
+		try {
+			service.delete[o.type.name/](this.pk);
+			} catch(Exception /*ServiceException*/ ex){
+      	    	System.err.println(ex.getMessage());
+      	    	Assert.fail(ex.getMessage());
+      		}
+        //[/protected]			
+		}   
+		
+	
+		private void verifDelete[o.type.name/]() {
+		//[protected ('verifDelete'+o.type.name)]
+		try {
+			[o.type.name/] dto = service.get[o.type.name/]ByPk(this.pk);
+			if(dto==null)
+			     System.out.println("\t entité/dto bien supprimé(e)");
+			Assert.assertTrue(dto == null);
+		} catch(Exception /*ServiceException*/ ex){
+      	    	System.err.println(ex.getMessage());
+      	    	Assert.fail(ex.getMessage());
+      		}
+        //[/protected]
+	   }
+	  
+    [/for]
+    
+}
+[/file]
+[/template]
+
+
+
