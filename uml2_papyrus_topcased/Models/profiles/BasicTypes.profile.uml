@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_cQRHoCzcEeOaGb3wLrIgog" name="BasicTypes" metamodelReference="_cQRHoSzcEeOaGb3wLrIgog">
+  <eAnnotations xmi:id="_ialU0CzcEeOaGb3wLrIgog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_stR3MCzdEeOaGb3wLrIgog" name="BasicTypes" nsURI="http:///schemas/BasicTypes/_sqTbsCzdEeOaGb3wLrIgog/3" nsPrefix="BasicTypes">
+      <eAnnotations xmi:id="_stR3OSzdEeOaGb3wLrIgog" source="PapyrusVersion">
+        <details xmi:id="_stR3OizdEeOaGb3wLrIgog" key="Version" value="0.0.4"/>
+        <details xmi:id="_stR3OyzdEeOaGb3wLrIgog" key="Comment" value=""/>
+        <details xmi:id="_stR3PCzdEeOaGb3wLrIgog" key="Copyright" value=""/>
+        <details xmi:id="_stR3PSzdEeOaGb3wLrIgog" key="Date" value="2013-10-04"/>
+        <details xmi:id="_stR3PizdEeOaGb3wLrIgog" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_stR3MSzdEeOaGb3wLrIgog" name="Real" instanceClassName="Real">
+        <eAnnotations xmi:id="_stR3MizdEeOaGb3wLrIgog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_fzQtQCzcEeOaGb3wLrIgog"/>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_ikcmACzdEeOaGb3wLrIgog" name="BasicTypes" nsURI="http:///schemas/BasicTypes/_ihTycCzdEeOaGb3wLrIgog/2" nsPrefix="BasicTypes">
+      <eAnnotations xmi:id="_ikcmCSzdEeOaGb3wLrIgog" source="PapyrusVersion">
+        <details xmi:id="_ikcmCizdEeOaGb3wLrIgog" key="Version" value="0.0.3"/>
+        <details xmi:id="_ikcmCyzdEeOaGb3wLrIgog" key="Comment" value=""/>
+        <details xmi:id="_ikcmDCzdEeOaGb3wLrIgog" key="Copyright" value=""/>
+        <details xmi:id="_ikcmDSzdEeOaGb3wLrIgog" key="Date" value="2013-10-04"/>
+        <details xmi:id="_ikcmDizdEeOaGb3wLrIgog" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_ikcmASzdEeOaGb3wLrIgog" name="Real" instanceClassName="Real">
+        <eAnnotations xmi:id="_ikcmAizdEeOaGb3wLrIgog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_fzQtQCzcEeOaGb3wLrIgog"/>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_4bhccCzcEeOaGb3wLrIgog" name="basic_types" nsURI="http:///schemas/basic_types/_4YZP8CzcEeOaGb3wLrIgog/1" nsPrefix="basic_types">
+      <eAnnotations xmi:id="_4bhceSzcEeOaGb3wLrIgog" source="PapyrusVersion">
+        <details xmi:id="_4bhceizcEeOaGb3wLrIgog" key="Version" value="0.0.2"/>
+        <details xmi:id="_4bhceyzcEeOaGb3wLrIgog" key="Comment" value=""/>
+        <details xmi:id="_4bhcfCzcEeOaGb3wLrIgog" key="Copyright" value=""/>
+        <details xmi:id="_4bhcfSzcEeOaGb3wLrIgog" key="Date" value="2013-10-04"/>
+        <details xmi:id="_4bhcfizcEeOaGb3wLrIgog" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_4bhccSzcEeOaGb3wLrIgog" name="Real" instanceClassName="Real">
+        <eAnnotations xmi:id="_4bhccizcEeOaGb3wLrIgog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_fzQtQCzcEeOaGb3wLrIgog"/>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_ialU0SzcEeOaGb3wLrIgog" name="basic_types" nsURI="http:///schemas/basic_types/_iHpKsCzcEeOaGb3wLrIgog/0" nsPrefix="basic_types">
+      <eAnnotations xmi:id="_ialU1CzcEeOaGb3wLrIgog" source="PapyrusVersion">
+        <details xmi:id="_ialU1SzcEeOaGb3wLrIgog" key="Version" value="0.0.1"/>
+        <details xmi:id="_ialU1izcEeOaGb3wLrIgog" key="Comment" value=""/>
+        <details xmi:id="_ialU1yzcEeOaGb3wLrIgog" key="Copyright" value=""/>
+        <details xmi:id="_ialU2CzcEeOaGb3wLrIgog" key="Date" value="2013-10-04"/>
+        <details xmi:id="_ialU2SzcEeOaGb3wLrIgog" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_ialU0izcEeOaGb3wLrIgog" name="Real" instanceClassName="Real">
+        <eAnnotations xmi:id="_ialU0yzcEeOaGb3wLrIgog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_fzQtQCzcEeOaGb3wLrIgog"/>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <packageImport xmi:id="_cQRHoSzcEeOaGb3wLrIgog">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:id="_cQRHoizcEeOaGb3wLrIgog">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_fzQtQCzcEeOaGb3wLrIgog" name="Real"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_lDHdUCzcEeOaGb3wLrIgog" name="Date"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_wPvt0CzcEeOaGb3wLrIgog" name="DateTime"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_z36HUCzcEeOaGb3wLrIgog" name="Time"/>
+</uml:Profile>

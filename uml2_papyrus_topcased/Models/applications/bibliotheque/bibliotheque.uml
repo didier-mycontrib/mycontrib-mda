@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Documentation="http://Papyrus/schemas/Documentation/_vaU6gAEYEeCIz8iAxBJnfA/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ntiers="http:///schemas/ntiers/_l56hAB67EeOIL-VHpkBl1g/19" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http://Papyrus/schemas/Documentation/_vaU6gAEYEeCIz8iAxBJnfA/0 pathmap://Papyrus.profile.uml#_vaU6ggEYEeCIz8iAxBJnfA http:///schemas/ntiers/_l56hAB67EeOIL-VHpkBl1g/19 ../../profiles/n-tiers.profile.uml#_l56hAR67EeOIL-VHpkBl1g">
+  <uml:Model xmi:id="_w_rq0B7XEeOIL-VHpkBl1g" name="Model">
+    <packageImport xmi:id="_w_rq0R7XEeOIL-VHpkBl1g">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Model" xmi:id="_BD0AUB7ZEeOIL-VHpkBl1g" name="UseCaseView" visibility="private">
+      <ownedComment xmi:id="_TorvEB7sEeOIL-VHpkBl1g" annotatedElement="_WSL9YB7rEeOIL-VHpkBl1g _YksLgB7rEeOIL-VHpkBl1g">
+        <body>si abimé</body>
+      </ownedComment>
+      <ownedComment xmi:id="_ZwAAsB7uEeOIL-VHpkBl1g">
+        <body>Système bibliothèque</body>
+      </ownedComment>
+      <ownedComment xmi:id="_dak1AB7uEeOIL-VHpkBl1g">
+        <body>--> enreg livre neuf&#xD;
+--> enreg debut et fin emprunt&#xD;
+--> declencher restauration&#xD;
+--> reintégrer ex restauré</body>
+      </ownedComment>
+      <ownedComment xmi:id="_ypwIgB7uEeOIL-VHpkBl1g">
+        <body> --> inscrire abonné&#xD;
+--> gérer contentieux</body>
+      </ownedComment>
+      <ownedComment xmi:id="_z8BBoB7uEeOIL-VHpkBl1g">
+        <body> déclencher ecriture comptable --></body>
+      </ownedComment>
+      <ownedComment xmi:id="_J2VYMCCBEeOTaLsNUtPeig">
+        <body>UseCaseView = vue fonctionnelle et comportementale</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_j1CRoB7bEeOIL-VHpkBl1g" name="enregistrer_exemplaire_neuf">
+        <ownedComment xmi:id="_bq80wB-OEeOIL-VHpkBl1g">
+          <body>scénario nominal:&#xD;
+1) renseigner les informations liées au nouvel exemplaire (qui vient d'être acheté)&#xD;
+2) enregistrer ces informations dans le système informatique &quot;bibliothèque&quot; &#xD;
+3) déclencher un enregistrement comptable de l'achat (voir sous UC)&#xD;
+4 afficher un résumé des opérations effectuées&#xD;
+</body>
+        </ownedComment>
+        <include xmi:id="_hEbfUB7oEeOIL-VHpkBl1g" addition="_RRKa4B7oEeOIL-VHpkBl1g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_RRKa4B7oEeOIL-VHpkBl1g" name="déclencher_enreg_comptable">
+        <ownedComment xmi:id="_4l12wB-OEeOIL-VHpkBl1g">
+          <body>scénario nominal:&#xD;
+1) récupérer les informations financières liées à l'achat (prix , intitulé exemplaire, ...)&#xD;
+2) appeler une méthode d'enregistrement comptable sur le logiciel externe de comptabilité&#xD;
+3) remonter un statut sur l'enregistrement délégué.&#xD;
+</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_eoZhwB7oEeOIL-VHpkBl1g" name="A_bibliothecaire_enregistrer_nouvel_exemplaire" memberEnd="_eoZhwR7oEeOIL-VHpkBl1g _eoZhxB7oEeOIL-VHpkBl1g" navigableOwnedEnd="_eoZhxB7oEeOIL-VHpkBl1g">
+        <ownedComment xmi:id="_xyTtQB9pEeOIL-VHpkBl1g">
+          <body></body>
+        </ownedComment>
+        <ownedEnd xmi:id="_eoZhwR7oEeOIL-VHpkBl1g" name="bibliothecaire" type="_LuNbkB7bEeOIL-VHpkBl1g" association="_eoZhwB7oEeOIL-VHpkBl1g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eoZhwh7oEeOIL-VHpkBl1g" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eoZhwx7oEeOIL-VHpkBl1g" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_eoZhxB7oEeOIL-VHpkBl1g" name="enregistrer_nouvel_exemplaire" type="_j1CRoB7bEeOIL-VHpkBl1g" association="_eoZhwB7oEeOIL-VHpkBl1g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eoZhxR7oEeOIL-VHpkBl1g" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eoZhxh7oEeOIL-VHpkBl1g" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_hzY3EB7oEeOIL-VHpkBl1g" name="A_déclencher_enreg_comptable_logiciel_comptabilité" memberEnd="_hzY3ER7oEeOIL-VHpkBl1g _hzY3FB7oEeOIL-VHpkBl1g" navigableOwnedEnd="_hzY3FB7oEeOIL-VHpkBl1g">
+        <ownedComment xmi:id="_cfIgAB9oEeOIL-VHpkBl1g">
+          <body></body>
+        </ownedComment>
+        <ownedEnd xmi:id="_hzY3ER7oEeOIL-VHpkBl1g" name="déclencher_enreg_comptable" type="_RRKa4B7oEeOIL-VHpkBl1g" association="_hzY3EB7oEeOIL-VHpkBl1g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hzY3Eh7oEeOIL-VHpkBl1g" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hzY3Ex7oEeOIL-VHpkBl1g" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_hzY3FB7oEeOIL-VHpkBl1g" name="logiciel_comptabilité" type="_W8iVMB7bEeOIL-VHpkBl1g" association="_hzY3EB7oEeOIL-VHpkBl1g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hzY3FR7oEeOIL-VHpkBl1g" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hzY3Fh7oEeOIL-VHpkBl1g" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_z84MAB7oEeOIL-VHpkBl1g" name="inscrire_nouvel_abonné">
+        <ownedComment xmi:id="_1FC0EB-PEeOIL-VHpkBl1g">
+          <body>scénario nominal:&#xD;
+1) renseigner informations sur abonné (nom , prénom , adresse, ...) &#xD;
+2) vérifier si pas déjà abonné&#xD;
+3) récupérer des photocopies des pièces justificatives liées aux conditions d'abonnement&#xD;
+4) enregistrer les informations sur l'abonné et les pièces justificatives dans le système informatique , génération d'un nouveau numéro d'abonné&#xD;
+5) imprimer une carte d'abonnement  (avec numéro d'abonné) et afficher un résumé des opérations effectuées</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_1l70gB7oEeOIL-VHpkBl1g" name="gérer_contentieux">
+        <ownedComment xmi:id="_J8nDYB-REeOIL-VHpkBl1g">
+          <body>scénario nominal:&#xD;
+1) récupérer les informations d'un contentieux préalablement enregistré dans le système informatique&#xD;
+2) selon la nature du contentieux , effectuer une des opérations suivantes:&#xD;
+     si &quot;un peu abîmé et nécessitant restauration&quot;&#xD;
+            alors &quot;avertissement la première fois (sur une période d'un an)&quot;&#xD;
+                      et &quot;demande d'un paiement de la restauration&quot; les fois suivantes (sur une période d'un an).&#xD;
+     si &quot;perdu&quot; ou bien &quot;rendu HS&quot; &#xD;
+            alors &quot;demande d'un paiement dont le montant est le prix de l'exemplaire diminué par l'application&#xD;
+                        d'un coefficient de vétusté de 5% par an&quot;.&#xD;
+3) ....</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_35oVcB7oEeOIL-VHpkBl1g" name="A_responsableabonnement_gérer_abonnement" memberEnd="_35oVcR7oEeOIL-VHpkBl1g _35oVdB7oEeOIL-VHpkBl1g">
+        <ownedEnd xmi:id="_35oVcR7oEeOIL-VHpkBl1g" name="responsableabonnement" type="_NpKFUB7bEeOIL-VHpkBl1g" association="_35oVcB7oEeOIL-VHpkBl1g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_35oVch7oEeOIL-VHpkBl1g" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_35oVcx7oEeOIL-VHpkBl1g" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_35oVdB7oEeOIL-VHpkBl1g" name="gérer_abonnement" type="_z84MAB7oEeOIL-VHpkBl1g" association="_35oVcB7oEeOIL-VHpkBl1g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_35oVdR7oEeOIL-VHpkBl1g" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_35oVdh7oEeOIL-VHpkBl1g" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4ewbwB7oEeOIL-VHpkBl1g" name="A_responsableabonnement_gérer_contentieux" memberEnd="_4ewbwR7oEeOIL-VHpkBl1g _4ewbxB7oEeOIL-VHpkBl1g">
+        <ownedEnd xmi:id="_4ewbwR7oEeOIL-VHpkBl1g" name="responsableabonnement" type="_NpKFUB7bEeOIL-VHpkBl1g" association="_4ewbwB7oEeOIL-VHpkBl1g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4ewbwh7oEeOIL-VHpkBl1g" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4ewbwx7oEeOIL-VHpkBl1g" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_4ewbxB7oEeOIL-VHpkBl1g" name="gérer_contentieux" type="_1l70gB7oEeOIL-VHpkBl1g" association="_4ewbwB7oEeOIL-VHpkBl1g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4ewbxR7oEeOIL-VHpkBl1g" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4ewbxh7oEeOIL-VHpkBl1g" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_JU0Z8B7pEeOIL-VHpkBl1g" name="gérer_emprunt">
+        <ownedComment xmi:id="_3KucQB-REeOIL-VHpkBl1g">
+          <body>scénario nominal:&#xD;
+1) choisir un type d'action sur les emprunts (consultation, début , fin/retour )&#xD;
+2) déclencher un des cas dérivés (voir &quot;UC&quot; avec &quot;Généralisation/Spécialisation)</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_L5CqMB7pEeOIL-VHpkBl1g" name="A_bibliothecaire_gérer_emprunt" memberEnd="_L5CqMR7pEeOIL-VHpkBl1g _L5CqNB7pEeOIL-VHpkBl1g">
+        <ownedEnd xmi:id="_L5CqMR7pEeOIL-VHpkBl1g" name="bibliothecaire" type="_LuNbkB7bEeOIL-VHpkBl1g" association="_L5CqMB7pEeOIL-VHpkBl1g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_L5CqMh7pEeOIL-VHpkBl1g" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L5CqMx7pEeOIL-VHpkBl1g" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_L5CqNB7pEeOIL-VHpkBl1g" name="gérer_emprunt" type="_JU0Z8B7pEeOIL-VHpkBl1g" association="_L5CqMB7pEeOIL-VHpkBl1g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_L5CqNR7pEeOIL-VHpkBl1g" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L5CqNh7pEeOIL-VHpkBl1g" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_Z9zI8B7qEeOIL-VHpkBl1g" name="enregistrer nouvel emprunt" classifierBehavior="_v6rqcB7_EeOIL-VHpkBl1g">
+        <ownedComment xmi:id="_OBrwcB-TEeOIL-VHpkBl1g">
+          <body>scénario nominal:&#xD;
+1) identifier abonné (voir sous UC)&#xD;
+2) vérifier droits à emprunter (voir sous UC) et retouner le nombre maximum d'exemplaires autorisés à l'emprunt&#xD;
+3) pour chaque exemplaire à emprunter (dans la limite autorisée):&#xD;
+      a) renseigner le numéro de l'exemplaire à emprunter&#xD;
+      b) enregistrer l'emprunt dans le système informatique&#xD;
+4) afficher un résumé des opérations effectuées (et imprimer éventuellement une petite fiche)</body>
+        </ownedComment>
+        <generalization xmi:id="_sCrDoB7qEeOIL-VHpkBl1g" general="_JU0Z8B7pEeOIL-VHpkBl1g"/>
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_v6rqcB7_EeOIL-VHpkBl1g" name="Activity_Enregistrer_nouvel_emprunt">
+          <node xmi:type="uml:InitialNode" xmi:id="_1KorsB8AEeOIL-VHpkBl1g" name="InitialNode1" outgoing="_T6vGYB8CEeOIL-VHpkBl1g" inPartition="_Xwm2oB8AEeOIL-VHpkBl1g"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_3gbeYB8AEeOIL-VHpkBl1g" name="préciser_emprunteur" outgoing="_XVsKUB8CEeOIL-VHpkBl1g" incoming="_T6vGYB8CEeOIL-VHpkBl1g" inPartition="_Xwm2oB8AEeOIL-VHpkBl1g"/>
+          <node xmi:type="uml:CallBehaviorAction" xmi:id="_2HuwoB8BEeOIL-VHpkBl1g" name="CallBehaviorAction1" outgoing="_F4ihgB8DEeOIL-VHpkBl1g" incoming="_XVsKUB8CEeOIL-VHpkBl1g" inPartition="_dQyhsB8AEeOIL-VHpkBl1g" behavior="_njAi8B8BEeOIL-VHpkBl1g"/>
+          <node xmi:type="uml:DecisionNode" xmi:id="_1p5IoB8CEeOIL-VHpkBl1g" name="droits suffisants pour emprunter" outgoing="_JWG_IB8EEeOIL-VHpkBl1g _VTHuQB8FEeOIL-VHpkBl1g" incoming="_F4ihgB8DEeOIL-VHpkBl1g" inPartition="_dQyhsB8AEeOIL-VHpkBl1g"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_ArsMsB8EEeOIL-VHpkBl1g" name="préciser exemplaire à emprunter" outgoing="_AGqssB8HEeOIL-VHpkBl1g" incoming="_JWG_IB8EEeOIL-VHpkBl1g _IhiVUB8JEeOIL-VHpkBl1g" inPartition="_Xwm2oB8AEeOIL-VHpkBl1g"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_PtAaUB8FEeOIL-VHpkBl1g" name="raffichage_refus_explicité" outgoing="_bEVe8B8FEeOIL-VHpkBl1g" incoming="_VTHuQB8FEeOIL-VHpkBl1g" inPartition="_Xwm2oB8AEeOIL-VHpkBl1g"/>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_aGxqgB8FEeOIL-VHpkBl1g" name="ActivityFinalNode1" incoming="_bEVe8B8FEeOIL-VHpkBl1g" inPartition="_Xwm2oB8AEeOIL-VHpkBl1g"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_8lUs4B8GEeOIL-VHpkBl1g" name="enregistrer_emprunt_exemplaire" outgoing="_ggPcEB8HEeOIL-VHpkBl1g" incoming="_AGqssB8HEeOIL-VHpkBl1g" inPartition="_dQyhsB8AEeOIL-VHpkBl1g"/>
+          <node xmi:type="uml:DecisionNode" xmi:id="_fXz0YB8HEeOIL-VHpkBl1g" name="DecisionNode1" outgoing="_FNd8gB8JEeOIL-VHpkBl1g _FXJngB8KEeOIL-VHpkBl1g" incoming="_ggPcEB8HEeOIL-VHpkBl1g" inPartition="_dQyhsB8AEeOIL-VHpkBl1g"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_3xNywB8IEeOIL-VHpkBl1g" name="autre_emprunt_souhaité?" outgoing="_Fu2LQB8JEeOIL-VHpkBl1g" incoming="_FNd8gB8JEeOIL-VHpkBl1g" inPartition="_Xwm2oB8AEeOIL-VHpkBl1g"/>
+          <node xmi:type="uml:DecisionNode" xmi:id="__Kkl8B8IEeOIL-VHpkBl1g" name="DecisionNode2" outgoing="_IhiVUB8JEeOIL-VHpkBl1g _EeqgUB8KEeOIL-VHpkBl1g" incoming="_Fu2LQB8JEeOIL-VHpkBl1g"/>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_BT_JgB8JEeOIL-VHpkBl1g" name="ActivityFinalNode2" incoming="_GYtyMB8KEeOIL-VHpkBl1g" inPartition="_Xwm2oB8AEeOIL-VHpkBl1g"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_-SsGQB8JEeOIL-VHpkBl1g" name="resumé opérations effectuées" outgoing="_GYtyMB8KEeOIL-VHpkBl1g" incoming="_EeqgUB8KEeOIL-VHpkBl1g _FXJngB8KEeOIL-VHpkBl1g" inPartition="_Xwm2oB8AEeOIL-VHpkBl1g"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_T6vGYB8CEeOIL-VHpkBl1g" name="ControlFlow1" source="_1KorsB8AEeOIL-VHpkBl1g" target="_3gbeYB8AEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_T6vGYR8CEeOIL-VHpkBl1g" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_T6vGYh8CEeOIL-VHpkBl1g"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_XVsKUB8CEeOIL-VHpkBl1g" name="ControlFlow2" source="_3gbeYB8AEeOIL-VHpkBl1g" target="_2HuwoB8BEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_XVsKUR8CEeOIL-VHpkBl1g" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_XV1UQB8CEeOIL-VHpkBl1g"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_F4ihgB8DEeOIL-VHpkBl1g" name="droit à au moins un emprunt ?" source="_2HuwoB8BEeOIL-VHpkBl1g" target="_1p5IoB8CEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_F4ihgR8DEeOIL-VHpkBl1g" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_F4ihgh8DEeOIL-VHpkBl1g"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_JWG_IB8EEeOIL-VHpkBl1g" name="ControlFlow3" source="_1p5IoB8CEeOIL-VHpkBl1g" target="_ArsMsB8EEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_JWG_IR8EEeOIL-VHpkBl1g" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_JWG_Ih8EEeOIL-VHpkBl1g"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_VTHuQB8FEeOIL-VHpkBl1g" name="ControlFlow4" source="_1p5IoB8CEeOIL-VHpkBl1g" target="_PtAaUB8FEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_VTHuQR8FEeOIL-VHpkBl1g" name=""/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_VTHuQh8FEeOIL-VHpkBl1g"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_bEVe8B8FEeOIL-VHpkBl1g" name="ControlFlow5" source="_PtAaUB8FEeOIL-VHpkBl1g" target="_aGxqgB8FEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_bEeo4B8FEeOIL-VHpkBl1g" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_bEeo4R8FEeOIL-VHpkBl1g"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_AGqssB8HEeOIL-VHpkBl1g" name="ControlFlow6" source="_ArsMsB8EEeOIL-VHpkBl1g" target="_8lUs4B8GEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_AGqssR8HEeOIL-VHpkBl1g" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_AGqssh8HEeOIL-VHpkBl1g"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_ggPcEB8HEeOIL-VHpkBl1g" name="encore droit à un autre emprunt ?" source="_8lUs4B8GEeOIL-VHpkBl1g" target="_fXz0YB8HEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_ggPcER8HEeOIL-VHpkBl1g" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_ggPcEh8HEeOIL-VHpkBl1g"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_FNd8gB8JEeOIL-VHpkBl1g" name="ControlFlow7" source="_fXz0YB8HEeOIL-VHpkBl1g" target="_3xNywB8IEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_FNd8gR8JEeOIL-VHpkBl1g" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_FNd8gh8JEeOIL-VHpkBl1g"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_Fu2LQB8JEeOIL-VHpkBl1g" name="ControlFlow8" source="_3xNywB8IEeOIL-VHpkBl1g" target="__Kkl8B8IEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_Fu_8QB8JEeOIL-VHpkBl1g" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_Fu_8QR8JEeOIL-VHpkBl1g"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IhiVUB8JEeOIL-VHpkBl1g" name="ControlFlow9" source="__Kkl8B8IEeOIL-VHpkBl1g" target="_ArsMsB8EEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_IhiVUR8JEeOIL-VHpkBl1g" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IhiVUh8JEeOIL-VHpkBl1g"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_EeqgUB8KEeOIL-VHpkBl1g" name="ControlFlow10" source="__Kkl8B8IEeOIL-VHpkBl1g" target="_-SsGQB8JEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_EeqgUR8KEeOIL-VHpkBl1g" name=""/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_EeqgUh8KEeOIL-VHpkBl1g"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_FXJngB8KEeOIL-VHpkBl1g" name="ControlFlow11" source="_fXz0YB8HEeOIL-VHpkBl1g" target="_-SsGQB8JEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_FXJngR8KEeOIL-VHpkBl1g" name=""/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_FXJngh8KEeOIL-VHpkBl1g"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_GYtyMB8KEeOIL-VHpkBl1g" name="ControlFlow12" source="_-SsGQB8JEeOIL-VHpkBl1g" target="_BT_JgB8JEeOIL-VHpkBl1g">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_GYtyMR8KEeOIL-VHpkBl1g" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_GYtyMh8KEeOIL-VHpkBl1g"/>
+          </edge>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_Xwm2oB8AEeOIL-VHpkBl1g" name="bibliothecaire_avec_ihm" node="_3gbeYB8AEeOIL-VHpkBl1g _1KorsB8AEeOIL-VHpkBl1g _ArsMsB8EEeOIL-VHpkBl1g _PtAaUB8FEeOIL-VHpkBl1g _aGxqgB8FEeOIL-VHpkBl1g _3xNywB8IEeOIL-VHpkBl1g _-SsGQB8JEeOIL-VHpkBl1g _BT_JgB8JEeOIL-VHpkBl1g"/>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_dQyhsB8AEeOIL-VHpkBl1g" name="systeme_bibliotheque" node="_2HuwoB8BEeOIL-VHpkBl1g _1p5IoB8CEeOIL-VHpkBl1g _8lUs4B8GEeOIL-VHpkBl1g _fXz0YB8HEeOIL-VHpkBl1g"/>
+        </ownedBehavior>
+        <include xmi:id="_8jbgMB7qEeOIL-VHpkBl1g" addition="_5zP3kB7qEeOIL-VHpkBl1g"/>
+        <include xmi:id="_OpEP4B7rEeOIL-VHpkBl1g" addition="_K_h9YB7rEeOIL-VHpkBl1g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_cMRLoB7qEeOIL-VHpkBl1g" name="enregistrer retour/fin emprunt">
+        <ownedComment xmi:id="_sJ8PYB-REeOIL-VHpkBl1g">
+          <body>scénario nominal:&#xD;
+1) enregistrer les numéros (et l'état physique = BON,ABIME,HS)  de chaque exemplaire rendu&#xD;
+2) pour chaque exemplaire rendu abimé ,effectuer les actions selon l'état (voir sous UC &quot;gérer état exemplaire rendu&quot;)&#xD;
+3) afficher un résumé des opérations effectuées (avec statistique = nombre total d'emprunts en cours)</body>
+        </ownedComment>
+        <generalization xmi:id="_sgoK8B7qEeOIL-VHpkBl1g" general="_JU0Z8B7pEeOIL-VHpkBl1g"/>
+        <include xmi:id="_oy7TcB-VEeOIL-VHpkBl1g" addition="_lfa7UB-VEeOIL-VHpkBl1g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_xl40kB7qEeOIL-VHpkBl1g" name="consulter_emprunts">
+        <ownedComment xmi:id="_-ZOAEB-NEeOIL-VHpkBl1g">
+          <body>scénario nominal:&#xD;
+1) identifier abonné (voir sous UC)&#xD;
+2) rechercher les emprunts (en cours) effectués par l'abonné précisé&#xD;
+3) afficher la liste des emprunts&#xD;
+</body>
+        </ownedComment>
+        <generalization xmi:id="_-SUKAB-REeOIL-VHpkBl1g" general="_JU0Z8B7pEeOIL-VHpkBl1g"/>
+        <include xmi:id="_7-vewB7qEeOIL-VHpkBl1g" addition="_5zP3kB7qEeOIL-VHpkBl1g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_5zP3kB7qEeOIL-VHpkBl1g" name="identifier abonné" classifierBehavior="_P0usIB93EeOIL-VHpkBl1g">
+        <ownedComment xmi:id="_toXR0B9oEeOIL-VHpkBl1g">
+          <body>scénario nominal:&#xD;
+1) renseigner numéro abonné&#xD;
+2) rechercher abonné selon numéro&#xD;
+3) retourner les informations sur l'abonné identifié&#xD;
+&#xD;
+&#xD;
+scénario exception &quot;abonné introuvable&quot;&#xD;
+* si echec étape 2&#xD;
+   alors étape 3 remplacée par &quot;remonter message d'erreur&quot; .</body>
+        </ownedComment>
+        <ownedBehavior xmi:type="uml:Interaction" xmi:id="_P0usIB93EeOIL-VHpkBl1g" name="seq_identifier_abonne">
+          <ownedAttribute xmi:id="_BZaHoCBfEeOTaLsNUtPeig" type="_voSMcB-7EeOIL-VHpkBl1g"/>
+          <lifeline xmi:id="_Uc1fsB93EeOIL-VHpkBl1g" name="Bibliothecaire" coveredBy="_hBPRAiBfEeOTaLsNUtPeig _hBPRBCBfEeOTaLsNUtPeig _zr7OgiBfEeOTaLsNUtPeig _zr7OhCBfEeOTaLsNUtPeig _6qPEciBfEeOTaLsNUtPeig _6qY1cSBfEeOTaLsNUtPeig _9c6AYiBfEeOTaLsNUtPeig _9dDxYSBfEeOTaLsNUtPeig _9dDxYCBfEeOTaLsNUtPeig __G3AwiBfEeOTaLsNUtPeig _Dy_YsSBgEeOTaLsNUtPeig _Cv1dICBhEeOTaLsNUtPeig"/>
+          <lifeline xmi:id="_jbRnUCBbEeOTaLsNUtPeig" name="IHM/GUI" coveredBy="_p39aEiBfEeOTaLsNUtPeig _p39aFCBfEeOTaLsNUtPeig _p39aEyBfEeOTaLsNUtPeig _rtFvsiBfEeOTaLsNUtPeig _0GS2UiBfEeOTaLsNUtPeig _0GS2VCBfEeOTaLsNUtPeig _07NFFCBfEeOTaLsNUtPeig __G3AxCBfEeOTaLsNUtPeig _DzIioiBgEeOTaLsNUtPeig _DzIipCBgEeOTaLsNUtPeig _jDyiIiBgEeOTaLsNUtPeig _jDyiJCBgEeOTaLsNUtPeig _mQSTUiBgEeOTaLsNUtPeig _0qkLkiBgEeOTaLsNUtPeig _Cv1dIiBhEeOTaLsNUtPeig _Cv1dLyBhEeOTaLsNUtPeig _Cv1dMSBhEeOTaLsNUtPeig _Cv1dMCBhEeOTaLsNUtPeig _JyoKciBhEeOTaLsNUtPeig _bMGXsSBhEeOTaLsNUtPeig _bMGXsyBhEeOTaLsNUtPeig _bMQItCBhEeOTaLsNUtPeig _bMQItiBhEeOTaLsNUtPeig _bMQItSBhEeOTaLsNUtPeig"/>
+          <lifeline xmi:id="_mXybwCBbEeOTaLsNUtPeig" name="serviceAb" represents="_BZaHoCBfEeOTaLsNUtPeig" coveredBy="_qQ_lIiBfEeOTaLsNUtPeig _qQ_lJCBfEeOTaLsNUtPeig _VN3UIiBgEeOTaLsNUtPeig _jg2RkiBgEeOTaLsNUtPeig _jg2RlCBgEeOTaLsNUtPeig _mQSTVCBgEeOTaLsNUtPeig _0qkLlCBgEeOTaLsNUtPeig _JyoKdCBhEeOTaLsNUtPeig _JyoKgSBhEeOTaLsNUtPeig _JyoKgyBhEeOTaLsNUtPeig _JyoKgiBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_qQ_lIiBfEeOTaLsNUtPeig" name="ActionExecSpec1Start" covered="_mXybwCBbEeOTaLsNUtPeig" event="_qQ_lICBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_hBPRAiBfEeOTaLsNUtPeig" name="ActionExecSpecStart" covered="_Uc1fsB93EeOIL-VHpkBl1g" event="_hBPRACBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_p39aEiBfEeOTaLsNUtPeig" name="ActionExecSpec0Start" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_p39aECBfEeOTaLsNUtPeig" execution="_p39aEyBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_qQ_lJCBfEeOTaLsNUtPeig" name="ActionExecSpec1Finish" covered="_mXybwCBbEeOTaLsNUtPeig" event="_qQ_lISBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_hBPRBCBfEeOTaLsNUtPeig" name="ActionExecSpecFinish" covered="_Uc1fsB93EeOIL-VHpkBl1g" event="_hBPRASBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_p39aEyBfEeOTaLsNUtPeig" name="ActionExecSpec0" covered="_jbRnUCBbEeOTaLsNUtPeig" start="_p39aEiBfEeOTaLsNUtPeig" finish="_p39aFCBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_zr7OgiBfEeOTaLsNUtPeig" name="BehaviorExecSpecStart" covered="_Uc1fsB93EeOIL-VHpkBl1g" event="_zr7OgCBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_rtFvsiBfEeOTaLsNUtPeig" name="MessageRecv" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_rtFvsSBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_VN3UIiBgEeOTaLsNUtPeig" name="rechercherAbonneSelonNum_MessageRecv" covered="_mXybwCBbEeOTaLsNUtPeig" event="_VN3UISBgEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_jg2RkiBgEeOTaLsNUtPeig" name="ActionExecSpec3Start" covered="_mXybwCBbEeOTaLsNUtPeig" event="_jg2RkCBgEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_p39aFCBfEeOTaLsNUtPeig" name="ActionExecSpec0Finish" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_p39aESBfEeOTaLsNUtPeig" execution="_p39aEyBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_zr7OhCBfEeOTaLsNUtPeig" name="BehaviorExecSpecFinish" covered="_Uc1fsB93EeOIL-VHpkBl1g" event="_zr7OgSBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_6qPEciBfEeOTaLsNUtPeig" name="BehaviorExecSpecStart0" covered="_Uc1fsB93EeOIL-VHpkBl1g" event="_6qPEcCBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_0GS2UiBfEeOTaLsNUtPeig" name="ActionExecSpec2Start" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_0GS2UCBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_jg2RlCBgEeOTaLsNUtPeig" name="ActionExecSpec3Finish" covered="_mXybwCBbEeOTaLsNUtPeig" event="_jg2RkSBgEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_6qY1cSBfEeOTaLsNUtPeig" name="BehaviorExecSpecFinish0" covered="_Uc1fsB93EeOIL-VHpkBl1g" event="_6qPEcSBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_0GS2VCBfEeOTaLsNUtPeig" name="ActionExecSpec2Finish" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_0GS2USBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_mQSTVCBgEeOTaLsNUtPeig" name="rechercherAbonneSelonNum_Message0Recv" covered="_mXybwCBbEeOTaLsNUtPeig" event="_mQSTUyBgEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_9c6AYiBfEeOTaLsNUtPeig" name="BehaviorExecSpecStart1" covered="_Uc1fsB93EeOIL-VHpkBl1g" event="_9c6AYCBfEeOTaLsNUtPeig" execution="_9dDxYCBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0qkLlCBgEeOTaLsNUtPeig" name="rechercherAbonneSelonNum_Message1Recv" covered="_mXybwCBbEeOTaLsNUtPeig" event="_0qkLkyBgEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_07NFFCBfEeOTaLsNUtPeig" name="MessageRecv0" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_07NFEyBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_9dDxYCBfEeOTaLsNUtPeig" name="BehaviorExecSpec" covered="_Uc1fsB93EeOIL-VHpkBl1g" start="_9c6AYiBfEeOTaLsNUtPeig" finish="_9dDxYSBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_9dDxYSBfEeOTaLsNUtPeig" name="BehaviorExecSpecFinish1" covered="_Uc1fsB93EeOIL-VHpkBl1g" event="_9c6AYSBfEeOTaLsNUtPeig" execution="_9dDxYCBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="__G3AwiBfEeOTaLsNUtPeig" name="MessageSend" covered="_Uc1fsB93EeOIL-VHpkBl1g" event="__G3AwSBfEeOTaLsNUtPeig" message="__G3AwCBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="__G3AxCBfEeOTaLsNUtPeig" name="MessageRecv1" covered="_jbRnUCBbEeOTaLsNUtPeig" event="__G3AwyBfEeOTaLsNUtPeig" message="__G3AwCBfEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Dy_YsSBgEeOTaLsNUtPeig" name="MessageSend0" covered="_Uc1fsB93EeOIL-VHpkBl1g" event="_Dy_YsCBgEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Cv1dICBhEeOTaLsNUtPeig" name="MessageSend1" covered="_Uc1fsB93EeOIL-VHpkBl1g" event="_CvrsISBhEeOTaLsNUtPeig" message="_CvrsICBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_DzIioiBgEeOTaLsNUtPeig" name="BehaviorExecSpec0Start" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_DzIioCBgEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_DzIipCBgEeOTaLsNUtPeig" name="BehaviorExecSpec0Finish" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_DzIioSBgEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_jDyiIiBgEeOTaLsNUtPeig" name="ActionExecSpec2Start0" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_jDyiICBgEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_jDyiJCBgEeOTaLsNUtPeig" name="ActionExecSpec2Finish0" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_jDyiISBgEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_mQSTUiBgEeOTaLsNUtPeig" name="rechercherAbonneSelonNum_Message0Send" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_mQSTUSBgEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0qkLkiBgEeOTaLsNUtPeig" name="rechercherAbonneSelonNum_Message1Send" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_0qkLkSBgEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Cv1dIiBhEeOTaLsNUtPeig" name="MessageRecv2" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_Cv1dISBhEeOTaLsNUtPeig" message="_CvrsICBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_Cv1dLyBhEeOTaLsNUtPeig" name="BehaviorExecSpec0Start0" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_Cv1dLSBhEeOTaLsNUtPeig" execution="_Cv1dMCBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_Cv1dMCBhEeOTaLsNUtPeig" name="BehaviorExecSpec0" covered="_jbRnUCBbEeOTaLsNUtPeig" start="_Cv1dLyBhEeOTaLsNUtPeig" finish="_Cv1dMSBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_Cv1dMSBhEeOTaLsNUtPeig" name="BehaviorExecSpec0Finish0" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_Cv1dLiBhEeOTaLsNUtPeig" execution="_Cv1dMCBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JyoKciBhEeOTaLsNUtPeig" name="rechercherAbonneSelonNum_Message2Send" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_JyoKcSBhEeOTaLsNUtPeig" message="_JyoKcCBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_bMGXsSBhEeOTaLsNUtPeig" name="MessageSend2" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_bMGXsCBhEeOTaLsNUtPeig" message="_bL9NwCBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JyoKdCBhEeOTaLsNUtPeig" name="rechercherAbonneSelonNum_Message2Recv" covered="_mXybwCBbEeOTaLsNUtPeig" event="_JyoKcyBhEeOTaLsNUtPeig" message="_JyoKcCBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_JyoKgSBhEeOTaLsNUtPeig" name="BehaviorExecSpec1Start" covered="_mXybwCBbEeOTaLsNUtPeig" event="_JyoKfyBhEeOTaLsNUtPeig" execution="_JyoKgiBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_bMGXsyBhEeOTaLsNUtPeig" name="MessageRecv3" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_bMGXsiBhEeOTaLsNUtPeig" message="_bL9NwCBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_JyoKgiBhEeOTaLsNUtPeig" name="BehaviorExecSpec1" covered="_mXybwCBbEeOTaLsNUtPeig" start="_JyoKgSBhEeOTaLsNUtPeig" finish="_JyoKgyBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_bMQItCBhEeOTaLsNUtPeig" name="BehaviorExecSpec2Start" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_bMQIsiBhEeOTaLsNUtPeig" execution="_bMQItSBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_JyoKgyBhEeOTaLsNUtPeig" name="BehaviorExecSpec1Finish" covered="_mXybwCBbEeOTaLsNUtPeig" event="_JyoKgCBhEeOTaLsNUtPeig" execution="_JyoKgiBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_bMQItSBhEeOTaLsNUtPeig" name="BehaviorExecSpec2" covered="_jbRnUCBbEeOTaLsNUtPeig" start="_bMQItCBhEeOTaLsNUtPeig" finish="_bMQItiBhEeOTaLsNUtPeig"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_bMQItiBhEeOTaLsNUtPeig" name="BehaviorExecSpec2Finish" covered="_jbRnUCBbEeOTaLsNUtPeig" event="_bMQIsyBhEeOTaLsNUtPeig" execution="_bMQItSBhEeOTaLsNUtPeig"/>
+          <message xmi:id="__G3AwCBfEeOTaLsNUtPeig" name="renseigner num abonné" receiveEvent="__G3AxCBfEeOTaLsNUtPeig" sendEvent="__G3AwiBfEeOTaLsNUtPeig"/>
+          <message xmi:id="_CvrsICBhEeOTaLsNUtPeig" name="déclencher identification" receiveEvent="_Cv1dIiBhEeOTaLsNUtPeig" sendEvent="_Cv1dICBhEeOTaLsNUtPeig"/>
+          <message xmi:id="_JyoKcCBhEeOTaLsNUtPeig" name="rechercherAbonneSelonNum_Message2" receiveEvent="_JyoKdCBhEeOTaLsNUtPeig" sendEvent="_JyoKciBhEeOTaLsNUtPeig"/>
+          <message xmi:id="_bL9NwCBhEeOTaLsNUtPeig" name="afficher informations sur abonné" receiveEvent="_bMGXsyBhEeOTaLsNUtPeig" sendEvent="_bMGXsSBhEeOTaLsNUtPeig"/>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_K_h9YB7rEeOIL-VHpkBl1g" name="vérifier_droits_a_emprunter" classifierBehavior="_njAi8B8BEeOIL-VHpkBl1g">
+        <ownedComment xmi:id="_12E9gB-REeOIL-VHpkBl1g">
+          <body>pré-conditions:&#xD;
+* abonné déjà identifié&#xD;
+&#xD;
+scénario nominal:&#xD;
+1) vérifier l'absence de gros contentieux&#xD;
+2) récupérer le nombre d'emprunt en cours&#xD;
+3) remonter le nombre d'emprunts  actuellement autorisés:&#xD;
+             0 si contentieux&#xD;
+             n = nbMaxEmprunts(ex: 8) - nbEmpruntsEnCours</body>
+        </ownedComment>
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_njAi8B8BEeOIL-VHpkBl1g" name="recup_nombre_exempl_autorisés_a_emprunter"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_WSL9YB7rEeOIL-VHpkBl1g" name="enregistrer contentieux">
+        <ownedComment xmi:id="_0ev-MB-REeOIL-VHpkBl1g">
+          <body>pré-conditions:&#xD;
+* numéro de l'exemplaire associé au contentieux déjà connu/renseigné (dans le contexte)&#xD;
+&#xD;
+scénario nominal:&#xD;
+1) renseigner le type et la formulation du contentieux&#xD;
+       (exemples: * exemplaire rendu très abimé , HS&#xD;
+                          * exemplaire déclaré perdu&#xD;
+                          * exemplaire un petit peu abîmé et nécessitant restauration)&#xD;
+2) enregistrer l'ensemble du contentieux dans le système informatique en fonction du contexte&#xD;
+3) afficher statut/résumé sur le contentieux</body>
+        </ownedComment>
+        <extend xmi:id="_52diYB-UEeOIL-VHpkBl1g" extendedCase="_lfa7UB-VEeOIL-VHpkBl1g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_YksLgB7rEeOIL-VHpkBl1g" name="lancer_restauration">
+        <ownedComment xmi:id="_LVlogB-REeOIL-VHpkBl1g">
+          <body>pré-conditions:&#xD;
+* numéro de l'exemplaire devant être restauré déjà connu/renseigné (dans le contexte)&#xD;
+&#xD;
+scénario nominal:&#xD;
+1) enregistrer l'envoi de l'exemplaire en restauration&#xD;
+2) afficher un statut/résumé sur l'opération effectuée</body>
+        </ownedComment>
+        <extend xmi:id="_iKRlsB7rEeOIL-VHpkBl1g" extendedCase="_lfa7UB-VEeOIL-VHpkBl1g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_PJow4B7sEeOIL-VHpkBl1g" name="réintégrer exemplaire réparé">
+        <ownedComment xmi:id="_gBm2gB-PEeOIL-VHpkBl1g">
+          <body>scénario nominal:&#xD;
+1) renseigner numéro exemplaire à réintégrer (qui devra être manuellement replacé dans le bon rayon)&#xD;
+3) enregistrer la ré-intégration de l'exemplaire dans le système informatique &quot;bibliothèque&quot;&#xD;
+</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_SnQHQB7sEeOIL-VHpkBl1g" name="A_bibliothecaire_réintégrer exemplaire réparé" memberEnd="_SnQHQR7sEeOIL-VHpkBl1g _SnQHRB7sEeOIL-VHpkBl1g">
+        <ownedEnd xmi:id="_SnQHQR7sEeOIL-VHpkBl1g" name="bibliothecaire" type="_LuNbkB7bEeOIL-VHpkBl1g" association="_SnQHQB7sEeOIL-VHpkBl1g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SnQHQh7sEeOIL-VHpkBl1g" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SnQHQx7sEeOIL-VHpkBl1g" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_SnQHRB7sEeOIL-VHpkBl1g" name="réintégrer exemplaire réparé" type="_PJow4B7sEeOIL-VHpkBl1g" association="_SnQHQB7sEeOIL-VHpkBl1g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SnQHRR7sEeOIL-VHpkBl1g" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SnQHRh7sEeOIL-VHpkBl1g" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Jo3sMB-KEeOIL-VHpkBl1g" name="context" visibility="private">
+        <packagedElement xmi:type="uml:Actor" xmi:id="_LuNbkB7bEeOIL-VHpkBl1g" name="Bibliothecaire">
+          <ownedComment xmi:id="_woxZ4B-LEeOIL-VHpkBl1g">
+            <body>Employé de la bibliothèque en charge de la gestion des exemplaires et des emprunts</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Actor" xmi:id="_NpKFUB7bEeOIL-VHpkBl1g" name="ResponsableAbonnement">
+          <ownedComment xmi:id="_31TxgB9pEeOIL-VHpkBl1g">
+            <body>Employé de la bibliothèque en charge des inscriptions et de la gestion des contentieux</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Actor" xmi:id="_W8iVMB7bEeOIL-VHpkBl1g" name="Logiciel_comptabilité">
+          <ownedComment xmi:id="_rD_isB-LEeOIL-VHpkBl1g">
+            <body>logiciel de comptabilité</body>
+          </ownedComment>
+          <ownedComment xmi:id="_sW24wB-LEeOIL-VHpkBl1g">
+            <body>logiciel de comptabilité</body>
+          </ownedComment>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_lfa7UB-VEeOIL-VHpkBl1g" name="gérer état exemplaire rendu">
+        <ownedComment xmi:id="_yMN-EB-VEeOIL-VHpkBl1g">
+          <body>scénario nominal:&#xD;
+1) selon l'état physique =( BON,ABIME,HS)de l'exemplaire rendu: &#xD;
+      * si rendu en bon état alors marquer exemplaire comme disponible&#xD;
+      * si rendu un peu abimé (ex: page prête à se détacher, ....)&#xD;
+            alors lancer une restauration et enregistrer l'incident (léger contentieux)&#xD;
+      * si rendu très abîmé (Hors Service) ou bien &quot;déclaré perdu&quot; &#xD;
+            alors  enregistrer  &quot;exemplaire HS&quot; et enregistrer le contentieux&#xD;
+2) afficher un résumé des opérations effectuées</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_hBPRACBfEeOTaLsNUtPeig" name="ExecutionEvent"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_hBPRASBfEeOTaLsNUtPeig" name="ExecutionEvent0"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_p39aECBfEeOTaLsNUtPeig" name="ExecutionEvent1"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_p39aESBfEeOTaLsNUtPeig" name="ExecutionEvent2"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_qQ_lICBfEeOTaLsNUtPeig" name="ExecutionEvent3"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_qQ_lISBfEeOTaLsNUtPeig" name="ExecutionEvent4"/>
+      <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_rtFvsSBfEeOTaLsNUtPeig" name="ReceiveOperationEvent"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_zr7OgCBfEeOTaLsNUtPeig" name="ExecutionEvent5"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_zr7OgSBfEeOTaLsNUtPeig" name="ExecutionEvent6"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_0GS2UCBfEeOTaLsNUtPeig" name="ExecutionEvent7"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_0GS2USBfEeOTaLsNUtPeig" name="ExecutionEvent8"/>
+      <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_07NFEyBfEeOTaLsNUtPeig" name="ReceiveOperationEvent0"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_6qPEcCBfEeOTaLsNUtPeig" name="ExecutionEvent9"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_6qPEcSBfEeOTaLsNUtPeig" name="ExecutionEvent10"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_9c6AYCBfEeOTaLsNUtPeig" name="ExecutionEvent11"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_9c6AYSBfEeOTaLsNUtPeig" name="ExecutionEvent12"/>
+      <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="__G3AwSBfEeOTaLsNUtPeig" name="SendOperationEvent"/>
+      <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="__G3AwyBfEeOTaLsNUtPeig" name="ReceiveOperationEvent1"/>
+      <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_Dy_YsCBgEeOTaLsNUtPeig" name="SendOperationEvent0"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_DzIioCBgEeOTaLsNUtPeig" name="ExecutionEvent13"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_DzIioSBgEeOTaLsNUtPeig" name="ExecutionEvent14"/>
+      <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_VN3UISBgEeOTaLsNUtPeig" name="ReceiveOperationEvent3" operation="_VNbPQCBgEeOTaLsNUtPeig"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_jDyiICBgEeOTaLsNUtPeig" name="ExecutionEvent15"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_jDyiISBgEeOTaLsNUtPeig" name="ExecutionEvent16"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_jg2RkCBgEeOTaLsNUtPeig" name="ExecutionEvent17"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_jg2RkSBgEeOTaLsNUtPeig" name="ExecutionEvent18"/>
+      <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_mQSTUSBgEeOTaLsNUtPeig" name="SendOperationEvent2" operation="_VNbPQCBgEeOTaLsNUtPeig"/>
+      <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_mQSTUyBgEeOTaLsNUtPeig" name="ReceiveOperationEvent4" operation="_VNbPQCBgEeOTaLsNUtPeig"/>
+      <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_0qkLkSBgEeOTaLsNUtPeig" name="SendOperationEvent3" operation="_VNbPQCBgEeOTaLsNUtPeig"/>
+      <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_0qkLkyBgEeOTaLsNUtPeig" name="ReceiveOperationEvent5" operation="_VNbPQCBgEeOTaLsNUtPeig"/>
+      <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_CvrsISBhEeOTaLsNUtPeig" name="SendOperationEvent4"/>
+      <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_Cv1dISBhEeOTaLsNUtPeig" name="ReceiveOperationEvent6"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_Cv1dLSBhEeOTaLsNUtPeig" name="ExecutionEvent19"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_Cv1dLiBhEeOTaLsNUtPeig" name="ExecutionEvent20"/>
+      <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_JyoKcSBhEeOTaLsNUtPeig" name="SendOperationEvent5" operation="_VNbPQCBgEeOTaLsNUtPeig"/>
+      <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_JyoKcyBhEeOTaLsNUtPeig" name="ReceiveOperationEvent7" operation="_VNbPQCBgEeOTaLsNUtPeig"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_JyoKfyBhEeOTaLsNUtPeig" name="ExecutionEvent21"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_JyoKgCBhEeOTaLsNUtPeig" name="ExecutionEvent22"/>
+      <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_bMGXsCBhEeOTaLsNUtPeig" name="SendOperationEvent6"/>
+      <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_bMGXsiBhEeOTaLsNUtPeig" name="ReceiveOperationEvent8"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_bMQIsiBhEeOTaLsNUtPeig" name="ExecutionEvent23"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_bMQIsyBhEeOTaLsNUtPeig" name="ExecutionEvent24"/>
+      <profileApplication xmi:id="_cf4t8B9oEeOIL-VHpkBl1g">
+        <eAnnotations xmi:id="_cgoU0B9oEeOIL-VHpkBl1g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://Papyrus.profile.uml#_vaU6ggEYEeCIz8iAxBJnfA"/>
+        </eAnnotations>
+        <appliedProfile href="pathmap://Papyrus.profile.uml#_H9068AEYEeCIz8iAxBJnfA"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="_GJK7IB7aEeOIL-VHpkBl1g" name="LogicalView" visibility="private">
+      <ownedComment xmi:id="_RLSzkCCBEeOTaLsNUtPeig">
+        <body>LogicalView = vue structurelle (package , classes , diag d'états pour certaines classes)</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Package" xmi:id="_3jfgoB7YEeOIL-VHpkBl1g" name="livres">
+        <ownedComment xmi:id="_QXn-8CBVEeOTaLsNUtPeig">
+          <body>package regroupant le contenu de la bibliotheque (oeuvres, exemplaires,....)</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Class" xmi:id="_cQ8BgB7wEeOIL-VHpkBl1g" name="Oeuvre">
+          <ownedComment xmi:id="_BILzkCBFEeOIL-VHpkBl1g">
+            <body>Oeuvre littéraire pouvant apparaître en plusieurs exemplaires</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_28yeMB-iEeOIL-VHpkBl1g" name="numIsbn"/>
+          <ownedAttribute xmi:id="_41V7QB-iEeOIL-VHpkBl1g" name="titre"/>
+          <ownedAttribute xmi:id="_6LVd0B-iEeOIL-VHpkBl1g" name="auteur">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_7bEAUB-iEeOIL-VHpkBl1g" name="editeur"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_eAtWAB7wEeOIL-VHpkBl1g" name="Exemplaire" classifierBehavior="_lWPzICBDEeOIL-VHpkBl1g">
+          <ownedComment xmi:id="_EhnNgCBFEeOIL-VHpkBl1g">
+            <body>exemplaire physique d'une oeuvre</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_g580AB7wEeOIL-VHpkBl1g" name="oeuvre" type="_cQ8BgB7wEeOIL-VHpkBl1g" association="_g580Ax7wEeOIL-VHpkBl1g">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_g580AR7wEeOIL-VHpkBl1g" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_g580Ah7wEeOIL-VHpkBl1g" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_Dz_ksB-kEeOIL-VHpkBl1g" name="numero"/>
+          <ownedAttribute xmi:id="_PolNEB-kEeOIL-VHpkBl1g" name="usage" type="_a-8oYB-kEeOIL-VHpkBl1g"/>
+          <ownedAttribute xmi:id="_R2wU0B-kEeOIL-VHpkBl1g" name="etatPhysique" type="_e_tvIB-kEeOIL-VHpkBl1g"/>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_lWPzICBDEeOIL-VHpkBl1g" name="états d'un exemplaire (cycle de vie)">
+            <region xmi:id="_pEPH0CBDEeOIL-VHpkBl1g" name="Region1">
+              <ownedComment xmi:id="_9MgboCBZEeOTaLsNUtPeig" annotatedElement="_yQJjICBWEeOTaLsNUtPeig">
+                <body>au sens&#xD;
+ &quot;HS&quot;&#xD;
+ ou bien &#xD;
+&quot;jamais&#xD;
+ retrouvé/retourné&quot;</body>
+              </ownedComment>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_EJZXQCBEEeOIL-VHpkBl1g" name="acheté et enregistré"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_Eltf0CBEEeOIL-VHpkBl1g" name="sortie"/>
+              <subvertex xmi:type="uml:State" xmi:id="_PDaNwCBEEeOIL-VHpkBl1g" name="DISPONIBLE"/>
+              <subvertex xmi:type="uml:State" xmi:id="_hp7-0CBWEeOTaLsNUtPeig" name="EMPUNTE"/>
+              <subvertex xmi:type="uml:State" xmi:id="_j4GfgCBWEeOTaLsNUtPeig" name="EN_RESTAURATION"/>
+              <subvertex xmi:type="uml:State" xmi:id="_vGYV0CBWEeOTaLsNUtPeig" name="EGARE_OU_EnRetard"/>
+              <subvertex xmi:type="uml:State" xmi:id="_yQJjICBWEeOTaLsNUtPeig" name="DEFINITIVEMENT_PERDU"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_LkTH8CBXEeOTaLsNUtPeig" name="rendu" kind="junction"/>
+              <transition xmi:id="_3jUs8CBWEeOTaLsNUtPeig" name="Transition0" source="_EJZXQCBEEeOIL-VHpkBl1g" target="_PDaNwCBEEeOIL-VHpkBl1g"/>
+              <transition xmi:id="_6AiWQCBWEeOTaLsNUtPeig" name="emprunté par abonné" source="_PDaNwCBEEeOIL-VHpkBl1g" target="_hp7-0CBWEeOTaLsNUtPeig"/>
+              <transition xmi:id="_B0fawCBXEeOTaLsNUtPeig" name="Transition1" source="_yQJjICBWEeOTaLsNUtPeig" target="_Eltf0CBEEeOIL-VHpkBl1g"/>
+              <transition xmi:id="_Oq8IwCBXEeOTaLsNUtPeig" name="retourné" source="_hp7-0CBWEeOTaLsNUtPeig" target="_LkTH8CBXEeOTaLsNUtPeig"/>
+              <transition xmi:id="_UWsxsCBXEeOTaLsNUtPeig" name="Transition2" source="_LkTH8CBXEeOTaLsNUtPeig" target="_yQJjICBWEeOTaLsNUtPeig" guard="_dI8qcCBXEeOTaLsNUtPeig">
+                <ownedRule xmi:id="_dI8qcCBXEeOTaLsNUtPeig" name="tres_abime">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_yoGToCBXEeOTaLsNUtPeig" name="" value="tres abîmé / HS"/>
+                </ownedRule>
+              </transition>
+              <transition xmi:id="_3_DKMCBXEeOTaLsNUtPeig" name="Transition3" source="_LkTH8CBXEeOTaLsNUtPeig" target="_j4GfgCBWEeOTaLsNUtPeig" guard="_8_b64CBXEeOTaLsNUtPeig">
+                <ownedRule xmi:id="_8_b64CBXEeOTaLsNUtPeig">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_8_b64SBXEeOTaLsNUtPeig" name="" value="un peu abîmé"/>
+                </ownedRule>
+              </transition>
+              <transition xmi:id="_-mHk0CBXEeOTaLsNUtPeig" name="réparé et réintégré" source="_j4GfgCBWEeOTaLsNUtPeig" target="_PDaNwCBEEeOIL-VHpkBl1g"/>
+              <transition xmi:id="_FFk7kCBYEeOTaLsNUtPeig" name="Transition5" source="_LkTH8CBXEeOTaLsNUtPeig" target="_PDaNwCBEEeOIL-VHpkBl1g" guard="_I0T3ICBYEeOTaLsNUtPeig">
+                <ownedRule xmi:id="_I0T3ICBYEeOTaLsNUtPeig">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_I0T3ISBYEeOTaLsNUtPeig" name="" value="bon état"/>
+                </ownedRule>
+              </transition>
+              <transition xmi:id="_ZC1UMCBYEeOTaLsNUtPeig" name="irréparable" source="_j4GfgCBWEeOTaLsNUtPeig" target="_yQJjICBWEeOTaLsNUtPeig"/>
+              <transition xmi:id="_qb21gCBYEeOTaLsNUtPeig" name="pas encore rendu (en retard)" source="_hp7-0CBWEeOTaLsNUtPeig" target="_vGYV0CBWEeOTaLsNUtPeig"/>
+              <transition xmi:id="_rV0jYCBYEeOTaLsNUtPeig" name="jamais rendu (6 mois après)" source="_vGYV0CBWEeOTaLsNUtPeig" target="_yQJjICBWEeOTaLsNUtPeig"/>
+              <transition xmi:id="_KE4RsCBZEeOTaLsNUtPeig" name="retouné en retard" source="_vGYV0CBWEeOTaLsNUtPeig" target="_LkTH8CBXEeOTaLsNUtPeig"/>
+            </region>
+          </ownedBehavior>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_g580Ax7wEeOIL-VHpkBl1g" name="exemplaire_oeuvre_1" memberEnd="_g580BB7wEeOIL-VHpkBl1g _g580AB7wEeOIL-VHpkBl1g" navigableOwnedEnd="_g580BB7wEeOIL-VHpkBl1g">
+          <ownedEnd xmi:id="_g580BB7wEeOIL-VHpkBl1g" name="exemplaires" type="_eAtWAB7wEeOIL-VHpkBl1g" association="_g580Ax7wEeOIL-VHpkBl1g">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_g580BR7wEeOIL-VHpkBl1g" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_g580Bh7wEeOIL-VHpkBl1g"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_a-8oYB-kEeOIL-VHpkBl1g" name="Usages">
+          <ownedLiteral xmi:id="_pVnzAB-kEeOIL-VHpkBl1g" name="DISPONIBLE"/>
+          <ownedLiteral xmi:id="_sZcJUB-kEeOIL-VHpkBl1g" name="EMPRUNTE"/>
+          <ownedLiteral xmi:id="_4YCCQB-kEeOIL-VHpkBl1g" name="EN_RESTAURATION"/>
+          <ownedLiteral xmi:id="_Efva8B-lEeOIL-VHpkBl1g" name="EGARE_OU_EN_RETARD"/>
+          <ownedLiteral xmi:id="_aVIRgB-zEeOIL-VHpkBl1g" name="DEFINITIVEMENT_PERDU"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_e_tvIB-kEeOIL-VHpkBl1g" name="EtatsPhysiques">
+          <ownedLiteral xmi:id="_uGPCUB-kEeOIL-VHpkBl1g" name="BON"/>
+          <ownedLiteral xmi:id="_vfNAYB-kEeOIL-VHpkBl1g" name="CORRECT"/>
+          <ownedLiteral xmi:id="_zQeSkB-kEeOIL-VHpkBl1g" name="UN_PEU_ABIME"/>
+          <ownedLiteral xmi:id="_07K50B-kEeOIL-VHpkBl1g" name="HORS_SERVICE"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_HIwt0B-0EeOIL-VHpkBl1g" name="GestionExemplaires" clientDependency="_Sh8zoB-0EeOIL-VHpkBl1g">
+          <ownedOperation xmi:id="_M1b8wB-0EeOIL-VHpkBl1g" name="CRUD_exemplaire"/>
+          <ownedOperation xmi:id="_bCDzgB-0EeOIL-VHpkBl1g" name="CRUD_oeuvre"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_Sh8zoB-0EeOIL-VHpkBl1g" name="Dependency1" supplier="_eAtWAB7wEeOIL-VHpkBl1g" client="_HIwt0B-0EeOIL-VHpkBl1g"/>
+        <profileApplication xmi:id="_BILzkSBFEeOIL-VHpkBl1g">
+          <eAnnotations xmi:id="_BIeugCBFEeOIL-VHpkBl1g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <references xmi:type="ecore:EPackage" href="pathmap://Papyrus.profile.uml#_vaU6ggEYEeCIz8iAxBJnfA"/>
+          </eAnnotations>
+          <appliedProfile href="pathmap://Papyrus.profile.uml#_H9068AEYEeCIz8iAxBJnfA"/>
+        </profileApplication>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_nhXCUB7vEeOIL-VHpkBl1g" name="abonnes">
+        <ownedComment xmi:id="_o5ekICBVEeOTaLsNUtPeig">
+          <body>package regroupant les informations sur les abonnés et les abonnements à la bibliothèque</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Class" xmi:id="_KBOLgB9uEeOIL-VHpkBl1g" name="Abonne">
+          <ownedComment xmi:id="_4fwlMCBEEeOIL-VHpkBl1g">
+            <body>Personne inscrite à la bibliothèque qui peut emprunter des livres sur une période donnée (ex: 1an)</body>
+          </ownedComment>
+          <generalization xmi:id="_cupCYB-6EeOIL-VHpkBl1g" general="_a_62wB-6EeOIL-VHpkBl1g"/>
+          <ownedAttribute xmi:id="_eKvM8B-6EeOIL-VHpkBl1g" name="abonnement" type="_ZybI4B-6EeOIL-VHpkBl1g" association="_eKvM8x-6EeOIL-VHpkBl1g">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eKvM8R-6EeOIL-VHpkBl1g" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eKvM8h-6EeOIL-VHpkBl1g" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_BS1_IB-7EeOIL-VHpkBl1g" name="numero">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ZybI4B-6EeOIL-VHpkBl1g" name="Abonnement">
+          <ownedComment xmi:id="_S3UHwCBFEeOIL-VHpkBl1g">
+            <body>informations sur abonnement</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_EAml4B-7EeOIL-VHpkBl1g" name="dateDebut" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z2VRIR-9EeOIL-VHpkBl1g" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z2VRIB-9EeOIL-VHpkBl1g" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_Z2VRIh-9EeOIL-VHpkBl1g">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_pFOvIB-7EeOIL-VHpkBl1g" name="dateFin" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_azSBkR-9EeOIL-VHpkBl1g" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_azSBkB-9EeOIL-VHpkBl1g" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_azbykB-9EeOIL-VHpkBl1g">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_a_62wB-6EeOIL-VHpkBl1g" name="Personne">
+          <ownedAttribute xmi:id="_6ONewB-6EeOIL-VHpkBl1g" name="nom" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A0PFoR-9EeOIL-VHpkBl1g" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A0PFoB-9EeOIL-VHpkBl1g" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_A0PFoh-9EeOIL-VHpkBl1g">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_7V5fkB-6EeOIL-VHpkBl1g" name="prenom" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UgIBcR-9EeOIL-VHpkBl1g" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UgIBcB-9EeOIL-VHpkBl1g" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_UgIBch-9EeOIL-VHpkBl1g">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_8XA-UB-6EeOIL-VHpkBl1g" name="adresse" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WMeOgB-9EeOIL-VHpkBl1g" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WMUdgB-9EeOIL-VHpkBl1g" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_WMeOgR-9EeOIL-VHpkBl1g">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="__I-IkB-6EeOIL-VHpkBl1g" name="dateNaissance" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XbdxMR-9EeOIL-VHpkBl1g" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XbdxMB-9EeOIL-VHpkBl1g" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_XbdxMh-9EeOIL-VHpkBl1g">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_eKvM8x-6EeOIL-VHpkBl1g" name="abonne_abonnement_1" memberEnd="_eKvM9B-6EeOIL-VHpkBl1g _eKvM8B-6EeOIL-VHpkBl1g">
+          <ownedEnd xmi:id="_eKvM9B-6EeOIL-VHpkBl1g" name="abonne" type="_KBOLgB9uEeOIL-VHpkBl1g" association="_eKvM8x-6EeOIL-VHpkBl1g">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eKvM9R-6EeOIL-VHpkBl1g" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eKvM9h-6EeOIL-VHpkBl1g" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_74mSEB-8EeOIL-VHpkBl1g" name="Dependency1" supplier="_KBOLgB9uEeOIL-VHpkBl1g" client="_voSMcB-7EeOIL-VHpkBl1g"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_voSMcB-7EeOIL-VHpkBl1g" name="GestionAbonnes" clientDependency="_74mSEB-8EeOIL-VHpkBl1g">
+          <ownedComment xmi:id="_eLRQ0CBcEeOTaLsNUtPeig">
+            <body>service pour gérer les abonnés</body>
+          </ownedComment>
+          <ownedOperation xmi:id="_zg2ZcB-7EeOIL-VHpkBl1g" name="CRUD_abonnes"/>
+          <ownedOperation xmi:id="_VNbPQCBgEeOTaLsNUtPeig" name="rechercherAbonneSelonNum"/>
+        </packagedElement>
+        <profileApplication xmi:id="_4fwlMSBEEeOIL-VHpkBl1g">
+          <eAnnotations xmi:id="_4gNRICBEEeOIL-VHpkBl1g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <references xmi:type="ecore:EPackage" href="pathmap://Papyrus.profile.uml#_vaU6ggEYEeCIz8iAxBJnfA"/>
+          </eAnnotations>
+          <appliedProfile href="pathmap://Papyrus.profile.uml#_H9068AEYEeCIz8iAxBJnfA"/>
+        </profileApplication>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_-RLpMB7vEeOIL-VHpkBl1g" name="emprunts" clientDependency="_AKpFMB7wEeOIL-VHpkBl1g _AjOkUB7wEeOIL-VHpkBl1g">
+        <ownedComment xmi:id="_ucv_cCBVEeOTaLsNUtPeig">
+          <body>package regoupant les informations sur les emprunts et les éventuels contentieux </body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_AKpFMB7wEeOIL-VHpkBl1g" name="Dependency1" supplier="_3jfgoB7YEeOIL-VHpkBl1g" client="_-RLpMB7vEeOIL-VHpkBl1g"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_AjOkUB7wEeOIL-VHpkBl1g" name="Dependency2" supplier="_nhXCUB7vEeOIL-VHpkBl1g" client="_-RLpMB7vEeOIL-VHpkBl1g"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LYZZ0B9uEeOIL-VHpkBl1g" name="Emprunt">
+          <ownedComment xmi:id="_IOtxYCBFEeOIL-VHpkBl1g">
+            <body>informations sur un emprunt effectué (en cours ou bien passé)</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_D1Y3kB-_EeOIL-VHpkBl1g" name="exemplaire_emprunté" type="_eAtWAB7wEeOIL-VHpkBl1g" association="_D1Y3kx-_EeOIL-VHpkBl1g">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D1Y3kR-_EeOIL-VHpkBl1g" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D1Y3kh-_EeOIL-VHpkBl1g" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_ERaFMB-_EeOIL-VHpkBl1g" name="emprunteur" type="_KBOLgB9uEeOIL-VHpkBl1g" association="_ERaFMx-_EeOIL-VHpkBl1g">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ERaFMR-_EeOIL-VHpkBl1g" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ERaFMh-_EeOIL-VHpkBl1g" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_kBMQsB-_EeOIL-VHpkBl1g" name="numero"/>
+          <ownedAttribute xmi:id="_fIz_8B_UEeOIL-VHpkBl1g" name="dateDebut"/>
+          <ownedAttribute xmi:id="_ggI_QB_UEeOIL-VHpkBl1g" name="dateFin"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_D1Y3kx-_EeOIL-VHpkBl1g" name="emprunt_exemplaire_1" memberEnd="_D1Y3lB-_EeOIL-VHpkBl1g _D1Y3kB-_EeOIL-VHpkBl1g">
+          <ownedEnd xmi:id="_D1Y3lB-_EeOIL-VHpkBl1g" name="emprunts" type="_LYZZ0B9uEeOIL-VHpkBl1g" association="_D1Y3kx-_EeOIL-VHpkBl1g">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D1Y3lR-_EeOIL-VHpkBl1g" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D1Y3lh-_EeOIL-VHpkBl1g"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_ERaFMx-_EeOIL-VHpkBl1g" name="emprunt_abonne_1" memberEnd="_ERaFNB-_EeOIL-VHpkBl1g _ERaFMB-_EeOIL-VHpkBl1g">
+          <ownedEnd xmi:id="_ERaFNB-_EeOIL-VHpkBl1g" name="emprunts" type="_LYZZ0B9uEeOIL-VHpkBl1g" association="_ERaFMx-_EeOIL-VHpkBl1g">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ERaFNR-_EeOIL-VHpkBl1g" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ERaFNh-_EeOIL-VHpkBl1g"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_owGDQB_UEeOIL-VHpkBl1g" name="GestionEmprunts" clientDependency="_tJWigB_UEeOIL-VHpkBl1g">
+          <ownedOperation xmi:id="_bWoSUB_VEeOIL-VHpkBl1g" name="CRUD_Emprunts"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_tJWigB_UEeOIL-VHpkBl1g" name="Dependency3" supplier="_LYZZ0B9uEeOIL-VHpkBl1g" client="_owGDQB_UEeOIL-VHpkBl1g"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_k4g4QB_VEeOIL-VHpkBl1g" name="Contentieux">
+          <ownedComment xmi:id="_PGzDgCBFEeOIL-VHpkBl1g">
+            <body>informations sur contentieux&#xD;
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_uICi4B_VEeOIL-VHpkBl1g" name="emprunt" type="_LYZZ0B9uEeOIL-VHpkBl1g" association="_uICi4x_VEeOIL-VHpkBl1g">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uICi4R_VEeOIL-VHpkBl1g" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uICi4h_VEeOIL-VHpkBl1g" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_uICi4x_VEeOIL-VHpkBl1g" name="contentieux_emprunt_1" memberEnd="_uICi5B_VEeOIL-VHpkBl1g _uICi4B_VEeOIL-VHpkBl1g" navigableOwnedEnd="_uICi5B_VEeOIL-VHpkBl1g">
+          <ownedEnd xmi:id="_uICi5B_VEeOIL-VHpkBl1g" name="contentieux" type="_k4g4QB_VEeOIL-VHpkBl1g" association="_uICi4x_VEeOIL-VHpkBl1g">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uICi5R_VEeOIL-VHpkBl1g" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uICi5h_VEeOIL-VHpkBl1g"/>
+          </ownedEnd>
+        </packagedElement>
+        <profileApplication xmi:id="_IOtxYSBFEeOIL-VHpkBl1g">
+          <eAnnotations xmi:id="_IPBTYCBFEeOIL-VHpkBl1g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <references xmi:type="ecore:EPackage" href="pathmap://Papyrus.profile.uml#_vaU6ggEYEeCIz8iAxBJnfA"/>
+          </eAnnotations>
+          <appliedProfile href="pathmap://Papyrus.profile.uml#_H9068AEYEeCIz8iAxBJnfA"/>
+        </profileApplication>
+      </packagedElement>
+      <profileApplication xmi:id="_RLSzkSCBEeOTaLsNUtPeig">
+        <eAnnotations xmi:id="_RLckkCCBEeOTaLsNUtPeig" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://Papyrus.profile.uml#_vaU6ggEYEeCIz8iAxBJnfA"/>
+        </eAnnotations>
+        <appliedProfile href="pathmap://Papyrus.profile.uml#_H9068AEYEeCIz8iAxBJnfA"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="_QWecoB7aEeOIL-VHpkBl1g" name="ComponentView" visibility="private">
+      <ownedComment xmi:id="_iET0kCCAEeOTaLsNUtPeig">
+        <body>Diagramme de composants (grands modules de l'application)&#xD;
+... à spécifier durant la phase de conception ...</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="_Tf8vAB7aEeOIL-VHpkBl1g" name="DeploymentView" visibility="private">
+      <ownedComment xmi:id="_gD4CICBlEeOTaLsNUtPeig" annotatedElement="_bvcYgCBlEeOTaLsNUtPeig">
+        <body>ex: JBoss ou Tomcat&#xD;
+ou WebSphere ou WebLogic</body>
+      </ownedComment>
+      <ownedComment xmi:id="_10aFgCCBEeOTaLsNUtPeig" annotatedElement="_pYMccCCBEeOTaLsNUtPeig">
+        <body>ex: Oracle ou MySQL ou DB2 ou ....</body>
+      </ownedComment>
+      <ownedComment xmi:id="_O4LE8CCCEeOTaLsNUtPeig" annotatedElement="__jARwCCBEeOTaLsNUtPeig">
+        <body>entouré par 2 &quot;firewall&quot;&#xD;
+au sein d'une DMZ</body>
+      </ownedComment>
+      <ownedComment xmi:id="_H35DoCCDEeOTaLsNUtPeig" annotatedElement="_bvcYgCBlEeOTaLsNUtPeig">
+        <body>potentiellement &#xD;
+plusieurs (en cluster)</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_bvcYgCBlEeOTaLsNUtPeig" name="Java EE Application Server" clientDependency="_3Wc1ICCDEeOTaLsNUtPeig">
+        <deployment xmi:id="_3Wc1ICCDEeOTaLsNUtPeig" name="Deployment1" supplier="_PJJDsCCDEeOTaLsNUtPeig" client="_bvcYgCBlEeOTaLsNUtPeig"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_qtCZMCBlEeOTaLsNUtPeig" name="Web Browser"/>
+      <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_pYMccCCBEeOTaLsNUtPeig" name="SGBDR" clientDependency="_y_LS4CCDEeOTaLsNUtPeig">
+        <deployment xmi:id="_y_LS4CCDEeOTaLsNUtPeig" name="Deployment1" supplier="_VWk2UCCDEeOTaLsNUtPeig" client="_pYMccCCBEeOTaLsNUtPeig"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="__jARwCCBEeOTaLsNUtPeig" name="Serveur HTTP (ex: Apache2)"/>
+      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_XqIp0CCCEeOTaLsNUtPeig" name="HTTP" memberEnd="_XqIp0SCCEeOTaLsNUtPeig _XqIp1CCCEeOTaLsNUtPeig">
+        <ownedEnd xmi:id="_XqIp0SCCEeOTaLsNUtPeig" name="serveur HTTP (ex: Apache2)" type="__jARwCCBEeOTaLsNUtPeig" association="_XqIp0CCCEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XqIp0iCCEeOTaLsNUtPeig" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XqIp0yCCEeOTaLsNUtPeig" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_XqIp1CCCEeOTaLsNUtPeig" name="web Browser" type="_qtCZMCBlEeOTaLsNUtPeig" association="_XqIp0CCCEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XqIp1SCCEeOTaLsNUtPeig" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XqIp1iCCEeOTaLsNUtPeig" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_YkGXsCCCEeOTaLsNUtPeig" name="Load-Balancing HTTP (ou ...)" memberEnd="_YkGXsSCCEeOTaLsNUtPeig _YkGXtCCCEeOTaLsNUtPeig">
+        <ownedEnd xmi:id="_YkGXsSCCEeOTaLsNUtPeig" name="java EE Application Server" type="_bvcYgCBlEeOTaLsNUtPeig" association="_YkGXsCCCEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YkGXsiCCEeOTaLsNUtPeig" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YkGXsyCCEeOTaLsNUtPeig" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_YkGXtCCCEeOTaLsNUtPeig" name="serveur HTTP (ex: Apache2)" type="__jARwCCBEeOTaLsNUtPeig" association="_YkGXsCCCEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YkGXtSCCEeOTaLsNUtPeig" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YkGXtiCCEeOTaLsNUtPeig" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_ZWnZwCCCEeOTaLsNUtPeig" name="SQL sur tcp/ip" memberEnd="_ZWnZwSCCEeOTaLsNUtPeig _ZWnZxCCCEeOTaLsNUtPeig">
+        <ownedEnd xmi:id="_ZWnZwSCCEeOTaLsNUtPeig" name="syst Gestion Base Donnees Relationnelles" type="_pYMccCCBEeOTaLsNUtPeig" association="_ZWnZwCCCEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZWnZwiCCEeOTaLsNUtPeig" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZWnZwyCCEeOTaLsNUtPeig" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_ZWnZxCCCEeOTaLsNUtPeig" name="java EE Application Server" type="_bvcYgCBlEeOTaLsNUtPeig" association="_ZWnZwCCCEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZWnZxSCCEeOTaLsNUtPeig" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZWnZxiCCEeOTaLsNUtPeig" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_An_HYCCDEeOTaLsNUtPeig" name="Routeur SMTP"/>
+      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_EylfkCCDEeOTaLsNUtPeig" name="tcp/ip" memberEnd="_EylfkSCDEeOTaLsNUtPeig _EylflCCDEeOTaLsNUtPeig">
+        <ownedEnd xmi:id="_EylfkSCDEeOTaLsNUtPeig" name="routeur SMTP" type="_An_HYCCDEeOTaLsNUtPeig" association="_EylfkCCDEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EylfkiCDEeOTaLsNUtPeig" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EylfkyCDEeOTaLsNUtPeig" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_EylflCCDEeOTaLsNUtPeig" name="java EE Application Server" type="_bvcYgCBlEeOTaLsNUtPeig" association="_EylfkCCDEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EylflSCDEeOTaLsNUtPeig" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EylfliCDEeOTaLsNUtPeig" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_PJJDsCCDEeOTaLsNUtPeig" name="webApp.war (ou .ear)" fileName="Artifact1.file"/>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_VWk2UCCDEeOTaLsNUtPeig" name="database script (.sql)" fileName="Artifact1.file"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="_4o00ECBkEeOTaLsNUtPeig" name="GuiView" visibility="private">
+      <ownedComment xmi:id="_OvSwYCBvEeOTaLsNUtPeig" annotatedElement="_DXqVUCBlEeOTaLsNUtPeig">
+        <body>current page depends of&#xD;
+a specific state of the web&#xD;
+application (navigation)</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Class" xmi:id="_DXqVUCBlEeOTaLsNUtPeig" name="Generic Web IHM/GUI" isAbstract="true" classifierBehavior="_Ot08UCBlEeOTaLsNUtPeig">
+        <generalization xmi:id="_DK3gYCBuEeOTaLsNUtPeig" general="_9YtUgCBtEeOTaLsNUtPeig"/>
+        <ownedAttribute xmi:id="_x5n3gCBsEeOTaLsNUtPeig" name="page" type="_upTWQCBsEeOTaLsNUtPeig" aggregation="composite" association="_x5n3gyBsEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x5n3gSBsEeOTaLsNUtPeig" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x5n3giBsEeOTaLsNUtPeig"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_ET1eICBvEeOTaLsNUtPeig" name="currentPage"/>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Ot08UCBlEeOTaLsNUtPeig" name="Generic Web IHM/GUI StateMachine / navigations">
+          <region xmi:id="_Ql8UgCBlEeOTaLsNUtPeig" name="Region1">
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_u-C7YCBlEeOTaLsNUtPeig" name="connexion (entry url)"/>
+            <subvertex xmi:type="uml:State" xmi:id="_wy3vACBlEeOTaLsNUtPeig" name="welcome_page"/>
+            <subvertex xmi:type="uml:State" xmi:id="_CUkfoCBwEeOTaLsNUtPeig" name="user_authentification"/>
+            <subvertex xmi:type="uml:State" xmi:id="_JCo6ICBwEeOTaLsNUtPeig" name="SubAreaForUserRole"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_qZc4YCBxEeOTaLsNUtPeig" name="external_link"/>
+            <transition xmi:id="_zLxgECBlEeOTaLsNUtPeig" name="Transition0" source="_u-C7YCBlEeOTaLsNUtPeig" target="_wy3vACBlEeOTaLsNUtPeig"/>
+            <transition xmi:id="_McgY8CBwEeOTaLsNUtPeig" name="Transition1" source="_wy3vACBlEeOTaLsNUtPeig" target="_CUkfoCBwEeOTaLsNUtPeig"/>
+            <transition xmi:id="_NScicCBwEeOTaLsNUtPeig" name="Transition2" source="_CUkfoCBwEeOTaLsNUtPeig" target="_JCo6ICBwEeOTaLsNUtPeig" guard="_TBR4ECBxEeOTaLsNUtPeig">
+              <ownedRule xmi:id="_TBR4ECBxEeOTaLsNUtPeig">
+                <specification xmi:type="uml:LiteralString" xmi:id="_TBR4ESBxEeOTaLsNUtPeig" name="" value="ok"/>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_OffkYCBwEeOTaLsNUtPeig" name="cancel" source="_CUkfoCBwEeOTaLsNUtPeig" target="_wy3vACBlEeOTaLsNUtPeig"/>
+            <transition xmi:id="_usID8CBwEeOTaLsNUtPeig" name="user_disconnection    (session end)" source="_JCo6ICBwEeOTaLsNUtPeig" target="_wy3vACBlEeOTaLsNUtPeig"/>
+            <transition xmi:id="_a3C6cCBxEeOTaLsNUtPeig" name="try-again" source="_CUkfoCBwEeOTaLsNUtPeig" target="_CUkfoCBwEeOTaLsNUtPeig" guard="_gm1HwCBxEeOTaLsNUtPeig">
+              <ownedRule xmi:id="_gm1HwCBxEeOTaLsNUtPeig">
+                <specification xmi:type="uml:LiteralString" xmi:id="_gm1HwSBxEeOTaLsNUtPeig" name="" value="failed"/>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_2BhHsCBxEeOTaLsNUtPeig" name="Transition3" source="_wy3vACBlEeOTaLsNUtPeig" target="_qZc4YCBxEeOTaLsNUtPeig"/>
+            <transition xmi:id="_Epqc0CByEeOTaLsNUtPeig" name="Transition4" source="_JCo6ICBwEeOTaLsNUtPeig" target="_qZc4YCBxEeOTaLsNUtPeig"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_upTWQCBsEeOTaLsNUtPeig" name="Page" isAbstract="true">
+        <ownedAttribute xmi:id="_i_kdkCBtEeOTaLsNUtPeig" name="header" type="_eYp80CBtEeOTaLsNUtPeig" aggregation="shared" association="_i_kdkyBtEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i_kdkSBtEeOTaLsNUtPeig" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i_kdkiBtEeOTaLsNUtPeig" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_jgWPYCBtEeOTaLsNUtPeig" name="footer" type="_gFJT0CBtEeOTaLsNUtPeig" aggregation="shared" association="_jgWPYyBtEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jgWPYSBtEeOTaLsNUtPeig" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jgWPYiBtEeOTaLsNUtPeig" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_x5n3gyBsEeOTaLsNUtPeig" name="iHM_page_1" memberEnd="_x5n3hCBsEeOTaLsNUtPeig _x5n3gCBsEeOTaLsNUtPeig">
+        <ownedEnd xmi:id="_x5n3hCBsEeOTaLsNUtPeig" name="iHM" type="_DXqVUCBlEeOTaLsNUtPeig" association="_x5n3gyBsEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x5n3hSBsEeOTaLsNUtPeig" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x5n3hiBsEeOTaLsNUtPeig" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_-AOc8CBsEeOTaLsNUtPeig" name="welcome_page" isAbstract="true">
+        <generalization xmi:id="_MGsBUCBtEeOTaLsNUtPeig" general="_upTWQCBsEeOTaLsNUtPeig"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_B1EnkCBtEeOTaLsNUtPeig" name="search_page" isAbstract="true">
+        <generalization xmi:id="_MgUpUCBtEeOTaLsNUtPeig" general="_upTWQCBsEeOTaLsNUtPeig"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GnmicCBtEeOTaLsNUtPeig" name="results_page" isAbstract="true">
+        <generalization xmi:id="_M46IcCBtEeOTaLsNUtPeig" general="_upTWQCBsEeOTaLsNUtPeig"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_a0ggoCBtEeOTaLsNUtPeig" name="other_page" isAbstract="true">
+        <generalization xmi:id="_desO8CBtEeOTaLsNUtPeig" general="_upTWQCBsEeOTaLsNUtPeig"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_eYp80CBtEeOTaLsNUtPeig" name="HeaderSubPage" isAbstract="true">
+        <ownedAttribute xmi:id="_pgeJUCBuEeOTaLsNUtPeig" name="logo"/>
+        <ownedAttribute xmi:id="_1S9f8CBuEeOTaLsNUtPeig" name="general_search"/>
+        <ownedAttribute xmi:id="_5N6SkCBuEeOTaLsNUtPeig" name="welcome_page_link"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gFJT0CBtEeOTaLsNUtPeig" name="FooterSubPage" isAbstract="true">
+        <ownedAttribute xmi:id="_r7KDECBuEeOTaLsNUtPeig" name="legal_information"/>
+        <ownedAttribute xmi:id="_wdcigCBuEeOTaLsNUtPeig" name="links"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_i_kdkyBtEeOTaLsNUtPeig" name="page_header_1" memberEnd="_i_kdlCBtEeOTaLsNUtPeig _i_kdkCBtEeOTaLsNUtPeig">
+        <ownedEnd xmi:id="_i_kdlCBtEeOTaLsNUtPeig" name="page" type="_upTWQCBsEeOTaLsNUtPeig" association="_i_kdkyBtEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i_kdlSBtEeOTaLsNUtPeig" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i_kdliBtEeOTaLsNUtPeig"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_jgWPYyBtEeOTaLsNUtPeig" name="page_footer_1" memberEnd="_jgWPZCBtEeOTaLsNUtPeig _jgWPYCBtEeOTaLsNUtPeig">
+        <ownedEnd xmi:id="_jgWPZCBtEeOTaLsNUtPeig" name="page" type="_upTWQCBsEeOTaLsNUtPeig" association="_jgWPYyBtEeOTaLsNUtPeig">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jgWPZSBtEeOTaLsNUtPeig" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jgWPZiBtEeOTaLsNUtPeig"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_9YtUgCBtEeOTaLsNUtPeig" name="Generic IHM/GUI" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_f2QlcCB8EeOTaLsNUtPeig" name="Bib"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_59gbICB8EeOTaLsNUtPeig" name="IHM_bibliotheque" classifierBehavior="_ArSFQCB-EeOTaLsNUtPeig">
+        <generalization xmi:id="_x4to0CB9EeOTaLsNUtPeig" general="_DXqVUCBlEeOTaLsNUtPeig"/>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_ArSFQCB-EeOTaLsNUtPeig" name="Etats espace &quot;bibliothécaire&quot; (IHM Web)">
+          <region xmi:id="_FNbawCB-EeOTaLsNUtPeig" name="Region1">
+            <subvertex xmi:type="uml:State" xmi:id="_yOlVsCB-EeOTaLsNUtPeig" name="param enregistrement nouvel exemplaire (neuf)"/>
+            <subvertex xmi:type="uml:State" xmi:id="_MFlv8CB_EeOTaLsNUtPeig" name="Menu_bibliothecaire (avec message/statut sur dernière(s) opération(s) effectuée(s))"/>
+            <subvertex xmi:type="uml:State" xmi:id="_nXroICB_EeOTaLsNUtPeig" name="param ré-intégration exemplaire restauré"/>
+            <transition xmi:id="_YIKxACB_EeOTaLsNUtPeig" name="Transition0" source="_ZIv5sCB-EeOTaLsNUtPeig" target="_MFlv8CB_EeOTaLsNUtPeig"/>
+            <transition xmi:id="_Y9hEoCB_EeOTaLsNUtPeig" name="Transition1" source="_MFlv8CB_EeOTaLsNUtPeig" target="_yOlVsCB-EeOTaLsNUtPeig"/>
+            <transition xmi:id="_ZdtAkCB_EeOTaLsNUtPeig" name="Transition2" source="_yOlVsCB-EeOTaLsNUtPeig" target="_MFlv8CB_EeOTaLsNUtPeig"/>
+            <transition xmi:id="_ftXn0CB_EeOTaLsNUtPeig" name="Transition3" source="_MFlv8CB_EeOTaLsNUtPeig" target="_fxJxECB-EeOTaLsNUtPeig"/>
+            <transition xmi:id="_uCeFICB_EeOTaLsNUtPeig" name="Transition4" source="_MFlv8CB_EeOTaLsNUtPeig" target="_nXroICB_EeOTaLsNUtPeig"/>
+            <transition xmi:id="_ukcw0CB_EeOTaLsNUtPeig" name="Transition5" source="_nXroICB_EeOTaLsNUtPeig" target="_MFlv8CB_EeOTaLsNUtPeig"/>
+          </region>
+          <connectionPoint xmi:id="_ZIv5sCB-EeOTaLsNUtPeig" name="authentification effectuée" kind="entryPoint"/>
+          <connectionPoint xmi:id="_fxJxECB-EeOTaLsNUtPeig" name="session end" kind="exitPoint"/>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_F5E1QCB9EeOTaLsNUtPeig" name="GenericForm">
+        <ownedOperation xmi:id="_LpLysCB9EeOTaLsNUtPeig" name="output"/>
+        <ownedOperation xmi:id="_THiaoCB9EeOTaLsNUtPeig" name="input"/>
+        <ownedOperation xmi:id="_UibrUCB9EeOTaLsNUtPeig" name="select"/>
+        <ownedOperation xmi:id="_ZqH94CB9EeOTaLsNUtPeig" name="submit"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_kRXCUCB9EeOTaLsNUtPeig" name="GenericSessionContext" isAbstract="true">
+        <ownedAttribute xmi:id="_oI4GcCB9EeOTaLsNUtPeig" name="userName"/>
+        <ownedAttribute xmi:id="_p19TUCB9EeOTaLsNUtPeig" name="role"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_8jRp0B7XEeOIL-VHpkBl1g">
+      <eAnnotations xmi:id="_8jRp0R7XEeOIL-VHpkBl1g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../profiles/n-tiers.profile.uml#_l56hAR67EeOIL-VHpkBl1g"/>
+      </eAnnotations>
+      <appliedProfile href="../../profiles/n-tiers.profile.uml#_QAvBgB6rEeOIL-VHpkBl1g"/>
+    </profileApplication>
+  </uml:Model>
+  <ntiers:external_system xmi:id="_aIjlQB7bEeOIL-VHpkBl1g" base_Actor="_W8iVMB7bEeOIL-VHpkBl1g"/>
+  <ntiers:entity xmi:id="_zfj74B7-EeOIL-VHpkBl1g" base_Class="_eAtWAB7wEeOIL-VHpkBl1g"/>
+  <ntiers:entity xmi:id="_Eia_8B7_EeOIL-VHpkBl1g" base_Class="_cQ8BgB7wEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_cgoU0R9oEeOIL-VHpkBl1g" base_Comment="_cfIgAB9oEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_toXR0R9oEeOIL-VHpkBl1g" base_Comment="_toXR0B9oEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_xyTtQR9pEeOIL-VHpkBl1g" base_Comment="_xyTtQB9pEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_31TxgR9pEeOIL-VHpkBl1g" base_Comment="_31TxgB9pEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_sW24wR-LEeOIL-VHpkBl1g" base_Comment="_sW24wB-LEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_woxZ4R-LEeOIL-VHpkBl1g" base_Comment="_woxZ4B-LEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_-ZOAER-NEeOIL-VHpkBl1g" base_Comment="_-ZOAEB-NEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_bq80wR-OEeOIL-VHpkBl1g" base_Comment="_bq80wB-OEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_4l12wR-OEeOIL-VHpkBl1g" base_Comment="_4l12wB-OEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_gBm2gR-PEeOIL-VHpkBl1g" base_Comment="_gBm2gB-PEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_1FC0ER-PEeOIL-VHpkBl1g" base_Comment="_1FC0EB-PEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_J8nDYR-REeOIL-VHpkBl1g" base_Comment="_J8nDYB-REeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_LVlogR-REeOIL-VHpkBl1g" base_Comment="_LVlogB-REeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_sJ8PYR-REeOIL-VHpkBl1g" base_Comment="_sJ8PYB-REeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_0ev-MR-REeOIL-VHpkBl1g" base_Comment="_0ev-MB-REeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_12E9gR-REeOIL-VHpkBl1g" base_Comment="_12E9gB-REeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_3KucQR-REeOIL-VHpkBl1g" base_Comment="_3KucQB-REeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_OBrwcR-TEeOIL-VHpkBl1g" base_Comment="_OBrwcB-TEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_yMN-ER-VEeOIL-VHpkBl1g" base_Comment="_yMN-EB-VEeOIL-VHpkBl1g"/>
+  <ntiers:id xmi:id="_Ad4Z8B-jEeOIL-VHpkBl1g" base_Property="_28yeMB-iEeOIL-VHpkBl1g"/>
+  <ntiers:id xmi:id="_IxJbMB-kEeOIL-VHpkBl1g" base_Property="_Dz_ksB-kEeOIL-VHpkBl1g"/>
+  <ntiers:service xmi:id="_mMNXwB-0EeOIL-VHpkBl1g" base_Class="_HIwt0B-0EeOIL-VHpkBl1g"/>
+  <ntiers:entity xmi:id="_4TaJgB-7EeOIL-VHpkBl1g" base_Class="_KBOLgB9uEeOIL-VHpkBl1g"/>
+  <ntiers:entity xmi:id="___N-oB-7EeOIL-VHpkBl1g" base_Class="_ZybI4B-6EeOIL-VHpkBl1g"/>
+  <ntiers:entity xmi:id="_gp2hcB-_EeOIL-VHpkBl1g" base_Class="_LYZZ0B9uEeOIL-VHpkBl1g"/>
+  <ntiers:service xmi:id="_sNcT4B_UEeOIL-VHpkBl1g" base_Class="_owGDQB_UEeOIL-VHpkBl1g"/>
+  <ntiers:id xmi:id="_KjdQEB_VEeOIL-VHpkBl1g" base_Property="_kBMQsB-_EeOIL-VHpkBl1g"/>
+  <ntiers:entity xmi:id="_r9sLMB_VEeOIL-VHpkBl1g" base_Class="_k4g4QB_VEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_4gNRISBEEeOIL-VHpkBl1g" base_Comment="_4fwlMCBEEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_BIofgCBFEeOIL-VHpkBl1g" base_Comment="_BILzkCBFEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_EhnNgSBFEeOIL-VHpkBl1g" base_Comment="_EhnNgCBFEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_IPBTYSBFEeOIL-VHpkBl1g" base_Comment="_IOtxYCBFEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_PGzDgSBFEeOIL-VHpkBl1g" base_Comment="_PGzDgCBFEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_S3UHwSBFEeOIL-VHpkBl1g" base_Comment="_S3UHwCBFEeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_QXn-8SBVEeOTaLsNUtPeig" base_Comment="_QXn-8CBVEeOTaLsNUtPeig"/>
+  <Documentation:Documentation xmi:id="_o5ekISBVEeOTaLsNUtPeig" base_Comment="_o5ekICBVEeOTaLsNUtPeig"/>
+  <Documentation:Documentation xmi:id="_ucv_cSBVEeOTaLsNUtPeig" base_Comment="_ucv_cCBVEeOTaLsNUtPeig"/>
+  <ntiers:service xmi:id="_aMS50CBcEeOTaLsNUtPeig" base_Class="_voSMcB-7EeOIL-VHpkBl1g"/>
+  <Documentation:Documentation xmi:id="_eLRQ0SBcEeOTaLsNUtPeig" base_Comment="_eLRQ0CBcEeOTaLsNUtPeig"/>
+  <Documentation:Documentation xmi:id="_J2VYMSCBEeOTaLsNUtPeig" base_Comment="_J2VYMCCBEeOTaLsNUtPeig"/>
+  <Documentation:Documentation xmi:id="_RLvfgCCBEeOTaLsNUtPeig" base_Comment="_RLSzkCCBEeOTaLsNUtPeig"/>
+</xmi:XMI>

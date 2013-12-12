@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_l-hugCEcEeOT_fjNFFfTPw" name="Model" visibility="private">
+  <packageImport xmi:id="_l-hugSEcEeOT_fjNFFfTPw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Model" xmi:id="_xOIagCEcEeOT_fjNFFfTPw" name="LogicalView" visibility="private">
+    <packagedElement xmi:type="uml:Package" xmi:id="_-3FuECEdEeOT_fjNFFfTPw" name="Package1" clientDependency="_AVx5oCEeEeOT_fjNFFfTPw">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_AVx5oCEeEeOT_fjNFFfTPw" name="Dependency1" supplier="__VGfwCEdEeOT_fjNFFfTPw" client="_-3FuECEdEeOT_fjNFFfTPw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="__VGfwCEdEeOT_fjNFFfTPw" name="Package2"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_07nY4CEcEeOT_fjNFFfTPw" name="UseCaseView" visibility="private">
+    <packagedElement xmi:type="uml:Model" xmi:id="_7DJ-4CEcEeOT_fjNFFfTPw" name="context" visibility="private">
+      <ownedComment xmi:id="_V1nUwCEdEeOT_fjNFFfTPw">
+        <body>système/application à modéliser/développer</body>
+      </ownedComment>
+      <ownedComment xmi:id="_aJPGECEdEeOT_fjNFFfTPw">
+        <body>Acteur &quot;......&quot;&#xD;
+     --> interaction 1&#xD;
+     --> interaction2</body>
+      </ownedComment>
+      <ownedComment xmi:id="_ffupoCEdEeOT_fjNFFfTPw">
+        <body>Acteur &quot;.....&quot;&#xD;
+    -->interaction a&#xD;
+   --> interaction b</body>
+      </ownedComment>
+      <ownedComment xmi:id="_kJ55wCEdEeOT_fjNFFfTPw">
+        <body> Acteur (logiciel externe) &quot;....&quot;&#xD;
+              interaction x --></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_1QBGICEdEeOT_fjNFFfTPw" name="Actor1"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_2js7kCEdEeOT_fjNFFfTPw" name="Actor2"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_4OBvYCEdEeOT_fjNFFfTPw" name="UseCase1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_6ZhWkCEdEeOT_fjNFFfTPw" name="A_actor1_usecase1" memberEnd="_6ZhWkSEdEeOT_fjNFFfTPw _6ZhWlCEdEeOT_fjNFFfTPw">
+      <ownedEnd xmi:id="_6ZhWkSEdEeOT_fjNFFfTPw" name="actor1" type="_1QBGICEdEeOT_fjNFFfTPw" association="_6ZhWkCEdEeOT_fjNFFfTPw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6ZhWkiEdEeOT_fjNFFfTPw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6ZhWkyEdEeOT_fjNFFfTPw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_6ZhWlCEdEeOT_fjNFFfTPw" name="usecase1" type="_4OBvYCEdEeOT_fjNFFfTPw" association="_6ZhWkCEdEeOT_fjNFFfTPw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6ZhWlSEdEeOT_fjNFFfTPw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6ZhWliEdEeOT_fjNFFfTPw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_4ONLACEcEeOT_fjNFFfTPw" name="DeploymentView" visibility="private">
+    <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_LjaPsCEeEeOT_fjNFFfTPw" name="Serveur1"/>
+    <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_O0gNACEeEeOT_fjNFFfTPw" name="Serveur2"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_qELN4CEfEeOT_fjNFFfTPw" name="GuiView" visibility="private">
+    <packagedElement xmi:type="uml:Class" xmi:id="_vvE7MCEfEeOT_fjNFFfTPw" name="IHM" isAbstract="true"/>
+  </packagedElement>
+</uml:Model>

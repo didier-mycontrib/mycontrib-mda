@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:business="http:///schemas/business/_TAq4ACEJEeOT_fjNFFfTPw/2" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/business/_TAq4ACEJEeOT_fjNFFfTPw/2 ../../profiles/business.profile.uml#_TAq4ASEJEeOT_fjNFFfTPw">
+  <uml:Model xmi:id="_UEozQCEFEeOT_fjNFFfTPw" name="Model">
+    <packageImport xmi:id="_UEozQSEFEeOT_fjNFFfTPw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Model" xmi:id="_FuOR4CEGEeOT_fjNFFfTPw" name="UseCaseView" visibility="private">
+      <packagedElement xmi:type="uml:Actor" xmi:id="_e418sCEFEeOT_fjNFFfTPw" name="Client"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_bdfasCEGEeOT_fjNFFfTPw" name="Abonne">
+        <generalization xmi:id="_dRxbwCEGEeOT_fjNFFfTPw" general="_e418sCEFEeOT_fjNFFfTPw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_e9zfwCEGEeOT_fjNFFfTPw" name="Bibliothecaire"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_ZqXlUCEIEeOT_fjNFFfTPw" name="s'abonner"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_i1rW8CELEeOT_fjNFFfTPw" name="emprunter des livres pour les lire" classifierBehavior="_1WBawCENEeOT_fjNFFfTPw">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_1WBawCENEeOT_fjNFFfTPw" name="emprunter des livres pour les lire">
+          <node xmi:type="uml:InitialNode" xmi:id="_X2lEwCEOEeOT_fjNFFfTPw" name="InitialNode1" outgoing="_6fBfcCEOEeOT_fjNFFfTPw" inPartition="_6lWmYCENEeOT_fjNFFfTPw"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_YyqSgCEOEeOT_fjNFFfTPw" name="choisir livre" outgoing="_6_ERcCEOEeOT_fjNFFfTPw" incoming="_6fBfcCEOEeOT_fjNFFfTPw" inPartition="_6lWmYCENEeOT_fjNFFfTPw"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_bllGECEOEeOT_fjNFFfTPw" name="demander à l'emprunter" incoming="_6_ERcCEOEeOT_fjNFFfTPw" inPartition="_6lWmYCENEeOT_fjNFFfTPw">
+            <outputValue xmi:id="_UAgVoCEPEeOT_fjNFFfTPw" name="livre à emprunter" outgoing="_UAzQkCEPEeOT_fjNFFfTPw">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_UA9BkCEPEeOT_fjNFFfTPw" value="1"/>
+            </outputValue>
+          </node>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_eVu5gCEOEeOT_fjNFFfTPw" name="enregistrer emprunt" inPartition="_RKWdUCEOEeOT_fjNFFfTPw">
+            <inputValue xmi:id="_UAgVoSEPEeOT_fjNFFfTPw" name="livre à emprunter" incoming="_UAzQkCEPEeOT_fjNFFfTPw">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_UA9BkSEPEeOT_fjNFFfTPw" value="1"/>
+            </inputValue>
+            <outputValue xmi:id="_eE7A4CEPEeOT_fjNFFfTPw" name="livre emprunté" outgoing="_eFN70CEPEeOT_fjNFFfTPw">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_eFN70SEPEeOT_fjNFFfTPw" value="1"/>
+            </outputValue>
+          </node>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_tNBd4CEOEeOT_fjNFFfTPw" name="lire le livre" outgoing="_7d0C8CEOEeOT_fjNFFfTPw" inPartition="_6lWmYCENEeOT_fjNFFfTPw">
+            <inputValue xmi:id="_eE7A4SEPEeOT_fjNFFfTPw" name="livre emprunté" incoming="_eFN70CEPEeOT_fjNFFfTPw">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_eFN70iEPEeOT_fjNFFfTPw" value="1"/>
+            </inputValue>
+          </node>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_u18jgCEOEeOT_fjNFFfTPw" name="retourner le livre" incoming="_7d0C8CEOEeOT_fjNFFfTPw" inPartition="_6lWmYCENEeOT_fjNFFfTPw">
+            <outputValue xmi:id="_q2IpkCEPEeOT_fjNFFfTPw" name="livre retourné" outgoing="_q2bkgCEPEeOT_fjNFFfTPw">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_q2bkgSEPEeOT_fjNFFfTPw" value="1"/>
+            </outputValue>
+          </node>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_xAXzsCEOEeOT_fjNFFfTPw" name="enregistrer le retour" outgoing="_79j6ACEOEeOT_fjNFFfTPw" inPartition="_RKWdUCEOEeOT_fjNFFfTPw">
+            <inputValue xmi:id="_q2IpkSEPEeOT_fjNFFfTPw" name="livre retourné" incoming="_q2bkgCEPEeOT_fjNFFfTPw">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_q2bkgiEPEeOT_fjNFFfTPw" value="1"/>
+            </inputValue>
+          </node>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_5JUQwCEOEeOT_fjNFFfTPw" name="ActivityFinalNode1" incoming="_79j6ACEOEeOT_fjNFFfTPw" inPartition="_RKWdUCEOEeOT_fjNFFfTPw"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_6fBfcCEOEeOT_fjNFFfTPw" name="ControlFlow1" source="_X2lEwCEOEeOT_fjNFFfTPw" target="_YyqSgCEOEeOT_fjNFFfTPw">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_6fBfcSEOEeOT_fjNFFfTPw" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_6fBfciEOEeOT_fjNFFfTPw"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_6_ERcCEOEeOT_fjNFFfTPw" name="ControlFlow2" source="_YyqSgCEOEeOT_fjNFFfTPw" target="_bllGECEOEeOT_fjNFFfTPw">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_6_ERcSEOEeOT_fjNFFfTPw" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_6_ERciEOEeOT_fjNFFfTPw"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_7d0C8CEOEeOT_fjNFFfTPw" name="ControlFlow3" source="_tNBd4CEOEeOT_fjNFFfTPw" target="_u18jgCEOEeOT_fjNFFfTPw">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_7d0C8SEOEeOT_fjNFFfTPw" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_7d0C8iEOEeOT_fjNFFfTPw"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_79j6ACEOEeOT_fjNFFfTPw" name="ControlFlow4" source="_xAXzsCEOEeOT_fjNFFfTPw" target="_5JUQwCEOEeOT_fjNFFfTPw">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_79j6ASEOEeOT_fjNFFfTPw" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_79trACEOEeOT_fjNFFfTPw"/>
+          </edge>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_UAzQkCEPEeOT_fjNFFfTPw" name="ObjectFlow1" source="_UAgVoCEPEeOT_fjNFFfTPw" target="_UAgVoSEPEeOT_fjNFFfTPw">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_UA9BkiEPEeOT_fjNFFfTPw" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_UA9BkyEPEeOT_fjNFFfTPw" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_eFN70CEPEeOT_fjNFFfTPw" name="ObjectFlow2" source="_eE7A4CEPEeOT_fjNFFfTPw" target="_eE7A4SEPEeOT_fjNFFfTPw">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_eFN70yEPEeOT_fjNFFfTPw" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_eFN71CEPEeOT_fjNFFfTPw" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_q2bkgCEPEeOT_fjNFFfTPw" name="ObjectFlow3" source="_q2IpkCEPEeOT_fjNFFfTPw" target="_q2IpkSEPEeOT_fjNFFfTPw">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_q2bkgyEPEeOT_fjNFFfTPw" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_q2bkhCEPEeOT_fjNFFfTPw" value="1"/>
+          </edge>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_6lWmYCENEeOT_fjNFFfTPw" name="Abonné" node="_YyqSgCEOEeOT_fjNFFfTPw _bllGECEOEeOT_fjNFFfTPw _tNBd4CEOEeOT_fjNFFfTPw _u18jgCEOEeOT_fjNFFfTPw _X2lEwCEOEeOT_fjNFFfTPw"/>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_RKWdUCEOEeOT_fjNFFfTPw" name="Bibliothecaire" node="_eVu5gCEOEeOT_fjNFFfTPw _xAXzsCEOEeOT_fjNFFfTPw _5JUQwCEOEeOT_fjNFFfTPw"/>
+        </ownedBehavior>
+        <include xmi:id="_dr4WICEMEeOT_fjNFFfTPw" addition="_VDPFUCEMEeOT_fjNFFfTPw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_nhGkQCELEeOT_fjNFFfTPw" name="Responsable"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_qcuA0CELEeOT_fjNFFfTPw" name="A_client_s'abonner" memberEnd="_qcuA0SELEeOT_fjNFFfTPw _qcuA1CELEeOT_fjNFFfTPw" navigableOwnedEnd="_qcuA1CELEeOT_fjNFFfTPw">
+        <ownedEnd xmi:id="_qcuA0SELEeOT_fjNFFfTPw" name="client" type="_e418sCEFEeOT_fjNFFfTPw" association="_qcuA0CELEeOT_fjNFFfTPw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qcuA0iELEeOT_fjNFFfTPw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qcuA0yELEeOT_fjNFFfTPw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_qcuA1CELEeOT_fjNFFfTPw" name="s'abonner" type="_ZqXlUCEIEeOT_fjNFFfTPw" association="_qcuA0CELEeOT_fjNFFfTPw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qcuA1SELEeOT_fjNFFfTPw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qcuA1iELEeOT_fjNFFfTPw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_rM0oECELEeOT_fjNFFfTPw" name="A_s'abonner_responsable" memberEnd="_rM0oESELEeOT_fjNFFfTPw _rM0oFCELEeOT_fjNFFfTPw" navigableOwnedEnd="_rM0oFCELEeOT_fjNFFfTPw">
+        <ownedEnd xmi:id="_rM0oESELEeOT_fjNFFfTPw" name="s'abonner" type="_ZqXlUCEIEeOT_fjNFFfTPw" association="_rM0oECELEeOT_fjNFFfTPw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rM0oEiELEeOT_fjNFFfTPw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rM0oEyELEeOT_fjNFFfTPw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_rM0oFCELEeOT_fjNFFfTPw" name="responsable" type="_nhGkQCELEeOT_fjNFFfTPw" association="_rM0oECELEeOT_fjNFFfTPw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rM0oFSELEeOT_fjNFFfTPw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rM0oFiELEeOT_fjNFFfTPw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_uB1tYCELEeOT_fjNFFfTPw" name="A_abonne_emprunter des livres pour les lire" memberEnd="_uB1tYSELEeOT_fjNFFfTPw _uB1tZCELEeOT_fjNFFfTPw" navigableOwnedEnd="_uB1tZCELEeOT_fjNFFfTPw">
+        <ownedEnd xmi:id="_uB1tYSELEeOT_fjNFFfTPw" name="abonne" type="_bdfasCEGEeOT_fjNFFfTPw" association="_uB1tYCELEeOT_fjNFFfTPw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uB1tYiELEeOT_fjNFFfTPw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uB1tYyELEeOT_fjNFFfTPw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_uB1tZCELEeOT_fjNFFfTPw" name="emprunter des livres pour les lire" type="_i1rW8CELEeOT_fjNFFfTPw" association="_uB1tYCELEeOT_fjNFFfTPw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uB1tZSELEeOT_fjNFFfTPw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uB1tZiELEeOT_fjNFFfTPw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_u_r1sCELEeOT_fjNFFfTPw" name="A_emprunter des livres pour les lire_bibliothecaire" memberEnd="_u_r1sSELEeOT_fjNFFfTPw _u_r1tCELEeOT_fjNFFfTPw" navigableOwnedEnd="_u_r1tCELEeOT_fjNFFfTPw">
+        <ownedEnd xmi:id="_u_r1sSELEeOT_fjNFFfTPw" name="emprunter des livres pour les lire" type="_i1rW8CELEeOT_fjNFFfTPw" association="_u_r1sCELEeOT_fjNFFfTPw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u_r1siELEeOT_fjNFFfTPw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u_r1syELEeOT_fjNFFfTPw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_u_r1tCELEeOT_fjNFFfTPw" name="bibliothecaire" type="_e9zfwCEGEeOT_fjNFFfTPw" association="_u_r1sCELEeOT_fjNFFfTPw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u_r1tSELEeOT_fjNFFfTPw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u_r1tiELEeOT_fjNFFfTPw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_VDPFUCEMEeOT_fjNFFfTPw" name="choisir livre"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_fvE88CEMEeOT_fjNFFfTPw" name="superviser"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_iDAHYCEMEeOT_fjNFFfTPw" name="A_responsable_superviser" memberEnd="_iDAHYSEMEeOT_fjNFFfTPw _iDAHZCEMEeOT_fjNFFfTPw" navigableOwnedEnd="_iDAHZCEMEeOT_fjNFFfTPw">
+        <ownedEnd xmi:id="_iDAHYSEMEeOT_fjNFFfTPw" name="responsable" type="_nhGkQCELEeOT_fjNFFfTPw" association="_iDAHYCEMEeOT_fjNFFfTPw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iDAHYiEMEeOT_fjNFFfTPw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iDAHYyEMEeOT_fjNFFfTPw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_iDAHZCEMEeOT_fjNFFfTPw" name="superviser" type="_fvE88CEMEeOT_fjNFFfTPw" association="_iDAHYCEMEeOT_fjNFFfTPw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iDAHZSEMEeOT_fjNFFfTPw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iDAHZiEMEeOT_fjNFFfTPw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_irzz0CEMEeOT_fjNFFfTPw" name="gérer_contentieux">
+        <extend xmi:id="_mDm2ECEMEeOT_fjNFFfTPw" extendedCase="_fvE88CEMEeOT_fjNFFfTPw"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="_JkhOACEGEeOT_fjNFFfTPw" name="LogicalView" visibility="private">
+      <packagedElement xmi:type="uml:Package" xmi:id="_zzYVkCEIEeOT_fjNFFfTPw" name="bibliotheque"/>
+    </packagedElement>
+    <profileApplication xmi:id="_U8Bm4CEIEeOT_fjNFFfTPw">
+      <eAnnotations xmi:id="_U8Bm4SEIEeOT_fjNFFfTPw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../profiles/business.profile.uml#_TAq4ASEJEeOT_fjNFFfTPw"/>
+      </eAnnotations>
+      <appliedProfile href="../../profiles/business.profile.uml#_cgWJYCEHEeOT_fjNFFfTPw"/>
+    </profileApplication>
+  </uml:Model>
+  <business:worker xmi:id="_W8dNkCEIEeOT_fjNFFfTPw" base_Actor="_e9zfwCEGEeOT_fjNFFfTPw"/>
+  <business:business xmi:id="_E3-NECELEeOT_fjNFFfTPw" base_Package="_zzYVkCEIEeOT_fjNFFfTPw"/>
+  <business:business xmi:id="_l7YjoCELEeOT_fjNFFfTPw" base_Classifier="_i1rW8CELEeOT_fjNFFfTPw"/>
+  <business:worker xmi:id="_r98tkCEMEeOT_fjNFFfTPw" base_Actor="_nhGkQCELEeOT_fjNFFfTPw"/>
+  <business:business xmi:id="_rfFK0CENEeOT_fjNFFfTPw" base_Classifier="_VDPFUCEMEeOT_fjNFFfTPw"/>
+  <business:manual xmi:id="_4alGACEPEeOT_fjNFFfTPw" base_Action="_bllGECEOEeOT_fjNFFfTPw"/>
+  <business:manual xmi:id="_5eAR4CEPEeOT_fjNFFfTPw" base_Action="_tNBd4CEOEeOT_fjNFFfTPw"/>
+  <business:manual xmi:id="_6fpVECEPEeOT_fjNFFfTPw" base_Action="_u18jgCEOEeOT_fjNFFfTPw"/>
+  <business:manual xmi:id="_7mExoCEPEeOT_fjNFFfTPw" base_Action="_YyqSgCEOEeOT_fjNFFfTPw"/>
+</xmi:XMI>

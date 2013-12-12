@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_P24lICEgEeOT_fjNFFfTPw" name="Model" visibility="private">
+  <packageImport xmi:id="_P24lISEgEeOT_fjNFFfTPw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Model" xmi:id="_UfKX0CEgEeOT_fjNFFfTPw" name="UseCaseView" visibility="private">
+    <ownedComment xmi:id="_eueSACNxEeOgRtmPFiX4TA" annotatedElement="_YP324CNxEeOgRtmPFiX4TA">
+      <body>en fonction des antécédents et des réputations</body>
+    </ownedComment>
+    <ownedComment xmi:id="_BxGuUCNyEeOgRtmPFiX4TA" annotatedElement="_NM4ssCHTEeOUnqq6WZOAlg">
+      <body>+ comparer / selectionner&#xD;
+meilleur(s) offre(s)</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_yidzYCEgEeOT_fjNFFfTPw" name="Client"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_zkX8UCEgEeOT_fjNFFfTPw" name="PrestatairePartenaire"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_1iIpgCEgEeOT_fjNFFfTPw" name="Employé_agence_voyage"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_3ZtPICEgEeOT_fjNFFfTPw" name="consulter_catalogue">
+      <extensionPoint xmi:id="_nlcxWSHSEeOUnqq6WZOAlg" name="point"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_6AbZwCEgEeOT_fjNFFfTPw" name="A_actor1_businessusecase1" memberEnd="_6AbZwSEgEeOT_fjNFFfTPw _6AbZxCEgEeOT_fjNFFfTPw" navigableOwnedEnd="_6AbZxCEgEeOT_fjNFFfTPw">
+      <ownedEnd xmi:id="_6AbZwSEgEeOT_fjNFFfTPw" name="actor1" type="_yidzYCEgEeOT_fjNFFfTPw" association="_6AbZwCEgEeOT_fjNFFfTPw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6AbZwiEgEeOT_fjNFFfTPw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6AbZwyEgEeOT_fjNFFfTPw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_6AbZxCEgEeOT_fjNFFfTPw" name="businessusecase1" type="_3ZtPICEgEeOT_fjNFFfTPw" association="_6AbZwCEgEeOT_fjNFFfTPw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6AbZxSEgEeOT_fjNFFfTPw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6AbZxiEgEeOT_fjNFFfTPw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_j_KAECHSEeOUnqq6WZOAlg" name="effectuer_reservation_unitaire">
+      <include xmi:id="_tJZFkCHTEeOUnqq6WZOAlg" addition="_kNFR4CHTEeOUnqq6WZOAlg"/>
+      <extend xmi:id="_nlcxUCHSEeOUnqq6WZOAlg" extendedCase="_3ZtPICEgEeOT_fjNFFfTPw" extensionLocation="_nlcxWSHSEeOUnqq6WZOAlg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_z_0nUCHSEeOUnqq6WZOAlg" name="étuduer faisabilité et consolider reservations"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_6HYbcCHSEeOUnqq6WZOAlg" name="A_employé_agence_voyage_consolide_reservations" memberEnd="_6HYbcSHSEeOUnqq6WZOAlg _6HYbdCHSEeOUnqq6WZOAlg">
+      <ownedEnd xmi:id="_6HYbcSHSEeOUnqq6WZOAlg" name="employé_agence_voyage" type="_1iIpgCEgEeOT_fjNFFfTPw" association="_6HYbcCHSEeOUnqq6WZOAlg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6HYbciHSEeOUnqq6WZOAlg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6HYbcyHSEeOUnqq6WZOAlg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_6HYbdCHSEeOUnqq6WZOAlg" name="consolide_reservations" type="_VfSnwCHTEeOUnqq6WZOAlg" association="_6HYbcCHSEeOUnqq6WZOAlg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6HYbdSHSEeOUnqq6WZOAlg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6HYbdiHSEeOUnqq6WZOAlg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_8yL00CHSEeOUnqq6WZOAlg" name="PrestataireHebergement">
+      <generalization xmi:id="_CuUcECHTEeOUnqq6WZOAlg" general="_zkX8UCEgEeOT_fjNFFfTPw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="__P8QsCHSEeOUnqq6WZOAlg" name="PrestataireTransport">
+      <generalization xmi:id="_DMHyYCHTEeOUnqq6WZOAlg" general="_zkX8UCEgEeOT_fjNFFfTPw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_Fhw0ECHTEeOUnqq6WZOAlg" name="Responsable_agence_voyage">
+      <generalization xmi:id="_J4Q6QCHTEeOUnqq6WZOAlg" general="_1iIpgCEgEeOT_fjNFFfTPw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_NM4ssCHTEeOUnqq6WZOAlg" name="constituer le catalogue">
+      <include xmi:id="_Vrv58CHUEeOUnqq6WZOAlg" addition="_8PWYECHTEeOUnqq6WZOAlg"/>
+      <include xmi:id="_bw01ICNxEeOgRtmPFiX4TA" addition="_YP324CNxEeOgRtmPFiX4TA"/>
+      <include xmi:id="_pnH2kCNxEeOgRtmPFiX4TA" addition="_mHTgwCNxEeOgRtmPFiX4TA"/>
+      <include xmi:id="_2_T_sCNxEeOgRtmPFiX4TA" addition="_xU6BoCNxEeOgRtmPFiX4TA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RtWnMCHTEeOUnqq6WZOAlg" name="A_responsable_agence_voyage_constituer le catalogue" memberEnd="_RtWnMSHTEeOUnqq6WZOAlg _RtWnNCHTEeOUnqq6WZOAlg">
+      <ownedEnd xmi:id="_RtWnMSHTEeOUnqq6WZOAlg" name="responsable_agence_voyage" type="_Fhw0ECHTEeOUnqq6WZOAlg" association="_RtWnMCHTEeOUnqq6WZOAlg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RtWnMiHTEeOUnqq6WZOAlg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RtWnMyHTEeOUnqq6WZOAlg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_RtWnNCHTEeOUnqq6WZOAlg" name="constituer le catalogue" type="_NM4ssCHTEeOUnqq6WZOAlg" association="_RtWnMCHTEeOUnqq6WZOAlg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RtWnNSHTEeOUnqq6WZOAlg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RtWnNiHTEeOUnqq6WZOAlg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_VfSnwCHTEeOUnqq6WZOAlg" name="gerer_logistique">
+      <include xmi:id="_b1WK4CHTEeOUnqq6WZOAlg" addition="_z_0nUCHSEeOUnqq6WZOAlg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_a6nA8CHTEeOUnqq6WZOAlg" name="A_gerer_logistique_prestatairepartenaire" memberEnd="_a6nA8SHTEeOUnqq6WZOAlg _a6nA9CHTEeOUnqq6WZOAlg" navigableOwnedEnd="_a6nA9CHTEeOUnqq6WZOAlg">
+      <ownedEnd xmi:id="_a6nA8SHTEeOUnqq6WZOAlg" name="gerer_logistique" type="_VfSnwCHTEeOUnqq6WZOAlg" association="_a6nA8CHTEeOUnqq6WZOAlg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_a6nA8iHTEeOUnqq6WZOAlg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_a6nA8yHTEeOUnqq6WZOAlg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_a6nA9CHTEeOUnqq6WZOAlg" name="prestatairepartenaire" type="_zkX8UCEgEeOT_fjNFFfTPw" association="_a6nA8CHTEeOUnqq6WZOAlg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_a6nA9SHTEeOUnqq6WZOAlg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_a6nA9iHTEeOUnqq6WZOAlg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_kNFR4CHTEeOUnqq6WZOAlg" name="reserver options pour prestations"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vCeHECHTEeOUnqq6WZOAlg" name="A_reserver options pour prestations_prestatairepartenaire" memberEnd="_vCeHESHTEeOUnqq6WZOAlg _vCeHFCHTEeOUnqq6WZOAlg" navigableOwnedEnd="_vCeHFCHTEeOUnqq6WZOAlg">
+      <ownedEnd xmi:id="_vCeHESHTEeOUnqq6WZOAlg" name="reserver options pour prestations" type="_kNFR4CHTEeOUnqq6WZOAlg" association="_vCeHECHTEeOUnqq6WZOAlg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vCeHEiHTEeOUnqq6WZOAlg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vCeHEyHTEeOUnqq6WZOAlg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_vCeHFCHTEeOUnqq6WZOAlg" name="prestatairepartenaire" type="_zkX8UCEgEeOT_fjNFFfTPw" association="_vCeHECHTEeOUnqq6WZOAlg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vCeHFSHTEeOUnqq6WZOAlg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vCeHFiHTEeOUnqq6WZOAlg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_8PWYECHTEeOUnqq6WZOAlg" name="souscrire_contrat_partenariat"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_WmUr0CHUEeOUnqq6WZOAlg" name="A_gerer_partenariats_prestatairepartenaire" memberEnd="_WmUr0SHUEeOUnqq6WZOAlg _WmUr1CHUEeOUnqq6WZOAlg" navigableOwnedEnd="_WmUr1CHUEeOUnqq6WZOAlg">
+      <ownedEnd xmi:id="_WmUr0SHUEeOUnqq6WZOAlg" name="gerer_partenariats" type="_8PWYECHTEeOUnqq6WZOAlg" association="_WmUr0CHUEeOUnqq6WZOAlg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WmUr0iHUEeOUnqq6WZOAlg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WmUr0yHUEeOUnqq6WZOAlg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_WmUr1CHUEeOUnqq6WZOAlg" name="prestatairepartenaire" type="_zkX8UCEgEeOT_fjNFFfTPw" association="_WmUr0CHUEeOUnqq6WZOAlg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WmUr1SHUEeOUnqq6WZOAlg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WmUr1iHUEeOUnqq6WZOAlg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_YP324CNxEeOgRtmPFiX4TA" name="selectionner liste prestataires sérieux"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_mHTgwCNxEeOgRtmPFiX4TA" name="solliciter_offres_prestations"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_qoVb8CNxEeOgRtmPFiX4TA" name="A_solliciter_offres_prestations_prestatairepartenaire" memberEnd="_qoVb8SNxEeOgRtmPFiX4TA _qoVb9CNxEeOgRtmPFiX4TA" navigableOwnedEnd="_qoVb9CNxEeOgRtmPFiX4TA">
+      <ownedEnd xmi:id="_qoVb8SNxEeOgRtmPFiX4TA" name="solliciter_offres_prestations" type="_mHTgwCNxEeOgRtmPFiX4TA" association="_qoVb8CNxEeOgRtmPFiX4TA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qoVb8iNxEeOgRtmPFiX4TA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qoVb8yNxEeOgRtmPFiX4TA" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_qoVb9CNxEeOgRtmPFiX4TA" name="prestatairepartenaire" type="_zkX8UCEgEeOT_fjNFFfTPw" association="_qoVb8CNxEeOgRtmPFiX4TA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qoVb9SNxEeOgRtmPFiX4TA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qoVb9iNxEeOgRtmPFiX4TA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_xU6BoCNxEeOgRtmPFiX4TA" name="construire pack voyage et publication au catalogue"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_izKo8CEgEeOT_fjNFFfTPw" name="LogicalView" visibility="private">
+    <packagedElement xmi:type="uml:Package" xmi:id="_plOyoCEgEeOT_fjNFFfTPw" name="tiers">
+      <packagedElement xmi:type="uml:Class" xmi:id="_46S9sCFYEeOls5wK-eVumw" name="Client">
+        <generalization xmi:id="_eCNrgCFZEeOls5wK-eVumw" general="_LI9GgCFZEeOls5wK-eVumw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_EzWPUCFZEeOls5wK-eVumw" name="Fournisseur">
+        <generalization xmi:id="_dlM_YCFZEeOls5wK-eVumw" general="_LI9GgCFZEeOls5wK-eVumw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_JUKvICFZEeOls5wK-eVumw" name="Prestataire">
+        <generalization xmi:id="_dHKYgCFZEeOls5wK-eVumw" general="_EzWPUCFZEeOls5wK-eVumw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_LI9GgCFZEeOls5wK-eVumw" name="Tiers">
+        <ownedAttribute xmi:id="_fRKK4CFZEeOls5wK-eVumw" name="adresse" type="_MlCqACFZEeOls5wK-eVumw" association="_fRKK4yFZEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fRKK4SFZEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fRKK4iFZEeOls5wK-eVumw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_MlCqACFZEeOls5wK-eVumw" name="Adresse"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_fRKK4yFZEeOls5wK-eVumw" name="tiers_adresse_1" memberEnd="_fRKK5CFZEeOls5wK-eVumw _fRKK4CFZEeOls5wK-eVumw">
+        <ownedEnd xmi:id="_fRKK5CFZEeOls5wK-eVumw" name="tiers" type="_LI9GgCFZEeOls5wK-eVumw" association="_fRKK4yFZEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fRKK5SFZEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fRKK5iFZEeOls5wK-eVumw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ri288CEgEeOT_fjNFFfTPw" name="paiements">
+      <packagedElement xmi:type="uml:Class" xmi:id="_LTno8CFaEeOls5wK-eVumw" name="Paiement"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Nxh10CFaEeOls5wK-eVumw" name="Acompte">
+        <generalization xmi:id="_QYG2gCFaEeOls5wK-eVumw" general="_LTno8CFaEeOls5wK-eVumw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_O3xFICFaEeOls5wK-eVumw" name="Solde">
+        <generalization xmi:id="_QvElACFaEeOls5wK-eVumw" general="_LTno8CFaEeOls5wK-eVumw"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_58i6UCFXEeOls5wK-eVumw" name="transports">
+      <packagedElement xmi:type="uml:Class" xmi:id="_O1DA8CFdEeOls5wK-eVumw" name="EtapeTransport">
+        <ownedAttribute xmi:id="_rr4XcCFfEeOls5wK-eVumw" name="depart"/>
+        <ownedAttribute xmi:id="_tbIukCFfEeOls5wK-eVumw" name="arrivée"/>
+        <ownedAttribute xmi:id="_vVe7YCFfEeOls5wK-eVumw" name="typeTransport"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_W601QCFdEeOls5wK-eVumw" name="Transport">
+        <ownedAttribute xmi:id="_mh0GUCFfEeOls5wK-eVumw" name="trajet" type="_O1DA8CFdEeOls5wK-eVumw" association="_mh0GUyFfEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mh0GUSFfEeOls5wK-eVumw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mh0GUiFfEeOls5wK-eVumw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_oJb6ECHQEeOUnqq6WZOAlg" name="destination" type="_AmE2QCFcEeOls5wK-eVumw" association="_oJb6EyHQEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oJb6ESHQEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oJb6EiHQEeOUnqq6WZOAlg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_mh0GUyFfEeOls5wK-eVumw" name="transport_trajet_1" memberEnd="_mh0GVCFfEeOls5wK-eVumw _mh0GUCFfEeOls5wK-eVumw">
+        <ownedEnd xmi:id="_mh0GVCFfEeOls5wK-eVumw" name="transport" type="_W601QCFdEeOls5wK-eVumw" association="_mh0GUyFfEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mh0GVSFfEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mh0GViFfEeOls5wK-eVumw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_AmE2QCFcEeOls5wK-eVumw" name="Destination"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_oJb6EyHQEeOUnqq6WZOAlg" name="transport_destination_1" memberEnd="_oJb6FCHQEeOUnqq6WZOAlg _oJb6ECHQEeOUnqq6WZOAlg">
+        <ownedEnd xmi:id="_oJb6FCHQEeOUnqq6WZOAlg" name="transport" type="_W601QCFdEeOls5wK-eVumw" association="_oJb6EyHQEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oJb6FSHQEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oJb6FiHQEeOUnqq6WZOAlg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_3yAOACFaEeOls5wK-eVumw" name="voyages" clientDependency="_CKxm8CHPEeOUnqq6WZOAlg">
+      <packagedElement xmi:type="uml:Class" xmi:id="__-S6ACFaEeOls5wK-eVumw" name="SejourFixe">
+        <ownedAttribute xmi:id="_CdMI4CFcEeOls5wK-eVumw" name="destination" type="_AmE2QCFcEeOls5wK-eVumw" association="_CdVS0CFcEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CdMI4SFcEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CdMI4iFcEeOls5wK-eVumw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_MAdO4CFcEeOls5wK-eVumw" name="periode" type="_KimJwCFcEeOls5wK-eVumw" association="_MAdO4yFcEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MAdO4SFcEeOls5wK-eVumw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MAdO4iFcEeOls5wK-eVumw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_adybICFcEeOls5wK-eVumw" name="activité" type="_XEN3QCFcEeOls5wK-eVumw" association="_adybIyFcEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_adybISFcEeOls5wK-eVumw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_adybIiFcEeOls5wK-eVumw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_JIcDcCFdEeOls5wK-eVumw" name="hebergement_Restauration" type="_vAaxsCFcEeOls5wK-eVumw" association="_JIcDcyFdEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JIcDcSFdEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JIcDciFdEeOls5wK-eVumw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_CdVS0CFcEeOls5wK-eVumw" name="sejourFixe_destination_1" memberEnd="_CdVS0SFcEeOls5wK-eVumw _CdMI4CFcEeOls5wK-eVumw">
+        <ownedEnd xmi:id="_CdVS0SFcEeOls5wK-eVumw" name="sejourFixe" type="__-S6ACFaEeOls5wK-eVumw" association="_CdVS0CFcEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CdVS0iFcEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CdVS0yFcEeOls5wK-eVumw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_KimJwCFcEeOls5wK-eVumw" name="Periode"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_MAdO4yFcEeOls5wK-eVumw" name="sejourFixe_periode_1" memberEnd="_MAdO5CFcEeOls5wK-eVumw _MAdO4CFcEeOls5wK-eVumw">
+        <ownedEnd xmi:id="_MAdO5CFcEeOls5wK-eVumw" name="sejourFixe" type="__-S6ACFaEeOls5wK-eVumw" association="_MAdO4yFcEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MAdO5SFcEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MAdO5iFcEeOls5wK-eVumw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_XEN3QCFcEeOls5wK-eVumw" name="Activité"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_adybIyFcEeOls5wK-eVumw" name="sejourFixe_activité_1" memberEnd="_adybJCFcEeOls5wK-eVumw _adybICFcEeOls5wK-eVumw">
+        <ownedEnd xmi:id="_adybJCFcEeOls5wK-eVumw" name="sejourFixe" type="__-S6ACFaEeOls5wK-eVumw" association="_adybIyFcEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_adybJSFcEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_adybJiFcEeOls5wK-eVumw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_vAaxsCFcEeOls5wK-eVumw" name="Hebergement_Restauration"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_JIcDcyFdEeOls5wK-eVumw" name="sejourFixe_hebergement_Restauration_1" memberEnd="_JIcDdCFdEeOls5wK-eVumw _JIcDcCFdEeOls5wK-eVumw">
+        <ownedEnd xmi:id="_JIcDdCFdEeOls5wK-eVumw" name="sejourFixe" type="__-S6ACFaEeOls5wK-eVumw" association="_JIcDcyFdEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JIcDdSFdEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JIcDdiFdEeOls5wK-eVumw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_4_nbwCHKEeOUnqq6WZOAlg" name="ConfigSejour">
+        <ownedAttribute xmi:id="_HWezoCHLEeOUnqq6WZOAlg" name="sejourFixe" type="__-S6ACFaEeOls5wK-eVumw" association="_HWokoCHLEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HWezoSHLEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HWezoiHLEeOUnqq6WZOAlg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_S_Sp0CHLEeOUnqq6WZOAlg" name="periode" type="_KimJwCFcEeOls5wK-eVumw" association="_S_Sp0yHLEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S_Sp0SHLEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S_Sp0iHLEeOUnqq6WZOAlg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_UDl_cCHLEeOUnqq6WZOAlg" name="activité" type="_XEN3QCFcEeOls5wK-eVumw" association="_UDl_cyHLEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UDl_cSHLEeOUnqq6WZOAlg" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UDl_ciHLEeOUnqq6WZOAlg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_is2u4CHLEeOUnqq6WZOAlg" name="class1" type="_W601QCFdEeOls5wK-eVumw" association="_is2u4yHLEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_is2u4SHLEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_is2u4iHLEeOUnqq6WZOAlg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Kka9ACHQEeOUnqq6WZOAlg" name="nbPersonnes"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_HWokoCHLEeOUnqq6WZOAlg" name="configSejour_sejourFixe_1" memberEnd="_HWokoSHLEeOUnqq6WZOAlg _HWezoCHLEeOUnqq6WZOAlg">
+        <ownedEnd xmi:id="_HWokoSHLEeOUnqq6WZOAlg" name="configSejour" type="_4_nbwCHKEeOUnqq6WZOAlg" association="_HWokoCHLEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HWokoiHLEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HWokoyHLEeOUnqq6WZOAlg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_S_Sp0yHLEeOUnqq6WZOAlg" name="configSejour_periode_1" memberEnd="_S_Sp1CHLEeOUnqq6WZOAlg _S_Sp0CHLEeOUnqq6WZOAlg">
+        <ownedEnd xmi:id="_S_Sp1CHLEeOUnqq6WZOAlg" name="configSejour" type="_4_nbwCHKEeOUnqq6WZOAlg" association="_S_Sp0yHLEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S_Sp1SHLEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S_Sp1iHLEeOUnqq6WZOAlg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_UDl_cyHLEeOUnqq6WZOAlg" name="configSejour_activité_1" memberEnd="_UDl_dCHLEeOUnqq6WZOAlg _UDl_cCHLEeOUnqq6WZOAlg">
+        <ownedEnd xmi:id="_UDl_dCHLEeOUnqq6WZOAlg" name="configSejour" type="_4_nbwCHKEeOUnqq6WZOAlg" association="_UDl_cyHLEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UDl_dSHLEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UDl_diHLEeOUnqq6WZOAlg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_is2u4yHLEeOUnqq6WZOAlg" name="configSejour_class1_1" memberEnd="_is2u5CHLEeOUnqq6WZOAlg _is2u4CHLEeOUnqq6WZOAlg">
+        <ownedEnd xmi:id="_is2u5CHLEeOUnqq6WZOAlg" name="configSejour" type="_4_nbwCHKEeOUnqq6WZOAlg" association="_is2u4yHLEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_is2u5SHLEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_is2u5iHLEeOUnqq6WZOAlg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_CKxm8CHPEeOUnqq6WZOAlg" name="Dependency1" supplier="_58i6UCFXEeOls5wK-eVumw" client="_3yAOACFaEeOls5wK-eVumw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_bIuZECFdEeOls5wK-eVumw" name="reservations" clientDependency="_1skPQCHNEeOUnqq6WZOAlg _2ysJ0CHNEeOUnqq6WZOAlg _8B9EACHNEeOUnqq6WZOAlg _BUSq4CHPEeOUnqq6WZOAlg">
+      <packagedElement xmi:type="uml:Class" xmi:id="_1XKb4CFdEeOls5wK-eVumw" name="Reservation">
+        <ownedAttribute xmi:id="_G4FU8CFeEeOls5wK-eVumw" name="option?"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_n1fxMCFeEeOls5wK-eVumw" name="ResaClient">
+        <generalization xmi:id="_3U9v4CFeEeOls5wK-eVumw" general="_1XKb4CFdEeOls5wK-eVumw"/>
+        <ownedAttribute xmi:id="_91UegCFeEeOls5wK-eVumw" name="client" type="_46S9sCFYEeOls5wK-eVumw" association="_91UegyFeEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_91UegSFeEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_91UegiFeEeOls5wK-eVumw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_F902sCFfEeOls5wK-eVumw" name="sejourFixe" type="_4_nbwCHKEeOUnqq6WZOAlg" association="_F902syFfEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F902sSFfEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F902siFfEeOls5wK-eVumw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NUosMCFfEeOls5wK-eVumw" name="paiement" type="_LTno8CFaEeOls5wK-eVumw" association="_NUosMyFfEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NUosMSFfEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NUosMiFfEeOls5wK-eVumw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_sg8MoCFeEeOls5wK-eVumw" name="ResaFournisseur">
+        <generalization xmi:id="_3_-bwCFeEeOls5wK-eVumw" general="_1XKb4CFdEeOls5wK-eVumw"/>
+        <ownedAttribute xmi:id="_YeZO4CFfEeOls5wK-eVumw" name="prestataire" type="_EzWPUCFZEeOls5wK-eVumw" association="_YeZO4yFfEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YeZO4SFfEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YeZO4iFfEeOls5wK-eVumw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5oUvoCHMEeOUnqq6WZOAlg" name="prestationSousTraitée" type="_V72sICHMEeOUnqq6WZOAlg" association="_5oUvoyHMEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5oUvoSHMEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5oUvoiHMEeOUnqq6WZOAlg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_91UegyFeEeOls5wK-eVumw" name="resaClient_client_1" memberEnd="_91UehCFeEeOls5wK-eVumw _91UegCFeEeOls5wK-eVumw">
+        <ownedEnd xmi:id="_91UehCFeEeOls5wK-eVumw" name="resaClient" type="_n1fxMCFeEeOls5wK-eVumw" association="_91UegyFeEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_91UehSFeEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_91UehiFeEeOls5wK-eVumw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_F902syFfEeOls5wK-eVumw" name="resaClient_sejourFixe_1" memberEnd="_F902tCFfEeOls5wK-eVumw _F902sCFfEeOls5wK-eVumw">
+        <ownedEnd xmi:id="_F902tCFfEeOls5wK-eVumw" name="resaClient" type="_n1fxMCFeEeOls5wK-eVumw" association="_F902syFfEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F902tSFfEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F902tiFfEeOls5wK-eVumw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_NUosMyFfEeOls5wK-eVumw" name="resaClient_paiement_1" memberEnd="_NUosNCFfEeOls5wK-eVumw _NUosMCFfEeOls5wK-eVumw">
+        <ownedEnd xmi:id="_NUosNCFfEeOls5wK-eVumw" name="resaClient" type="_1XKb4CFdEeOls5wK-eVumw" association="_NUosMyFfEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NUosNSFfEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NUosNiFfEeOls5wK-eVumw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_YeZO4yFfEeOls5wK-eVumw" name="resaPrestation_prestataire_1" memberEnd="_YeZO5CFfEeOls5wK-eVumw _YeZO4CFfEeOls5wK-eVumw">
+        <ownedEnd xmi:id="_YeZO5CFfEeOls5wK-eVumw" name="resaPrestation" type="_sg8MoCFeEeOls5wK-eVumw" association="_YeZO4yFfEeOls5wK-eVumw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YeZO5SFfEeOls5wK-eVumw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YeZO5iFfEeOls5wK-eVumw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_V72sICHMEeOUnqq6WZOAlg" name="PrestationSousTraitée"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5oUvoyHMEeOUnqq6WZOAlg" name="resaFournisseur_prestationSousTraitée_1" memberEnd="_5oUvpCHMEeOUnqq6WZOAlg _5oUvoCHMEeOUnqq6WZOAlg">
+        <ownedEnd xmi:id="_5oUvpCHMEeOUnqq6WZOAlg" name="resaFournisseur" type="_sg8MoCFeEeOls5wK-eVumw" association="_5oUvoyHMEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5oUvpSHMEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5oUvpiHMEeOUnqq6WZOAlg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_6J5ysCHMEeOUnqq6WZOAlg" name="PrestaHebergement">
+        <generalization xmi:id="__DGWQCHMEeOUnqq6WZOAlg" general="_V72sICHMEeOUnqq6WZOAlg"/>
+        <ownedAttribute xmi:id="_cCV3UCHOEeOUnqq6WZOAlg" name="hebergement_Restauration" type="_vAaxsCFcEeOls5wK-eVumw" association="_cCV3UyHOEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cCV3USHOEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cCV3UiHOEeOUnqq6WZOAlg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_8ONz0CHMEeOUnqq6WZOAlg" name="PrestaTransport">
+        <generalization xmi:id="_AyAvICHNEeOUnqq6WZOAlg" general="_V72sICHMEeOUnqq6WZOAlg"/>
+        <ownedAttribute xmi:id="_92S6ACHOEeOUnqq6WZOAlg" name="placeTransp" type="_O1DA8CFdEeOls5wK-eVumw" association="_92S6AyHOEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_92S6ASHOEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_92S6AiHOEeOUnqq6WZOAlg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_1skPQCHNEeOUnqq6WZOAlg" name="Dependency1" supplier="_plOyoCEgEeOT_fjNFFfTPw" client="_bIuZECFdEeOls5wK-eVumw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_2ysJ0CHNEeOUnqq6WZOAlg" name="Dependency2" supplier="_ri288CEgEeOT_fjNFFfTPw" client="_bIuZECFdEeOls5wK-eVumw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_8B9EACHNEeOUnqq6WZOAlg" name="Dependency3" supplier="_3yAOACFaEeOls5wK-eVumw" client="_bIuZECFdEeOls5wK-eVumw"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_cCV3UyHOEeOUnqq6WZOAlg" name="prestaHebergement_hebergement_Restauration_1" memberEnd="_cCV3VCHOEeOUnqq6WZOAlg _cCV3UCHOEeOUnqq6WZOAlg">
+        <ownedEnd xmi:id="_cCV3VCHOEeOUnqq6WZOAlg" name="prestaHebergement" type="_6J5ysCHMEeOUnqq6WZOAlg" association="_cCV3UyHOEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cCV3VSHOEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cCV3ViHOEeOUnqq6WZOAlg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_92S6AyHOEeOUnqq6WZOAlg" name="prestaTransport_placeTransp_1" memberEnd="_92S6BCHOEeOUnqq6WZOAlg _92S6ACHOEeOUnqq6WZOAlg">
+        <ownedEnd xmi:id="_92S6BCHOEeOUnqq6WZOAlg" name="prestaTransport" type="_8ONz0CHMEeOUnqq6WZOAlg" association="_92S6AyHOEeOUnqq6WZOAlg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_92S6BSHOEeOUnqq6WZOAlg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_92S6BiHOEeOUnqq6WZOAlg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_BUSq4CHPEeOUnqq6WZOAlg" name="Dependency4" supplier="_58i6UCFXEeOls5wK-eVumw" client="_bIuZECFdEeOls5wK-eVumw"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
