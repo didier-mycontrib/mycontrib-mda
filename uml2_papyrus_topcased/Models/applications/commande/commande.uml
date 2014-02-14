@@ -550,7 +550,7 @@ factures</body>
           </ownedComment>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_Gv5M8CwMEeOaGb3wLrIgog" name="Expedition_stock" supplier="_iP6B0CwLEeOaGb3wLrIgog" client="_nOFzECwLEeOaGb3wLrIgog"/>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_HR6U4CwMEeOaGb3wLrIgog" name="Expedition_GestionAchats" supplier="_lSPxcCwLEeOaGb3wLrIgog" client="_nOFzECwLEeOaGb3wLrIgog"/>
-          <packagedElement xmi:type="uml:Class" xmi:id="_bsBfcCxKEeOaGb3wLrIgog" name="Livraison">
+          <packagedElement xmi:type="uml:Class" xmi:id="_bsBfcCxKEeOaGb3wLrIgog" name="SuiviLivraison">
             <ownedAttribute xmi:id="_fQDKYCxLEeOaGb3wLrIgog" name="numLivraison"/>
             <ownedAttribute xmi:id="_goGicCxLEeOaGb3wLrIgog" name="accuseReception"/>
           </packagedElement>
@@ -569,13 +569,11 @@ factures</body>
             </ownedOperation>
             <ownedOperation xmi:id="_jIzqwCzyEeOEl-SwRlyn8w" name="getColisByNum"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_hado8CxKEeOaGb3wLrIgog" name="ServiceLivraison" clientDependency="_KN5mQCxLEeOaGb3wLrIgog"/>
-          <packagedElement xmi:type="uml:Class" xmi:id="_jAKbcCxKEeOaGb3wLrIgog" name="ServiceExpedition" clientDependency="_FoaB0CxLEeOaGb3wLrIgog _OBDSUCxMEeOaGb3wLrIgog _RkiAICxMEeOaGb3wLrIgog"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_jAKbcCxKEeOaGb3wLrIgog" name="ServiceExpedition" clientDependency="_FoaB0CxLEeOaGb3wLrIgog _RkiAICxMEeOaGb3wLrIgog _KN5mQCxLEeOaGb3wLrIgog _biy6sI3hEeOTIruS5--sVg"/>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_FoaB0CxLEeOaGb3wLrIgog" name="ServiceExp_Expedition" supplier="_xAmXsCxHEeOaGb3wLrIgog" client="_jAKbcCxKEeOaGb3wLrIgog"/>
-          <packagedElement xmi:type="uml:Dependency" xmi:id="_KN5mQCxLEeOaGb3wLrIgog" name="ServiceLivraison_Livraison" supplier="_bsBfcCxKEeOaGb3wLrIgog" client="_hado8CxKEeOaGb3wLrIgog"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_KN5mQCxLEeOaGb3wLrIgog" name="ServiceLivraison_Livraison" supplier="_bsBfcCxKEeOaGb3wLrIgog" client="_jAKbcCxKEeOaGb3wLrIgog"/>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_9M2VUCxLEeOaGb3wLrIgog" name="ServicePackaging_ColisPackage" supplier="_dUTE0CxKEeOaGb3wLrIgog" client="_fyLcgCxKEeOaGb3wLrIgog"/>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_BQRHcCxMEeOaGb3wLrIgog" name="expedition_Colis" supplier="_dUTE0CxKEeOaGb3wLrIgog" client="_xAmXsCxHEeOaGb3wLrIgog"/>
-          <packagedElement xmi:type="uml:Dependency" xmi:id="_OBDSUCxMEeOaGb3wLrIgog" name="ServExpeditio_ServLivraison" supplier="_hado8CxKEeOaGb3wLrIgog" client="_jAKbcCxKEeOaGb3wLrIgog"/>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_RkiAICxMEeOaGb3wLrIgog" name="ServExp_servPackaging" supplier="_fyLcgCxKEeOaGb3wLrIgog" client="_jAKbcCxKEeOaGb3wLrIgog"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_xAmXsCxHEeOaGb3wLrIgog" name="Expedition" clientDependency="_BQRHcCxMEeOaGb3wLrIgog">
             <ownedAttribute xmi:id="_30GZ4CxJEeOaGb3wLrIgog" name="statut_expedition"/>
@@ -593,6 +591,7 @@ factures</body>
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e8uB5ixPEeOaGb3wLrIgog" value="1"/>
             </ownedEnd>
           </packagedElement>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_biy6sI3hEeOTIruS5--sVg" name="Dependency1" supplier="_XpTMcCzwEeOEl-SwRlyn8w" client="_jAKbcCxKEeOaGb3wLrIgog"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_qQ0kQCwLEeOaGb3wLrIgog" name="commandes_et_suivi" clientDependency="_H_xgcCwMEeOaGb3wLrIgog _JI99ICwMEeOaGb3wLrIgog">
           <packagedElement xmi:type="uml:Dependency" xmi:id="_H_xgcCwMEeOaGb3wLrIgog" name="SuiviCmde_expeditions" supplier="_nOFzECwLEeOaGb3wLrIgog" client="_qQ0kQCwLEeOaGb3wLrIgog"/>
@@ -1271,7 +1270,6 @@ Echanges asynchones (initiation, A/R, ...)</body>
   <ntiers:service xmi:id="_F4BSgCxIEeOaGb3wLrIgog" base_Class="_BapvUCxIEeOaGb3wLrIgog"/>
   <ntiers:reference xmi:id="_EnmPoCxMEeOaGb3wLrIgog" base_Dependency="_BQRHcCxMEeOaGb3wLrIgog"/>
   <ntiers:service xmi:id="_YsjywCxMEeOaGb3wLrIgog" base_Class="_jAKbcCxKEeOaGb3wLrIgog"/>
-  <ntiers:service xmi:id="_Z-mCYCxMEeOaGb3wLrIgog" base_Class="_hado8CxKEeOaGb3wLrIgog"/>
   <ntiers:service xmi:id="_bfB6YCxMEeOaGb3wLrIgog" base_Class="_fyLcgCxKEeOaGb3wLrIgog"/>
   <ntiers:service xmi:id="_lP9zgCxNEeOaGb3wLrIgog" base_Class="_byi20CxNEeOaGb3wLrIgog"/>
   <ntiers:reference xmi:id="_6JxzoCxQEeOaGb3wLrIgog" base_Dependency="_22uugCxQEeOaGb3wLrIgog"/>

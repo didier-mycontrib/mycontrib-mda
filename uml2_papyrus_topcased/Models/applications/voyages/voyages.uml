@@ -473,6 +473,9 @@
           <ownedOperation xmi:id="_GMEgMCVTEeOEl-JokDxAEQ" name="recupListeCategories"/>
           <ownedOperation xmi:id="_8f_nACVTEeOEl-JokDxAEQ" name="recupListeVoyageSelonCategorie"/>
           <ownedOperation xmi:id="_Gaq5ECWkEeOLdeKPQWhTwQ" name="recupDetailsVoyageSelonId"/>
+          <ownedOperation xmi:id="_cKIVcIqJEeOMUKpjH8b14g" name="recupListeCategories"/>
+          <ownedOperation xmi:id="_lZoK4IqJEeOMUKpjH8b14g" name="recupListeVoyageSelonCategorie"/>
+          <ownedOperation xmi:id="_qxsbwIqJEeOMUKpjH8b14g" name="recupDetailsVoyageSelonId"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_JVEe0CKdEeO13NwzcNKRkw" name="GestionConfigSejour" clientDependency="_53_3YCKdEeO13NwzcNKRkw">
           <ownedOperation xmi:id="_0KRfkCKdEeO13NwzcNKRkw" name="CRUD_ConfigSejour"/>

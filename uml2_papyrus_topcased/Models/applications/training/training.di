@@ -25,15 +25,21 @@
     <availablePage>
       <emfPageIdentifier href="training.notation#_E9LdYGMbEeOjaIzuhpmW5A"/>
     </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="training.notation#_E9QmsJWAEeO7IrghFLvshw"/>
+    </availablePage>
   </pageList>
   <sashModel currentSelection="//@sashModel/@windows.0/@children.0">
     <windows>
       <children xsi:type="di:TabFolder">
         <children>
+          <emfPageIdentifier href="training.notation#_vRsboCEfEeOT_fjNFFfTPw"/>
+        </children>
+        <children>
           <emfPageIdentifier href="training.notation#_MgvQECEdEeOT_fjNFFfTPw"/>
         </children>
         <children>
-          <emfPageIdentifier href="training.notation#_vRsboCEfEeOT_fjNFFfTPw"/>
+          <emfPageIdentifier href="training.notation#_E9QmsJWAEeO7IrghFLvshw"/>
         </children>
         <children>
           <emfPageIdentifier href="training.notation#_NbA3QGMZEeOjaIzuhpmW5A"/>

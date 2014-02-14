@@ -3329,6 +3329,18 @@
           <element xmi:type="uml:Operation" href="voyages.uml#_qnapQCKdEeO13NwzcNKRkw"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_qnkaQSKdEeO13NwzcNKRkw"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_cKuLUIqJEeOMUKpjH8b14g" type="3013" fontName="Segoe UI" lineColor="0">
+          <element xmi:type="uml:Operation" href="voyages.uml#_cKIVcIqJEeOMUKpjH8b14g"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_cKuLUYqJEeOMUKpjH8b14g"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_lZoK4YqJEeOMUKpjH8b14g" type="3013" fontName="Segoe UI" lineColor="0">
+          <element xmi:type="uml:Operation" href="voyages.uml#_lZoK4IqJEeOMUKpjH8b14g"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_lZoK4oqJEeOMUKpjH8b14g"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_qxsbwYqJEeOMUKpjH8b14g" type="3013" fontName="Segoe UI" lineColor="0">
+          <element xmi:type="uml:Operation" href="voyages.uml#_qxsbwIqJEeOMUKpjH8b14g"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_qxsbwoqJEeOMUKpjH8b14g"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_H0_MMCKdEeO13NwzcNKRkw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_H0_MMSKdEeO13NwzcNKRkw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_H0_MMiKdEeO13NwzcNKRkw"/>
@@ -3341,7 +3353,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H0_MOCKdEeO13NwzcNKRkw"/>
       </children>
       <element xmi:type="uml:Class" href="voyages.uml#_H0_MICKdEeO13NwzcNKRkw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H0_MIiKdEeO13NwzcNKRkw" x="270" y="470"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H0_MIiKdEeO13NwzcNKRkw" x="260" y="445" height="116"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_JVEe0SKdEeO13NwzcNKRkw" type="2008" fontName="Segoe UI" fillColor="16764671" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JVEe0yKdEeO13NwzcNKRkw" source="ShadowFigure">

@@ -29,6 +29,12 @@
     <availablePage>
       <emfPageIdentifier href="voyages.notation#_Ii-aACEdEeOT_fjNFFfTPw"/>
     </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="voyages.notation#_BxAVACVREeOEl-JokDxAEQ"/>
+    </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="voyages.notation#_7nYsQCHrEeOUnqq6WZOAlg"/>
+    </availablePage>
   </pageList>
   <sashModel currentSelection="//@sashModel/@windows.0/@children.0">
     <windows>
@@ -40,10 +46,16 @@
           <emfPageIdentifier href="voyages.notation#_qGkg4CHrEeOUnqq6WZOAlg"/>
         </children>
         <children>
+          <emfPageIdentifier href="voyages.notation#_CI5t8CHrEeOUnqq6WZOAlg"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="voyages.notation#_BxAVACVREeOEl-JokDxAEQ"/>
+        </children>
+        <children>
           <emfPageIdentifier href="voyages.notation#_Ii-aACEdEeOT_fjNFFfTPw"/>
         </children>
         <children>
-          <emfPageIdentifier href="voyages.notation#_CI5t8CHrEeOUnqq6WZOAlg"/>
+          <emfPageIdentifier href="voyages.notation#_7nYsQCHrEeOUnqq6WZOAlg"/>
         </children>
       </children>
     </windows>
