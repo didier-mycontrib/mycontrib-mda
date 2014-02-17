@@ -11,10 +11,11 @@
    e.getAppliedStereotypes()->size() < 1 /]
 
 [query public queryBasicAttributes(c : Classifier) : Set(Property) = 
-   c.getAllAttributes()->select(aggregation <> AggregationKind::composite and aggregation <> AggregationKind::shared) /]
+   c.getAllAttributes()->select(aggregation <> AggregationKind::composite and aggregation <> AggregationKind::shared and association = null) /]
 
 [query public isNotWithGeneric(c : Classifier) : Boolean = c.name.contains('<')._not() /]
 
+[query public isNotInPrivatePackage(e : Element) : Boolean =   e.ancestors(Package)->first().visibility <> VisibilityKind::private /]
 
 [query public queryRootPackage(e : Element) : Package = 
    e.ancestors(Package)->last()/]
@@ -62,7 +63,7 @@
                       
 
 [template public recursiveQualifiedName(n : Namespace) post(trim())]
-	[if (n.namespace <>null) and (n.namespace.name <> null) and (n.namespace.visibility <> VisibilityKind::private)][n.namespace.recursiveQualifiedName()/].[/if][n.name/]
+	[if (n.namespace <>null) and (n.namespace.name <> null) and (n.namespace.name <> 'LogicalView') and (n.namespace.name <> 'Model') and (n.namespace.visibility <> VisibilityKind::private)][n.namespace.recursiveQualifiedName()/].[/if][n.name/]
 [/template]
 
 

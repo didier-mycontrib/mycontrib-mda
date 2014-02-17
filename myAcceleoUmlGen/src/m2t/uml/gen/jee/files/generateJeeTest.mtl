@@ -67,7 +67,7 @@ public class TestService[c.name/] {
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"/serviceSpringConf.xml","/dataSourceForTestSpringConf.xml"})
 @TransactionConfiguration(transactionManager="txManager",defaultRollback=false)
-public class TestDao[c.name/]WithGenericAndDbUnit extends GenericDaoTestWithDbUnit<_[c.name/],[cl.typeNameOfPk().convertPrimitiveToWrapper()/]>{ 
+public class TestDao[c.name/]WithGenericAndDbUnit extends GenericDaoTestWithDbUnitSpring<_[c.name/],[cl.typeNameOfPk().convertPrimitiveToWrapper()/]>{ 
 
 	private Dao[c.name/] dao = null; // dao à tester
 	

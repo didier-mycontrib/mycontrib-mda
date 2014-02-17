@@ -2,10 +2,18 @@
 [module utilSql('http://www.eclipse.org/uml2/3.0.0/UML')/]
 [import m2t::uml::gen::common::files::utilCommon/]
 
+[query public queryIsData(c : Classifier) : Boolean = 
+   (c.queryAsStereotype('n-tiers::entity') or  c.queryAsStereotype('n-tiers::embeddable') 
+   or c.queryAsStereotype('n-tiers::data') or c.queryAsStereotype('n-tiers::value')
+   or ( c.queryAsAtLeastOneProperty() and c.queryAsAtLeastOneOperation()._not() and c.queryAsNoStereotype() ))
+   and c.isNotInPrivatePackage() /]
+
+[query public queryIsForEntity(c : Classifier) : Boolean = 
+   c.queryIsData() and  c.queryAsStereotype('n-tiers::value')._not() /]
 
 [template public genSqlDropTable(m: Model)]
-[for (c : Class | m.eAllContents())]
-    [if (c.queryAsStereotype('n-tiers::entity'))]
+[for (c : Class | m.eAllContents(Class))]
+    [if (c.queryIsForEntity())]
 DROP TABLE IF EXISTS [c.name/];
 	[/if]
 [/for]
@@ -142,8 +150,8 @@ CREATE TABLE [c.name/](
 [/template]
 
 [template public genSqlCreateTable(m: Model)]
-[for (c : Class | m.eAllContents())]
-    [if (c.queryAsStereotype('n-tiers::entity'))]
+[for (c : Class | m.eAllContents(Class))]
+    [if (c.queryIsForEntity())]
 [c.sqlCreateTable()/]
 
 	[/if]
@@ -151,16 +159,16 @@ CREATE TABLE [c.name/](
 [/template]
 
 [template public genSqlForeignKey(m: Model)]
-[for (c : Class | m.eAllContents())]
-    [if (c.queryAsStereotype('n-tiers::entity'))]
+[for (c : Class | m.eAllContents(Class))]
+    [if (c.queryIsForEntity())]
 [c.foreignKeyDeclarationsFromAssociationsOfUmlClass()/]
 	[/if]
 [/for]
 [/template]
 
 [template public genSqlInsertInto(m: Model)]
-[for (c : Class | m.eAllContents())]
-    [if (c.queryAsStereotype('n-tiers::entity'))]
+[for (c : Class | m.eAllContents(Class))]
+    [if (c.queryIsForEntity())]
 INSERT INTO [c.name/] ([for(c.attribute->asSequence()->sortedBy(name))separator(',')][name/][/for][c.foreignKeyStringWithoutTypeFromAssociationsOfUmlClass()/])
                VALUES ([c.getStringOfFieldExempleValueList()/][c.foreignKeyExValueStringFromAssociationsOfUmlClass()/]);
 	[/if]
@@ -168,8 +176,8 @@ INSERT INTO [c.name/] ([for(c.attribute->asSequence()->sortedBy(name))separator(
 [/template]
 
 [template public genSelectInSql(m: Model)]
-[for (c : Class | m.eAllContents())]
-    [if (c.queryAsStereotype('n-tiers::entity'))]
+[for (c : Class | m.eAllContents(Class))]
+    [if (c.queryIsForEntity())]
 SELECT * FROM [c.name/];
 	[/if]
 [/for]

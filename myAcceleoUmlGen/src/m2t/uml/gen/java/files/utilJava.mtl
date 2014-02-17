@@ -14,8 +14,8 @@
 [template public genJavaInstanceVarFromUmlAssRole(c : Class)]
 [for (a : Association | c.getAssociations() )]
   [let p : Property = a.queryGetOppositeAssociationEnd(c)]
-  [comment les associations composite ont déjà une extrémité en tant qu'attribut /]       
-       [if (p.aggregation <> AggregationKind::composite)]
+  [comment les associations composite ont deja� une extremite en tant qu'attribut /]       
+       [if (p.aggregation <> AggregationKind::composite )]
 [p.genJavaPrivateProperty()/]
        [/if]
   [/let] 
@@ -25,7 +25,7 @@
 [template public genJavaGetterSetterFromUmlAssRole(c: Class)]
 [for (a : Association | c.getAssociations() )]
      [let p : Property = a.queryGetOppositeAssociationEnd(c)]
-       [comment les associations composite ont déjà une extrémité en tant qu'attribut /]       
+       [comment les associations composite ont deja� une extremite en tant qu'attribut /]       
        [if (p.aggregation <> AggregationKind::composite)]		
 [p.genJavaGetter()/]
 [p.genJavaSetter()/]
@@ -39,14 +39,14 @@ public [if (c.isAbstract)]abstract[/if] class [c.name.toUpperFirst()/] [c.javaEx
 [for (p: Property | c.attribute)]
 [p.genJavaPrivateProperty()/]
 [/for]
-[c.genJavaInstanceVarFromUmlAssRole()/]
+[comment {c.genJavaInstanceVarFromUmlAssRole()/} for old uml version /]
 [c.genJavaDefaultConstructor()/]      
 [c.genJavaToString()/]           
 [for (p: Property | c.attribute)]
 [p.genJavaGetter()/]
 [p.genJavaSetter()/]
 [/for]
-[c.genJavaGetterSetterFromUmlAssRole()/]
+[comment {c.genJavaGetterSetterFromUmlAssRole()/} for old uml version /]
         
 [for (o: Operation | c.ownedOperation)]
 [o.genJavaMethod()/]
@@ -72,9 +72,18 @@ public enum [e.name.toUpperFirst()/] {
 }
 [/template]
 
+[template public genJavaImportsFromPackageDependencies(c : Classifier)]
+[for (d : Dependency  | c._package.clientDependency)]
+  [let n : Namespace = d.supplier->asOrderedSet()->first().namespace ]
+import [c.packagePrefixFromUml()/].[if (n <> null) and (n.name <> 'LogicalView') and (n.name <> 'Model') and (n.visibility <> VisibilityKind::private)][n.recursiveQualifiedName()/].[/if][d.supplier.name/].*;
+ [/let]
+[/for]
+[/template]
+
 [template public genJavaNeedsImports(c : Classifier)]
 //(re-)generated imports:
 [if (c.oclIsKindOf(Class))]
+[(c.oclAsType(Class)).genJavaImportsFromPackageDependencies()/]
 [(c.oclAsType(Class)).javaImportsNeedForImplementsfromUml()/]
 [(c.oclAsType(Class)).javaImportsNeedForExtendsfromUml()/]
 [/if]	
@@ -169,7 +178,7 @@ return null;
 		[/if]
 [/template]
 
-[template inputParametersForOp(o: Operation) post(trim())] 
+[template public inputParametersForOp(o: Operation) post(trim())] 
 [for (p : Parameter | o.ownedParameter) separator(',') ? (p.direction <> ParameterDirectionKind::return)][p.type.name/] [p.name/][/for]
 [/template]
 

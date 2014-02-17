@@ -5,9 +5,10 @@
 [import m2t::uml::gen::java::files::utilJava /]
 
 [query public queryIsData(c : Classifier) : Boolean = 
-   c.queryAsStereotype('n-tiers::entity') or  c.queryAsStereotype('n-tiers::embeddable') 
+   (c.queryAsStereotype('n-tiers::entity') or  c.queryAsStereotype('n-tiers::embeddable') 
    or c.queryAsStereotype('n-tiers::data') or c.queryAsStereotype('n-tiers::value')
-   or ( c.queryAsAtLeastOneProperty() and c.queryAsAtLeastOneOperation()._not() and c.queryAsNoStereotype() )/]
+   or ( c.queryAsAtLeastOneProperty() and c.queryAsAtLeastOneOperation()._not() and c.queryAsNoStereotype() ))
+   and c.isNotInPrivatePackage() /]
 
 [query public queryIsService(c : Classifier) : Boolean = 
    c.queryAsStereotype('n-tiers::service') or c.queryAsAtLeastOneOperation() /]
@@ -93,7 +94,7 @@ public  class [if (jeeType='entity')]_[/if][c.name.toUpperFirst()/] [c.javaExten
 
 //[/protected]
 [for (p: Property | c.attribute)]
-[if (p.aggregation <> AggregationKind::shared and p.aggregation <> AggregationKind::composite)][p.genJeePrivateProperty(jeeType)/][/if]
+[if (p.aggregation <> AggregationKind::shared and p.aggregation <> AggregationKind::composite and p.association = null)][p.genJeePrivateProperty(jeeType)/][/if]
 [/for]
 [c.genJeeInstanceVarFromUmlAssRole(jeeType)/]
 [c.genJeeDefaultConstructor(jeeType)/]      
@@ -106,7 +107,7 @@ public  class [if (jeeType='entity')]_[/if][c.name.toUpperFirst()/] [c.javaExten
  	}
 [/if]          
 [for (p: Property | c.attribute)]
-  [if (p.aggregation <> AggregationKind::shared and p.aggregation <> AggregationKind::composite)]
+  [if (p.aggregation <> AggregationKind::shared and p.aggregation <> AggregationKind::composite and p.association = null)]
 [p.genJeeGetter()/]
 [p.genJeeSetter()/]
   [/if]
@@ -122,7 +123,9 @@ public  class [if (jeeType='entity')]_[/if][c.name.toUpperFirst()/] [c.javaExten
 
 [template public genJeeImportsFromPackageDependencies(c : Classifier,jeeSuffix : String)]
 [for (d : Dependency  | c._package.clientDependency)]
-import [c.packagePrefixFromUml()/].[if (d.supplier.namespace <>null) and (d.supplier.namespace.visibility <> VisibilityKind::private)][d.supplier.namespace.recursiveQualifiedName()/].[/if][d.supplier.name/].[jeeSuffix/].*;
+  [let n : Namespace = d.supplier->asOrderedSet()->first().namespace ]
+import [c.packagePrefixFromUml()/].[if (n <> null) and (n.name <> 'LogicalView') and (n.name <> 'Model') and (n.visibility <> VisibilityKind::private)][n.recursiveQualifiedName()/].[/if][d.supplier.name/].[jeeSuffix/].*;
+ [/let]
 [/for]
 [/template]
 
@@ -133,8 +136,10 @@ import [c.packagePrefixFromUml()/].[if (d.supplier.namespace <>null) and (d.supp
 	import java.util.Date;
   [if(c.queryWithEnumProperty()) or c.queryClassifierOperationWithEnumParam()]
     import [c.jeePackageName('itf.domain.enumeration')/].*;
-  [/if]		
-  [if (jeeType = 'entity')]   
+  [/if]	
+  [if (jeeType = 'dto')]   
+    [c.genJeeImportsFromPackageDependencies('itf.domain.dto')/]	
+  [elseif (jeeType = 'entity')]   
 	import javax.persistence.*;
     [c.genJeeImportsFromPackageDependencies('impl.persistence.entity')/]
   [elseif (jeeType = 'service')]
@@ -157,7 +162,7 @@ import [c.packagePrefixFromUml()/].[if (d.supplier.namespace <>null) and (d.supp
     import org.mycontrib.generic.persistence.GenericDao;
     import [c.jeePackageName('impl.persistence.entity')/].*;
  [elseif (jeeType = 'daoImpl')]
-    import org.mycontrib.generic.persistence.GenericDaoJpaImpl;
+    import org.mycontrib.generic.persistence.spring.GenericDaoJpaSpring;
     import [c.jeePackageName('impl.persistence.dao')/].*;
     import [c.jeePackageName('impl.persistence.entity')/].*;
 	import javax.inject.Named;
@@ -168,7 +173,7 @@ import [c.packagePrefixFromUml()/].[if (d.supplier.namespace <>null) and (d.supp
  	import [c.jeePackageName('impl.persistence.dao')/].*;
  	import [c.jeePackageName('impl.persistence.entity')/].*; 
  	import javax.sql.DataSource;
- 	import org.mycontrib.generic.test.GenericDaoTestWithDbUnit;
+ 	import org.mycontrib.generic.test.spring.GenericDaoTestWithDbUnitSpring;
  	import org.springframework.transaction.annotation.Transactional;
  	import org.springframework.test.context.transaction.TransactionConfiguration; 		
   [/if]  
@@ -347,7 +352,7 @@ import [c.packagePrefixFromUml()/].[if (d.supplier.namespace <>null) and (d.supp
 	}
 [/template]
 
-[template inputParametersForOpWithWebParam(o: Operation) post(trim())] 
+[template public inputParametersForOpWithWebParam(o: Operation) post(trim())] 
 [for (p : Parameter | o.ownedParameter) separator(',') ? (p.direction <> ParameterDirectionKind::return)]@WebParam(name="[p.name/]")[p.type.name/] [p.name/][/for]
 [/template]
 

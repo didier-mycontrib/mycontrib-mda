@@ -6,7 +6,7 @@
 [import m2t::uml::gen::jee::files::jeeArtifacts /]
 
 [template public generateJeeClassFile(c: Classifier) 
-? ( c.oclIsTypeOf(Class) or c.oclIsTypeOf(Interface) or c.oclIsTypeOf(Enumeration)) ]
+? ( (c.oclIsTypeOf(Class) or c.oclIsTypeOf(Interface) or c.oclIsTypeOf(Enumeration)) and c.isNotWithGeneric() and c.isNotInPrivatePackage() ) ]
 [comment @main /]
 [c.generateDtoClassFile()/]
 [c.generateServiceInterfaceFile()/]

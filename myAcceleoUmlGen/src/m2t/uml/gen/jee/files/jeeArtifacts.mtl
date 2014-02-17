@@ -134,7 +134,7 @@ public interface Dao[c.name/] extends GenericDao<_[c.name/],[cl.typeNameOfPk().c
 [c.genJeePackage('impl.persistence.dao.jpa')/]
 [c.genJeeImports('daoImpl')/]
 @Named
-public class Dao[c.name/]Jpa extends GenericDaoJpaImpl<_[c.name/],[cl.typeNameOfPk().convertPrimitiveToWrapper()/]> implements Dao[c.name/] {
+public class Dao[c.name/]Jpa extends GenericDaoJpaSpring<_[c.name/],[cl.typeNameOfPk().convertPrimitiveToWrapper()/]> implements Dao[c.name/] {
 	//[protected ('specific_dao_methods')]
 	    //public List<_[c.name/]> find[c.name/]ByXyz(...){ .... }
 	//[/protected]

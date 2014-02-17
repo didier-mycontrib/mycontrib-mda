@@ -4,7 +4,7 @@
 [import m2t::uml::gen::common::files::utilCommon/]
 [import m2t::uml::gen::sql::files::utilSql /]
 
-[template public generateSqlFile(m: Model) ? (m.name <> 'common') ]
+[template public generateSqlFile(m: Model) ? (m.name = 'LogicalView') ]
 [comment @main /]
 [file ('myGeneratedDataBaseStructure.sql', false)]
 ################################################################################################################
@@ -19,7 +19,7 @@
 ######      < UML model = [m.name/]  > 
 ################################################################################################################
 
-[let databaseName : String = m.queryFirstInstanceSpec().queryInstanceProperty('databaseName').default('myDataBase')] 
+[let databaseName : String = m.queryRetreiveCfgProperty('databaseName').default('myDataBase')] 
 CREATE DATABASE IF NOT EXISTS [databaseName/];
 USE [databaseName/];
 [/let]
