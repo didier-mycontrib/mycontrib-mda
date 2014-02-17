@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ntiers="http:///schemas/ntiers/_ARg8ICEHEeOT_fjNFFfTPw/20" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/ntiers/_ARg8ICEHEeOT_fjNFFfTPw/20 ../../profiles/n-tiers.profile.uml#_ARg8ISEHEeOT_fjNFFfTPw">
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ntiers="http:///schemas/ntiers/_ARg8ICEHEeOT_fjNFFfTPw/20" xmlns:ntiers_1="http:///schemas/ntiers/_L7fawJWZEeO7IrghFLvshw/21" xmlns:ntiers_2="http:///schemas/ntiers/_7cY98JevEeOWJ5qDELGoUw/22" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/ntiers/_ARg8ICEHEeOT_fjNFFfTPw/20 file:/C:/tp/tp-uml/mda/uml2_papyrus_topcased/Models/profiles/n-tiers.profile.uml#_ARg8ISEHEeOT_fjNFFfTPw http:///schemas/ntiers/_L7fawJWZEeO7IrghFLvshw/21 file:/C:/tp/tp-uml/mda/uml2_papyrus_topcased/Models/profiles/n-tiers.profile.uml#_L7mvgJWZEeO7IrghFLvshw http:///schemas/ntiers/_7cY98JevEeOWJ5qDELGoUw/22 file:/C:/tp/tp-uml/mda/uml2_papyrus_topcased/Models/profiles/n-tiers.profile.uml#_7ccBQJevEeOWJ5qDELGoUw">
   <uml:Model xmi:id="_l-hugCEcEeOT_fjNFFfTPw" name="Model" visibility="private">
     <ownedComment xmi:id="_sSpcMJWBEeO7IrghFLvshw" annotatedElement="_IAGsoJWAEeO7IrghFLvshw _ZX10gJWAEeO7IrghFLvshw">
       <body>parametrage pour la generation de code java/jee via acceleo_m2t&#xD;
 * Classe &quot;AppConfig&quot; à la racine du modèle UML &#xD;
-* instanceSpecification avec &quot;slots&quot; pour les valeurs des propriétés&#xD;
-   et avec stéréotype &lt;&lt;config>> (de n-tiers::) </body>
+   et avec stéréotype &lt;&lt;config>> (de n-tiers::) &#xD;
+* instanceSpecification avec &quot;slots&quot; pour les valeurs des propriétés</body>
     </ownedComment>
     <packageImport xmi:id="_l-hugSEcEeOT_fjNFFfTPw">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -39,7 +39,7 @@ shared=true and ownerOrgId not null means &quot;readeable by others&quot;</body>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vtPNgmMdEeOjaIzuhpmW5A"/>
           </ownedAttribute>
           <ownedAttribute xmi:id="_CE5hUGMeEeOjaIzuhpmW5A" name="choices" type="_b23K4GMbEeOjaIzuhpmW5A" aggregation="composite" association="_CE5hU2MeEeOjaIzuhpmW5A">
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CE5hUWMeEeOjaIzuhpmW5A" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CE5hUWMeEeOjaIzuhpmW5A" value="*"/>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CE5hUmMeEeOjaIzuhpmW5A" value="1"/>
           </ownedAttribute>
           <ownedAttribute xmi:id="_9-eaUGMkEeOjaIzuhpmW5A" name="mcqUserSessionId" visibility="private">
@@ -89,7 +89,9 @@ shared=true and ownerOrgId not null means &quot;readeable by others&quot;</body>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oQmFsWMxEeOjaIzuhpmW5A" value="1"/>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oQmFsmMxEeOjaIzuhpmW5A" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:id="_jMaksGMyEeOjaIzuhpmW5A" name="idSession"/>
+          <ownedAttribute xmi:id="_jMaksGMyEeOjaIzuhpmW5A" name="idSession">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
           <ownedAttribute xmi:id="_4fDb4GMyEeOjaIzuhpmW5A" name="startDateTime"/>
           <ownedAttribute xmi:id="_8F1VUGMyEeOjaIzuhpmW5A" name="duration"/>
           <ownedAttribute xmi:id="_LtW5cGNXEeO2qNd1i6yKTQ" name="assignedGroup" type="_LKgjgGM1EeOjaIzuhpmW5A" association="_LtW5c2NXEeO2qNd1i6yKTQ">
@@ -125,9 +127,11 @@ shared=true and ownerOrgId not null means &quot;readeable by others&quot;</body>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7GRV9mNXEeO2qNd1i6yKTQ"/>
           </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_vdGYwGNqEeOPvvsR26loOg" name="McqUserSessionManager" clientDependency="_0Oz0QGNqEeOPvvsR26loOg _0tWxcGNqEeOPvvsR26loOg"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_vdGYwGNqEeOPvvsR26loOg" name="McqUserSessionManager" clientDependency="_0Oz0QGNqEeOPvvsR26loOg">
+          <ownedOperation xmi:id="_nV4bgJfXEeOMMp6tE5Q0yg" name="createNewMcqUserSession"/>
+          <ownedOperation xmi:id="_qR3rgJfXEeOMMp6tE5Q0yg" name="computeMcqScore"/>
+        </packagedElement>
         <packagedElement xmi:type="uml:Dependency" xmi:id="_0Oz0QGNqEeOPvvsR26loOg" name="Dependency3" supplier="_KhkTAGMbEeOjaIzuhpmW5A" client="_vdGYwGNqEeOPvvsR26loOg"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_0tWxcGNqEeOPvvsR26loOg" name="Dependency4" supplier="_b23K4GMbEeOjaIzuhpmW5A" client="_vdGYwGNqEeOPvvsR26loOg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="__VGfwCEdEeOT_fjNFFfTPw" name="mcq" clientDependency="_BugukJWHEeO7IrghFLvshw">
         <ownedComment xmi:id="_xPEbYGMXEeOjaIzuhpmW5A" annotatedElement="_TE4moGMVEeOjaIzuhpmW5A">
@@ -276,10 +280,34 @@ shared=true and ownerOrgId not null means &quot;readeable by others&quot;</body>
           </ownedEnd>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_3ski8GMaEeOjaIzuhpmW5A" name="McqChooser" clientDependency="_WRdPsGNqEeOPvvsR26loOg">
-          <ownedOperation xmi:id="_6iRkwGMaEeOjaIzuhpmW5A" name="getSubjectList"/>
-          <ownedOperation xmi:id="_pFUh4GNrEeOPvvsR26loOg" name="CRUD_subject"/>
-          <ownedOperation xmi:id="_F0FzcGNsEeOPvvsR26loOg" name="addSubject"/>
-          <ownedOperation xmi:id="_b3pKMGNsEeOPvvsR26loOg" name="getMcqBySubject"/>
+          <ownedOperation xmi:id="_6iRkwGMaEeOjaIzuhpmW5A" name="getSubjectList">
+            <ownedParameter xmi:id="_g0e18JfVEeOMMp6tE5Q0yg" type="_VCG0EJfVEeOMMp6tE5Q0yg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_pFUh4GNrEeOPvvsR26loOg" name="deleteSubject">
+            <ownedParameter xmi:id="_ngPjUJfVEeOMMp6tE5Q0yg" name="id">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_F0FzcGNsEeOPvvsR26loOg" name="addSubject">
+            <ownedParameter xmi:id="_E8saQJfWEeOMMp6tE5Q0yg" name="s" type="_dcWM4GMZEeOjaIzuhpmW5A"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_b3pKMGNsEeOPvvsR26loOg" name="getMcqListBySubject">
+            <ownedParameter xmi:id="_OYoJMJfWEeOMMp6tE5Q0yg" name="subjectId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_SmnMkJfWEeOMMp6tE5Q0yg" type="_YoqrEJfVEeOMMp6tE5Q0yg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4gQkMJfUEeOMMp6tE5Q0yg" name="updateSubject">
+            <ownedParameter xmi:id="_bHMtkJfWEeOMMp6tE5Q0yg" name="s" type="_dcWM4GMZEeOjaIzuhpmW5A"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_G2JEoJfVEeOMMp6tE5Q0yg" name="addMcqInSubject">
+            <ownedParameter xmi:id="_h_zkIJfWEeOMMp6tE5Q0yg" name="subjectId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_kiduIJfWEeOMMp6tE5Q0yg" name="mcqId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="__ggAYGNpEeOPvvsR26loOg" name="McqManager" clientDependency="_Vvxe8GNqEeOPvvsR26loOg">
           <ownedOperation xmi:id="_iEmRIGNrEeOPvvsR26loOg" name="CRUD_mcq"/>
@@ -297,6 +325,8 @@ shared=true and ownerOrgId not null means &quot;readeable by others&quot;</body>
         <packagedElement xmi:type="uml:Dependency" xmi:id="_Vvxe8GNqEeOPvvsR26loOg" name="Dependency3" supplier="_TE4moGMVEeOjaIzuhpmW5A" client="__ggAYGNpEeOPvvsR26loOg"/>
         <packagedElement xmi:type="uml:Dependency" xmi:id="_WRdPsGNqEeOPvvsR26loOg" name="Dependency4" supplier="_dcWM4GMZEeOjaIzuhpmW5A" client="_3ski8GMaEeOjaIzuhpmW5A"/>
         <packagedElement xmi:type="uml:Dependency" xmi:id="_BugukJWHEeO7IrghFLvshw" name="Dependency5" supplier="_DUYiUGMVEeOjaIzuhpmW5A" client="__VGfwCEdEeOT_fjNFFfTPw"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_VCG0EJfVEeOMMp6tE5Q0yg" name="List&lt;McqSubject>"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_YoqrEJfVEeOMMp6tE5Q0yg" name="List&lt;Mcq>"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_DUYiUGMVEeOjaIzuhpmW5A" name="saasOrg">
         <ownedComment xmi:id="_DsIkEGNOEeOjaIzuhpmW5A" annotatedElement="_NEWY0GMbEeOjaIzuhpmW5A">
@@ -430,6 +460,16 @@ ADMIN_SAAS : peut créer/supprimer org , ...</body>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_58q005WEEeO7IrghFLvshw" value="1"/>
           </ownedEnd>
         </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_1WdPwJfWEeOMMp6tE5Q0yg" name="SaasOrgManager" clientDependency="_H6S-YJfXEeOMMp6tE5Q0yg">
+          <ownedOperation xmi:id="_P5gQoJfXEeOMMp6tE5Q0yg" name="findAllSaasOrg"/>
+          <ownedOperation xmi:id="_R5cvIJfXEeOMMp6tE5Q0yg" name="getSaasOrgById"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_BsxsMJfXEeOMMp6tE5Q0yg" name="SaasUserGroupManager" clientDependency="_Ji9lUJfXEeOMMp6tE5Q0yg _KSEHAJfXEeOMMp6tE5Q0yg">
+          <ownedOperation xmi:id="_Y0ZvEJfXEeOMMp6tE5Q0yg" name="findSaasGroupsForOrg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_H6S-YJfXEeOMMp6tE5Q0yg" name="Dependency1" supplier="_1Zu-0GM0EeOjaIzuhpmW5A" client="_1WdPwJfWEeOMMp6tE5Q0yg"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_Ji9lUJfXEeOMMp6tE5Q0yg" name="Dependency2" supplier="_LKgjgGM1EeOjaIzuhpmW5A" client="_BsxsMJfXEeOMMp6tE5Q0yg"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_KSEHAJfXEeOMMp6tE5Q0yg" name="Dependency3" supplier="_NEWY0GMbEeOjaIzuhpmW5A" client="_BsxsMJfXEeOMMp6tE5Q0yg"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Model" xmi:id="_07nY4CEcEeOT_fjNFFfTPw" name="UseCaseView" visibility="private">
@@ -508,7 +548,7 @@ pour chaque &quot;org&quot; , au moins:&#xD;
         <value xmi:type="uml:LiteralString" xmi:id="_MfhBwJWBEeO7IrghFLvshw" name="" value="training"/>
       </slot>
       <slot xmi:id="_OFTT0JWBEeO7IrghFLvshw" definingFeature="_OZjiAJWAEeO7IrghFLvshw">
-        <value xmi:type="uml:LiteralString" xmi:id="_RDrwgJWBEeO7IrghFLvshw" name="" value="org.mycontrib"/>
+        <value xmi:type="uml:LiteralString" xmi:id="_RDrwgJWBEeO7IrghFLvshw" name="" value="org.mycontrib.apps"/>
       </slot>
       <slot xmi:id="_SZj-UJWBEeO7IrghFLvshw" definingFeature="_PvO7gJWAEeO7IrghFLvshw">
         <value xmi:type="uml:LiteralString" xmi:id="_W4FYEJWBEeO7IrghFLvshw" name="" value="training_db"/>
@@ -516,7 +556,7 @@ pour chaque &quot;org&quot; , au moins:&#xD;
     </packagedElement>
     <profileApplication xmi:id="_GrG30GNoEeOPvvsR26loOg">
       <eAnnotations xmi:id="_GrjjwGNoEeOPvvsR26loOg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../../profiles/n-tiers.profile.uml#_ARg8ISEHEeOT_fjNFFfTPw"/>
+        <references xmi:type="ecore:EPackage" href="../../profiles/n-tiers.profile.uml#_7ccBQJevEeOWJ5qDELGoUw"/>
       </eAnnotations>
       <appliedProfile href="../../profiles/n-tiers.profile.uml#_QAvBgB6rEeOIL-VHpkBl1g"/>
     </profileApplication>
@@ -534,16 +574,19 @@ pour chaque &quot;org&quot; , au moins:&#xD;
   <ntiers:service xmi:id="_EPopAGNqEeOPvvsR26loOg" base_Class="__ggAYGNpEeOPvvsR26loOg"/>
   <ntiers:service xmi:id="_YkTcEGNqEeOPvvsR26loOg" base_Class="_Jbyk0GNqEeOPvvsR26loOg"/>
   <ntiers:service xmi:id="_1-BIEGNqEeOPvvsR26loOg" base_Class="_vdGYwGNqEeOPvvsR26loOg"/>
-  <ntiers:entity xmi:id="_8965cGNqEeOPvvsR26loOg" base_Class="_KhkTAGMbEeOjaIzuhpmW5A"/>
-  <ntiers:entity xmi:id="_93lsYGNqEeOPvvsR26loOg" base_Class="_b23K4GMbEeOjaIzuhpmW5A"/>
-  <ntiers:entity xmi:id="__rGRYGNqEeOPvvsR26loOg" base_Class="_dcWM4GMZEeOjaIzuhpmW5A"/>
-  <ntiers:entity xmi:id="_AYQSUGNrEeOPvvsR26loOg" base_Class="_TE4moGMVEeOjaIzuhpmW5A"/>
-  <ntiers:entity xmi:id="_BG5hAGNrEeOPvvsR26loOg" base_Class="_UCT4MGMVEeOjaIzuhpmW5A"/>
-  <ntiers:entity xmi:id="_B4hyQGNrEeOPvvsR26loOg" base_Class="_VO94kGMVEeOjaIzuhpmW5A"/>
-  <ntiers:entity xmi:id="_G8v6EGNrEeOPvvsR26loOg" base_Class="_7fmw4GM0EeOjaIzuhpmW5A"/>
-  <ntiers:entity xmi:id="_HnguUGNrEeOPvvsR26loOg" base_Class="_1Zu-0GM0EeOjaIzuhpmW5A"/>
-  <ntiers:entity xmi:id="_Ique0GNrEeOPvvsR26loOg" base_Class="_NEWY0GMbEeOjaIzuhpmW5A"/>
-  <ntiers:entity xmi:id="_JTa2gGNrEeOPvvsR26loOg" base_Class="_LKgjgGM1EeOjaIzuhpmW5A"/>
-  <ntiers:entity xmi:id="_bs_O0GNrEeOPvvsR26loOg" base_Class="_K1kLEGMxEeOjaIzuhpmW5A"/>
   <ntiers:config xmi:id="_ZutKcJWCEeO7IrghFLvshw" base_InstanceSpecification="_ZX10gJWAEeO7IrghFLvshw"/>
+  <ntiers_1:data xmi:id="_j__8oJWZEeO7IrghFLvshw" base_Class="_dcWM4GMZEeOjaIzuhpmW5A"/>
+  <ntiers_1:data xmi:id="_lEsT0JWZEeO7IrghFLvshw" base_Class="_TE4moGMVEeOjaIzuhpmW5A"/>
+  <ntiers_1:data xmi:id="_mQgmsJWZEeO7IrghFLvshw" base_Class="_UCT4MGMVEeOjaIzuhpmW5A"/>
+  <ntiers_1:data xmi:id="_sNIWIJWZEeO7IrghFLvshw" base_Class="_K1kLEGMxEeOjaIzuhpmW5A"/>
+  <ntiers_1:data xmi:id="_tHfsoJWZEeO7IrghFLvshw" base_Class="_KhkTAGMbEeOjaIzuhpmW5A"/>
+  <ntiers_1:data xmi:id="_1r4vkJWZEeO7IrghFLvshw" base_Class="_7fmw4GM0EeOjaIzuhpmW5A"/>
+  <ntiers_1:data xmi:id="_2sppAJWZEeO7IrghFLvshw" base_Class="_1Zu-0GM0EeOjaIzuhpmW5A"/>
+  <ntiers_1:data xmi:id="_3iUFsJWZEeO7IrghFLvshw" base_Class="_NEWY0GMbEeOjaIzuhpmW5A"/>
+  <ntiers_1:data xmi:id="_4cbkkJWZEeO7IrghFLvshw" base_Class="_LKgjgGM1EeOjaIzuhpmW5A"/>
+  <ntiers_1:embeddable xmi:id="_kRaFEJevEeOWJ5qDELGoUw" base_Class="_VO94kGMVEeOjaIzuhpmW5A"/>
+  <ntiers_2:config xmi:id="_3Y7LsJezEeOWJ5qDELGoUw" base_Class="_IAGsoJWAEeO7IrghFLvshw"/>
+  <ntiers_2:embeddable xmi:id="_D_4A8Je7EeOWJ5qDELGoUw" base_Class="_b23K4GMbEeOjaIzuhpmW5A"/>
+  <ntiers_2:service xmi:id="__GAeQJfWEeOMMp6tE5Q0yg" base_Class="_1WdPwJfWEeOMMp6tE5Q0yg"/>
+  <ntiers_2:service xmi:id="_GLmA4JfXEeOMMp6tE5Q0yg" base_Class="_BsxsMJfXEeOMMp6tE5Q0yg"/>
 </xmi:XMI>

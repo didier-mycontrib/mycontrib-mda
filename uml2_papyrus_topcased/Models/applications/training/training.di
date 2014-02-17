@@ -33,19 +33,19 @@
     <windows>
       <children xsi:type="di:TabFolder">
         <children>
-          <emfPageIdentifier href="training.notation#_vRsboCEfEeOT_fjNFFfTPw"/>
+          <emfPageIdentifier href="training.notation#_MgvQECEdEeOT_fjNFFfTPw"/>
         </children>
         <children>
-          <emfPageIdentifier href="training.notation#_MgvQECEdEeOT_fjNFFfTPw"/>
+          <emfPageIdentifier href="training.notation#_vRsboCEfEeOT_fjNFFfTPw"/>
         </children>
         <children>
           <emfPageIdentifier href="training.notation#_E9QmsJWAEeO7IrghFLvshw"/>
         </children>
         <children>
-          <emfPageIdentifier href="training.notation#_NbA3QGMZEeOjaIzuhpmW5A"/>
+          <emfPageIdentifier href="training.notation#_Qws9gGMVEeOjaIzuhpmW5A"/>
         </children>
         <children>
-          <emfPageIdentifier href="training.notation#_Qws9gGMVEeOjaIzuhpmW5A"/>
+          <emfPageIdentifier href="training.notation#_NbA3QGMZEeOjaIzuhpmW5A"/>
         </children>
         <children>
           <emfPageIdentifier href="training.notation#_Ii-aACEdEeOT_fjNFFfTPw"/>
